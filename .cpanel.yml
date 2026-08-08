@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/trendm93/corretorimbativel.com.br
+    - /bin/mkdir -p $DEPLOYPATH/wp-content/themes/corretor-imbativel
+    - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.gitignore' wp-content/themes/corretor-imbativel/ $DEPLOYPATH/wp-content/themes/corretor-imbativel/
