@@ -1,0 +1,25 @@
+# WordPress core (this repo only versions the custom theme)
+/wp-admin/
+/wp-includes/
+/*.php
+!wp-content/**/*.php
+wp-config.php
+.htaccess
+
+# Uploads and generated content — never versioned
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+*.log
+
+# Third-party plugins/themes are not part of this repo
+wp-content/plugins/
+wp-content/themes/twenty*/
+
+# Local/OS
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+*.zip
