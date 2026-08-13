@@ -22,8 +22,8 @@ function ci_customize_register( $wp_customize ) {
 
 	$offer_fields = array(
 		'ci_product_name'   => array( 'label' => 'Nome do produto', 'default' => 'Corretor Imbatível — Manual Jurídico para Corretores de Imóveis', 'type' => 'text' ),
-		'ci_price_old'      => array( 'label' => 'Preço "de" (riscado)', 'default' => 'R$ 497,00', 'type' => 'text' ),
-		'ci_price_new'      => array( 'label' => 'Preço "por"', 'default' => 'R$ 197,00', 'type' => 'text' ),
+		'ci_price_old'      => array( 'label' => 'Preço "de" (riscado)', 'default' => 'R$ 397,00', 'type' => 'text' ),
+		'ci_price_new'      => array( 'label' => 'Preço "por"', 'default' => 'R$ 97,00', 'type' => 'text' ),
 		'ci_installment'    => array( 'label' => 'Texto de parcelamento', 'default' => '[PARCELAMENTO]', 'type' => 'text' ),
 		'ci_checkout_url'   => array( 'label' => 'Link de checkout (Greenn)', 'default' => 'https://payfast.greenn.com.br/123089', 'type' => 'url' ),
 		'ci_guarantee_text' => array( 'label' => 'Texto da garantia (deixe em branco para não exibir a seção)', 'default' => '', 'type' => 'text' ),

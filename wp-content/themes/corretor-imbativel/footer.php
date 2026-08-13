@@ -16,6 +16,11 @@ defined( 'ABSPATH' ) || exit;
 			<p class="ci-footer__copy">
 				&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Corretor Imbatível · Barbato Fabbris Advogados Associados. Todos os direitos reservados.
 			</p>
+			<p class="ci-footer__links">
+				<a href="#">Política de Privacidade</a>
+				<span aria-hidden="true">&bull;</span>
+				<a href="#">Termos de Uso</a>
+			</p>
 		</div>
 	</footer>
 

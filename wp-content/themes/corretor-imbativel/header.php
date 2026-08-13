@@ -69,5 +69,8 @@ defined( 'ABSPATH' ) || exit;
 				<img src="<?php echo esc_url( CI_THEME_URI . '/assets/images/logo.svg' ); ?>" alt="Corretor Imbatível" width="180" height="54">
 			<?php endif; ?>
 		</a>
+		<a href="#oferta" class="ci-btn ci-btn--primary ci-btn--sm ci-js-cta" data-event="click_checkout" data-location="header">
+			<?php echo esc_html( get_theme_mod( 'ci_cta_sticky', 'QUERO ACESSAR' ) ); ?>
+		</a>
 	</div>
 </header>

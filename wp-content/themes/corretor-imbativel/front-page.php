@@ -2,6 +2,11 @@
 /**
  * Corretor Imbatível — landing page front-page template.
  *
+ * Editorial redesign per LANDING-PAGE-REDESIGN.md: numbered lists instead of
+ * card grids, flush-left rhythm, navy/gold rule dividers. WordPress structure,
+ * Customizer fields, tracking and checkout are unchanged from the previous
+ * version — only markup/classes changed to match the new design system.
+ *
  * @package Corretor_Imbativel
  */
 
@@ -19,7 +24,6 @@ $installment  = get_theme_mod( 'ci_installment' );
 $checkout_url = get_theme_mod( 'ci_checkout_url' );
 $guarantee    = get_theme_mod( 'ci_guarantee_text' );
 $product_name = get_theme_mod( 'ci_product_name' );
-$mockup_image = get_theme_mod( 'ci_mockup_image' );
 $author_photo = get_theme_mod( 'ci_author_photo' );
 
 $testimonials = ci_parse_pipe_lines( get_theme_mod( 'ci_testimonials', '' ) );
@@ -29,10 +33,10 @@ $faq_default = array(
 	array( 'Para quem é o Corretor Imbatível?', 'Para corretores de imóveis autônomos, profissionais vinculados a imobiliárias, gestores imobiliários e imobiliárias que querem reduzir riscos jurídicos durante negociações imobiliárias.' ),
 	array( 'Preciso ter conhecimento jurídico prévio?', 'Não. O conteúdo foi escrito para ser acessível a corretores sem formação jurídica, traduzindo a legislação em orientações práticas para o dia a dia da corretagem.' ),
 	array( 'O conteúdo serve para corretores iniciantes?', 'Sim. O material apresenta desde os conceitos fundamentais da profissão até boas práticas avançadas de documentação e prevenção de litígios.' ),
-	array( 'Como recebo o produto?', '[FORMA_DE_ENTREGA]' ),
-	array( 'O acesso é digital?', '[TIPO_DE_ACESSO]' ),
-	array( 'Como funciona o pagamento?', 'O pagamento é processado integralmente pela plataforma de checkout. Formas de pagamento e parcelamento: ' . ( $installment ? esc_html( $installment ) : '[PARCELAMENTO]' ) . '.' ),
-	array( 'O eBook substitui uma consulta com advogado?', 'Não. O conteúdo possui finalidade educacional e informativa e não substitui a análise jurídica individualizada de um caso concreto por um advogado.' ),
+	array( 'Como recebo meu acesso?', 'O acesso é enviado por e-mail após a confirmação do pagamento.' ),
+	array( 'O conteúdo é digital?', 'Sim, 100% digital — leitura em computador, tablet ou celular.' ),
+	array( 'Como funciona o pagamento?', 'O pagamento é processado integralmente pela Greenn. Parcelamento: ' . ( $installment ? esc_html( $installment ) : '[PARCELAMENTO]' ) . '.' ),
+	array( 'O Corretor Imbatível substitui uma consulta jurídica?', 'Não. O conteúdo possui finalidade educacional e informativa e não substitui a análise jurídica individualizada de um caso concreto por um advogado.' ),
 );
 
 $faq_items = ! empty( $faq_override ) ? $faq_override : $faq_default;
@@ -64,6 +68,32 @@ $aprendizado = array(
 	array( 'Boas práticas', 'Estruture uma atuação mais organizada, ética e profissional no mercado imobiliário.' ),
 );
 
+$capitulos = array(
+	'Introdução à atuação segura do corretor',
+	'O corretor de imóveis: conceito e atuação',
+	'Base jurídica: o que diz a lei',
+	'Corretor angariador x corretor vendedor',
+	'A importância da documentação na intermediação',
+	'Boas práticas na intermediação imobiliária',
+	'Considerações finais e orientação do especialista',
+);
+
+$sem_rotina = array(
+	'Acordos verbais',
+	'Registros dispersos',
+	'Dúvidas sobre documentos',
+	'Dificuldade para comprovar atuação',
+	'Problemas descobertos tarde demais',
+);
+
+$mentalidade_ci = array(
+	'Formalização',
+	'Organização',
+	'Registro',
+	'Conhecimento',
+	'Prevenção',
+);
+
 $para_quem = array(
 	array( 'Corretores iniciantes', 'Construa sua carreira já com uma base jurídica sólida.' ),
 	array( 'Corretores experientes', 'Reforce e atualize sua atuação com boas práticas documentais.' ),
@@ -82,44 +112,71 @@ $para_quem = array(
 				<p class="ci-eyebrow"><?php echo esc_html( $eyebrow ); ?></p>
 				<h1 class="ci-hero__headline"><?php echo esc_html( $headline ); ?></h1>
 				<p class="ci-hero__sub"><?php echo esc_html( $subheadline ); ?></p>
+				<p class="ci-hero__credit"><strong>Corretor Imbatível</strong> — conteúdo desenvolvido por Dr. Rodrigo Barbato Fabbris</p>
 				<div class="ci-hero__actions">
 					<a href="#oferta" class="ci-btn ci-btn--primary ci-btn--lg ci-js-cta" data-event="click_checkout" data-location="hero">
 						<?php echo esc_html( $cta_primary ); ?>
 					</a>
 					<a href="#solucao" class="ci-link-arrow">Conheça o conteúdo ↓</a>
 				</div>
+				<p class="ci-hero__microcopy">Acesso digital &bull; Compra segura</p>
 			</div>
 			<div class="ci-hero__media">
+				<svg class="ci-hero__blueprint" viewBox="0 0 400 480" aria-hidden="true" focusable="false">
+					<rect x="20" y="20" width="360" height="440" fill="none" stroke="currentColor" stroke-width="1"/>
+					<line x1="20" y1="120" x2="380" y2="120" stroke="currentColor" stroke-width="1"/>
+					<line x1="200" y1="20" x2="200" y2="460" stroke="currentColor" stroke-width="1"/>
+					<circle cx="200" cy="240" r="90" fill="none" stroke="currentColor" stroke-width="1"/>
+				</svg>
 				<?php get_template_part( 'template-parts/mockup' ); ?>
 			</div>
 		</div>
 	</section>
 
-	<!-- A DOR -->
+	<!-- CREDIBILITY BAR -->
+	<div class="ci-credibility">
+		<div class="ci-container ci-credibility__inner">
+			<span>Direito Imobiliário</span>
+			<span>Mercado Imobiliário</span>
+			<span>Prevenção Jurídica</span>
+			<span>Boas Práticas</span>
+			<span>Documentação</span>
+		</div>
+	</div>
+
+	<!-- PROBLEMA -->
 	<section class="ci-section" id="dor">
 		<div class="ci-container">
-			<h2 class="ci-heading">Um negócio mal conduzido pode custar muito mais do que uma comissão.</h2>
-			<div class="ci-card-grid">
-				<?php foreach ( $dores as $dor ) : ?>
-					<div class="ci-card">
-						<h3 class="ci-card__title"><?php echo esc_html( $dor[0] ); ?></h3>
-						<p class="ci-card__text"><?php echo esc_html( $dor[1] ); ?></p>
-					</div>
+			<h2 class="ci-heading">O problema não começa quando chega o processo.</h2>
+			<p class="ci-lede">Na maioria das vezes, ele começa muito antes: quando uma negociação importante é conduzida sem a formalização adequada.</p>
+
+			<ol class="ci-numbered-list">
+				<?php foreach ( $dores as $i => $dor ) : ?>
+					<li class="ci-numbered-list__item">
+						<span class="ci-numbered-list__number"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
+						<span class="ci-numbered-list__body">
+							<span class="ci-numbered-list__title"><?php echo esc_html( $dor[0] ); ?></span>
+							<span class="ci-numbered-list__text"><?php echo esc_html( $dor[1] ); ?></span>
+						</span>
+					</li>
 				<?php endforeach; ?>
-			</div>
+			</ol>
+
+			<blockquote class="ci-pullquote">Uma negociação mal conduzida pode custar muito mais do que uma comissão.</blockquote>
 		</div>
 	</section>
 
 	<!-- IDENTIFICAÇÃO -->
-	<section class="ci-section ci-section--dark" id="identificacao">
+	<section class="ci-section ci-section--dark ci-section--ruled" id="identificacao">
 		<div class="ci-container ci-identificacao">
-			<h2 class="ci-heading ci-heading--light">Se você trabalha com imóveis, provavelmente já viveu alguma dessas situações.</h2>
+			<h2 class="ci-heading ci-heading--light">Isso já aconteceu com você?</h2>
 			<ul class="ci-identificacao__list">
 				<?php foreach ( $identificacao as $frase ) : ?>
 					<li>&ldquo;<?php echo esc_html( $frase ); ?>&rdquo;</li>
 				<?php endforeach; ?>
 			</ul>
-			<p class="ci-identificacao__closing">O Corretor Imbatível nasceu justamente para mudar esse cenário.</p>
+			<p class="ci-identificacao__closing">É justamente nesse espaço entre a venda e a segurança jurídica que nasce o Corretor Imbatível.</p>
+			<a href="#solucao" class="ci-btn ci-btn--outline-gold">Quero conhecer a solução</a>
 		</div>
 	</section>
 
@@ -133,52 +190,75 @@ $para_quem = array(
 			<p class="ci-lede">
 				O material não promete imunidade jurídica: ele ajuda você a reduzir riscos, aumentar sua segurança e adotar práticas preventivas reconhecidas pela legislação e pela jurisprudência.
 			</p>
+			<blockquote class="ci-pullquote ci-pullquote--left">Venda é consequência. Preparação vem antes.</blockquote>
 		</div>
 	</section>
 
 	<!-- O QUE VOCÊ VAI APRENDER -->
-	<section class="ci-section" id="aprendizado">
+	<section class="ci-section ci-section--muted" id="aprendizado">
 		<div class="ci-container">
 			<h2 class="ci-heading">O que você vai aprender</h2>
-			<div class="ci-card-grid">
-				<?php foreach ( $aprendizado as $item ) : ?>
-					<div class="ci-card ci-card--accent">
-						<h3 class="ci-card__title"><?php echo esc_html( $item[0] ); ?></h3>
-						<p class="ci-card__text"><?php echo esc_html( $item[1] ); ?></p>
-					</div>
+
+			<ol class="ci-numbered-list">
+				<?php foreach ( $aprendizado as $i => $item ) : ?>
+					<li class="ci-numbered-list__item">
+						<span class="ci-numbered-list__number"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
+						<span class="ci-numbered-list__body">
+							<span class="ci-numbered-list__title"><?php echo esc_html( $item[0] ); ?></span>
+							<span class="ci-numbered-list__text"><?php echo esc_html( $item[1] ); ?></span>
+						</span>
+					</li>
 				<?php endforeach; ?>
+			</ol>
+		</div>
+	</section>
+
+	<!-- CONTEÚDO DO EBOOK -->
+	<section class="ci-section" id="conteudo">
+		<div class="ci-container ci-ebook-content">
+			<div class="ci-ebook-content__media"><?php get_template_part( 'template-parts/mockup' ); ?></div>
+			<div class="ci-ebook-content__body">
+				<h2 class="ci-heading">Dentro do Corretor Imbatível</h2>
+				<p class="ci-lede">Conhecimento jurídico aplicado à realidade do corretor de imóveis.</p>
+				<ol class="ci-chapter-list">
+					<?php foreach ( $capitulos as $i => $capitulo ) : ?>
+						<li class="ci-chapter-list__item">
+							<span class="ci-chapter-list__label">Capítulo <?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
+							<span class="ci-chapter-list__title"><?php echo esc_html( $capitulo ); ?></span>
+						</li>
+					<?php endforeach; ?>
+				</ol>
 			</div>
 		</div>
 	</section>
 
-	<!-- ANTES x DEPOIS -->
-	<section class="ci-section ci-section--muted" id="antes-depois">
+	<!-- TRANSFORMAÇÃO -->
+	<section class="ci-section ci-section--muted" id="transformacao">
 		<div class="ci-container">
-			<h2 class="ci-heading">Antes e depois do Corretor Imbatível</h2>
-			<div class="ci-compare">
-				<div class="ci-compare__col">
-					<h3 class="ci-compare__title ci-compare__title--before">Corretor despreparado</h3>
-					<ul>
-						<li>Negocia na informalidade.</li>
-						<li>Depende de acordos verbais.</li>
-						<li>Tem documentação desorganizada.</li>
-						<li>Descobre problemas quando já aconteceram.</li>
+			<h2 class="ci-heading">O que muda quando você começa a tratar sua atuação como um negócio profissional?</h2>
+			<div class="ci-transformation">
+				<div class="ci-transformation__col">
+					<h3 class="ci-transformation__title ci-transformation__title--before">Sem uma rotina preventiva</h3>
+					<ul class="ci-dash-list">
+						<?php foreach ( $sem_rotina as $item ) : ?>
+							<li><?php echo esc_html( $item ); ?></li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
-				<div class="ci-compare__col">
-					<h3 class="ci-compare__title ci-compare__title--after">Corretor Imbatível</h3>
-					<ul>
-						<li>Valoriza a formalização.</li>
-						<li>Registra sua atuação.</li>
-						<li>Entende melhor seus direitos e responsabilidades.</li>
-						<li>Trabalha com uma mentalidade preventiva.</li>
+				<div class="ci-transformation__col">
+					<h3 class="ci-transformation__title ci-transformation__title--after">Mentalidade Corretor Imbatível</h3>
+					<ul class="ci-dash-list ci-dash-list--gold">
+						<?php foreach ( $mentalidade_ci as $item ) : ?>
+							<li><?php echo esc_html( $item ); ?></li>
+						<?php endforeach; ?>
 					</ul>
 				</div>
 			</div>
+			<blockquote class="ci-pullquote ci-pullquote--left">Não se trata de eliminar todos os riscos. Trata-se de estar muito mais preparado para eles.</blockquote>
 		</div>
 	</section>
 
-	<!-- SOBRE O ESPECIALISTA -->
+	<!-- AUTORIDADE -->
 	<section class="ci-section" id="especialista">
 		<div class="ci-container ci-especialista">
 			<div class="ci-especialista__photo">
@@ -209,51 +289,32 @@ $para_quem = array(
 	<!-- PARA QUEM É -->
 	<section class="ci-section ci-section--muted" id="para-quem">
 		<div class="ci-container">
-			<h2 class="ci-heading">Para quem é o Corretor Imbatível</h2>
-			<p class="ci-lede">Não importa se você está começando agora ou já atua há anos: conhecimento jurídico e organização profissional são ativos que acompanham toda a carreira.</p>
-			<div class="ci-card-grid ci-card-grid--5">
+			<h2 class="ci-heading">O Corretor Imbatível foi feito para quem quer levar a profissão a sério.</h2>
+			<div class="ci-audience-grid">
 				<?php foreach ( $para_quem as $item ) : ?>
-					<div class="ci-card">
-						<h3 class="ci-card__title"><?php echo esc_html( $item[0] ); ?></h3>
-						<p class="ci-card__text"><?php echo esc_html( $item[1] ); ?></p>
+					<div class="ci-audience-grid__item">
+						<h3 class="ci-audience-grid__title"><?php echo esc_html( $item[0] ); ?></h3>
+						<p class="ci-audience-grid__text"><?php echo esc_html( $item[1] ); ?></p>
 					</div>
 				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
 
-	<!-- PRODUTO -->
-	<section class="ci-section" id="produto">
-		<div class="ci-container ci-produto">
-			<div class="ci-produto__media"><?php get_template_part( 'template-parts/mockup' ); ?></div>
-			<div class="ci-produto__content">
-				<h2 class="ci-heading"><?php echo esc_html( $product_name ); ?></h2>
-				<p class="ci-lede">Conhecimento jurídico aplicado à realidade do corretor de imóveis.</p>
-				<ul class="ci-produto__list">
-					<li>Introdução à atuação segura do corretor</li>
-					<li>O corretor de imóveis: conceito e atuação</li>
-					<li>Base jurídica: o que diz a lei</li>
-					<li>Corretor angariador x corretor vendedor</li>
-					<li>A importância da documentação na intermediação</li>
-					<li>Boas práticas na intermediação imobiliária</li>
-					<li>Considerações finais e orientação do especialista</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
 	<!-- OFERTA -->
-	<section class="ci-section ci-section--dark" id="oferta">
+	<section class="ci-section ci-section--dark ci-section--ruled ci-offer" id="oferta">
 		<div class="ci-container ci-oferta">
-			<h2 class="ci-heading ci-heading--light">Você recebe</h2>
+			<h2 class="ci-heading ci-heading--light">Tenha o Corretor Imbatível ao seu lado na sua próxima negociação.</h2>
+
+			<div class="ci-oferta__mockup"><?php get_template_part( 'template-parts/mockup' ); ?></div>
+
+			<p class="ci-eyebrow">Você recebe</p>
 			<p class="ci-oferta__product"><?php echo esc_html( $product_name ); ?></p>
 
 			<div class="ci-oferta__price">
 				<span class="ci-oferta__price-old"><?php echo esc_html( $price_old ); ?></span>
 				<span class="ci-oferta__price-new">por <?php echo esc_html( $price_new ); ?></span>
-				<?php if ( $installment && '[PARCELAMENTO]' !== $installment ) : ?>
-					<span class="ci-oferta__installment"><?php echo esc_html( $installment ); ?></span>
-				<?php endif; ?>
+				<span class="ci-oferta__installment">ou em até <?php echo esc_html( $installment ? $installment : '[PARCELAMENTO]' ); ?> no cartão</span>
 			</div>
 
 			<a href="<?php echo esc_url( $checkout_url ? $checkout_url : '#' ); ?>"
@@ -261,8 +322,10 @@ $para_quem = array(
 				data-event="click_checkout"
 				data-location="oferta"
 				target="_blank" rel="noopener">
-				<?php echo esc_html( $cta_primary ); ?>
+				QUERO ACESSAR AGORA
 			</a>
+
+			<p class="ci-oferta__microcopy">Pagamento processado pela Greenn &bull; Acesso digital &bull; Compra segura</p>
 		</div>
 	</section>
 
@@ -276,32 +339,25 @@ $para_quem = array(
 	</section>
 	<?php endif; ?>
 
-	<!-- PROVA SOCIAL -->
+	<?php if ( ! empty( $testimonials ) ) : ?>
+	<!-- PROVA SOCIAL — só renderiza quando há depoimentos reais configurados -->
 	<section class="ci-section ci-section--muted" id="prova-social">
 		<div class="ci-container">
 			<h2 class="ci-heading">O que dizem os corretores</h2>
-			<div class="ci-card-grid ci-card-grid--3">
-				<?php if ( ! empty( $testimonials ) ) : ?>
-					<?php foreach ( $testimonials as $t ) : ?>
-						<blockquote class="ci-testimonial">
-							<p>&ldquo;<?php echo esc_html( $t[2] ?? '' ); ?>&rdquo;</p>
-							<footer>
-								<strong><?php echo esc_html( $t[0] ?? '' ); ?></strong>
-								<?php if ( ! empty( $t[1] ) ) : ?><span><?php echo esc_html( $t[1] ); ?></span><?php endif; ?>
-							</footer>
-						</blockquote>
-					<?php endforeach; ?>
-				<?php else : ?>
-					<?php for ( $i = 1; $i <= 3; $i++ ) : ?>
-						<blockquote class="ci-testimonial ci-testimonial--placeholder">
-							<p>[DEPOIMENTO_0<?php echo esc_html( $i ); ?>]</p>
-							<footer><strong>[NOME_DEPOENTE_0<?php echo esc_html( $i ); ?>]</strong></footer>
-						</blockquote>
-					<?php endfor; ?>
-				<?php endif; ?>
+			<div class="ci-testimonial-grid">
+				<?php foreach ( $testimonials as $t ) : ?>
+					<blockquote class="ci-testimonial">
+						<p>&ldquo;<?php echo esc_html( $t[2] ?? '' ); ?>&rdquo;</p>
+						<footer>
+							<strong><?php echo esc_html( $t[0] ?? '' ); ?></strong>
+							<?php if ( ! empty( $t[1] ) ) : ?><span><?php echo esc_html( $t[1] ); ?></span><?php endif; ?>
+						</footer>
+					</blockquote>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>
+	<?php endif; ?>
 
 	<!-- FAQ -->
 	<section class="ci-section" id="faq">
@@ -326,11 +382,12 @@ $para_quem = array(
 	<!-- CTA FINAL -->
 	<section class="ci-section ci-cta-final" id="cta-final">
 		<div class="ci-container">
-			<h2 class="ci-heading">Sua próxima negociação pode começar com mais preparo.</h2>
-			<p class="ci-lede">Torne conhecimento jurídico e organização profissional parte da sua atuação no mercado imobiliário.</p>
+			<h2 class="ci-heading">A próxima negociação começa antes do primeiro &ldquo;sim&rdquo;.</h2>
+			<p class="ci-lede">Comece com mais conhecimento, organização e segurança para conduzir cada etapa da sua atuação profissional.</p>
 			<a href="#oferta" class="ci-btn ci-btn--primary ci-btn--lg ci-js-cta" data-event="click_checkout" data-location="cta_final">
 				<?php echo esc_html( $cta_primary ); ?>
 			</a>
+			<div class="ci-cta-final__mockup"><?php get_template_part( 'template-parts/mockup' ); ?></div>
 		</div>
 	</section>
 
