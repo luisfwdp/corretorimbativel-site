@@ -14,17 +14,17 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$eyebrow      = get_theme_mod( 'ci_hero_eyebrow' );
-$headline     = get_theme_mod( 'ci_hero_headline' );
-$subheadline  = get_theme_mod( 'ci_hero_subheadline' );
-$cta_primary  = get_theme_mod( 'ci_cta_primary' );
-$price_old    = get_theme_mod( 'ci_price_old' );
-$price_new    = get_theme_mod( 'ci_price_new' );
-$installment  = get_theme_mod( 'ci_installment' );
-$checkout_url = get_theme_mod( 'ci_checkout_url' );
-$guarantee    = get_theme_mod( 'ci_guarantee_text' );
-$product_name = get_theme_mod( 'ci_product_name' );
-$author_photo = get_theme_mod( 'ci_author_photo' );
+$eyebrow      = get_theme_mod( 'ci_hero_eyebrow', 'SEGURANÇA JURÍDICA PARA QUEM VIVE DO MERCADO IMOBILIÁRIO' );
+$headline     = get_theme_mod( 'ci_hero_headline', 'Sua próxima comissão pode depender do que você faz antes da negociação dar problema.' );
+$subheadline  = get_theme_mod( 'ci_hero_subheadline', 'Conheça os principais riscos jurídicos da profissão e aprenda a conduzir negociações imobiliárias de maneira mais segura, organizada e profissional.' );
+$cta_primary  = get_theme_mod( 'ci_cta_primary', 'QUERO SER UM CORRETOR IMBATÍVEL' );
+$price_old    = get_theme_mod( 'ci_price_old', 'R$ 397,00' );
+$price_new    = get_theme_mod( 'ci_price_new', 'R$ 97,00' );
+$installment  = get_theme_mod( 'ci_installment', '[PARCELAMENTO]' );
+$checkout_url = get_theme_mod( 'ci_checkout_url', 'https://payfast.greenn.com.br/123089' );
+$guarantee    = get_theme_mod( 'ci_guarantee_text', '' );
+$product_name = get_theme_mod( 'ci_product_name', 'Corretor Imbatível — Manual Jurídico para Corretores de Imóveis' );
+$author_photo = get_theme_mod( 'ci_author_photo', '' );
 
 $testimonials = ci_parse_pipe_lines( get_theme_mod( 'ci_testimonials', '' ) );
 $faq_override = ci_parse_pipe_lines( get_theme_mod( 'ci_faq', '' ) );
