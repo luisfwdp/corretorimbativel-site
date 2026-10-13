@@ -185,7 +185,7 @@ function ci_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'ci_meta_pixel_id', array( 'default' => '2257513981770004', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_setting( 'ci_meta_pixel_id', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control(
 		'ci_meta_pixel_id',
 		array(
