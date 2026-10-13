@@ -50,7 +50,6 @@ function ci_assets() {
 		array(
 			'checkoutUrl' => esc_url_raw( get_theme_mod( 'ci_checkout_url', '' ) ),
 			'ga4Id'        => esc_js( get_theme_mod( 'ci_ga4_id', '' ) ),
-			'metaPixelId'  => esc_js( get_theme_mod( 'ci_meta_pixel_id', '' ) ),
 		)
 	);
 }
@@ -66,28 +65,10 @@ function ci_preload_fonts() {
 add_action( 'wp_head', 'ci_preload_fonts', 1 );
 
 /**
- * Shared event ID for this request, used to deduplicate the browser Pixel
- * PageView against the server-side Conversions API PageView (Meta dedupes
- * two events with the same pixel ID + eventID within a short window).
- *
- * @return string
- */
-function ci_pageview_event_id() {
-	static $event_id = null;
-
-	if ( null === $event_id ) {
-		$event_id = 'pv_' . wp_generate_uuid4();
-	}
-
-	return $event_id;
-}
-
-/**
- * Tracking snippets (GA4 / Meta Pixel) — only output when IDs are configured.
+ * Tracking snippets (GA4) — only output when configured.
  */
 function ci_tracking_head() {
-	$ga4_id   = get_theme_mod( 'ci_ga4_id', '' );
-	$pixel_id = get_theme_mod( 'ci_meta_pixel_id', '' );
+	$ga4_id = get_theme_mod( 'ci_ga4_id', '' );
 
 	if ( $ga4_id ) {
 		?>
@@ -100,76 +81,7 @@ function ci_tracking_head() {
 		</script>
 		<?php
 	}
-
-	if ( $pixel_id ) {
-		$event_id = ci_pageview_event_id();
-		?>
-		<script>
-			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-			document,'script','https://connect.facebook.net/en_US/fbevents.js');
-			fbq('init', '<?php echo esc_js( $pixel_id ); ?>');
-			fbq('track', 'PageView', {}, {eventID: '<?php echo esc_js( $event_id ); ?>'});
-		</script>
-		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo esc_attr( $pixel_id ); ?>&ev=PageView&eventID=<?php echo esc_attr( $event_id ); ?>&noscript=1" /></noscript>
-		<?php
-	}
 }
 add_action( 'wp_head', 'ci_tracking_head', 20 );
-
-/**
- * Server-side PageView via Meta Conversions API — only fires when both a
- * Pixel ID and an access token are configured. Deduplicates against the
- * browser Pixel event above via the shared eventID. The access token is
- * read from a Customizer setting (stored in the WordPress database only,
- * never in theme code/Git) so it never needs to be committed anywhere.
- */
-function ci_meta_capi_send_pageview() {
-	$pixel_id = get_theme_mod( 'ci_meta_pixel_id', '' );
-	$token    = get_theme_mod( 'ci_meta_capi_token', '' );
-
-	if ( ! $pixel_id || ! $token ) {
-		return;
-	}
-
-	$user_data = array(
-		'client_ip_address' => isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '',
-		'client_user_agent' => isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '',
-	);
-
-	if ( isset( $_COOKIE['_fbp'] ) ) {
-		$user_data['fbp'] = sanitize_text_field( wp_unslash( $_COOKIE['_fbp'] ) );
-	}
-
-	if ( isset( $_COOKIE['_fbc'] ) ) {
-		$user_data['fbc'] = sanitize_text_field( wp_unslash( $_COOKIE['_fbc'] ) );
-	}
-
-	$payload = array(
-		'data' => array(
-			array(
-				'event_name'       => 'PageView',
-				'event_time'       => time(),
-				'event_id'         => ci_pageview_event_id(),
-				'event_source_url' => home_url( add_query_arg( null, null ) ),
-				'action_source'    => 'website',
-				'user_data'        => $user_data,
-			),
-		),
-	);
-
-	wp_remote_post(
-		"https://graph.facebook.com/v21.0/{$pixel_id}/events?access_token=" . rawurlencode( $token ),
-		array(
-			'timeout'  => 2,
-			'blocking' => false,
-			'headers'  => array( 'Content-Type' => 'application/json' ),
-			'body'     => wp_json_encode( $payload ),
-		)
-	);
-}
-add_action( 'wp_footer', 'ci_meta_capi_send_pageview', 30 );
 
 require CI_THEME_DIR . '/inc/customizer.php';
