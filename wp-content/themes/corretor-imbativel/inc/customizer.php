@@ -185,12 +185,23 @@ function ci_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'ci_meta_pixel_id', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_setting( 'ci_meta_pixel_id', array( 'default' => '2257513981770004', 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control(
 		'ci_meta_pixel_id',
 		array(
 			'label'       => 'Meta Pixel ID',
 			'description' => 'Deixe em branco para não carregar o Pixel.',
+			'section'     => 'ci_tracking',
+			'type'        => 'text',
+		)
+	);
+
+	$wp_customize->add_setting( 'ci_meta_capi_token', array( 'default' => '', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control(
+		'ci_meta_capi_token',
+		array(
+			'label'       => 'Meta Conversion API — Access Token',
+			'description' => 'Opcional: habilita o envio server-side do evento PageView (deduplicado com o Pixel do navegador via eventID), mais resistente a bloqueadores de anúncio. Cole aqui o token gerado em Gerenciador de Eventos → Configurações → Conversions API. Fica salvo apenas no banco de dados do WordPress, nunca no código/Git. Deixe em branco para não usar a Conversions API.',
 			'section'     => 'ci_tracking',
 			'type'        => 'text',
 		)
