@@ -158,3 +158,7 @@ O script de deploy anterior usa `set -e`, mas isso não oferece troca atômica d
 Resultados técnicos desta branch são registrados em `tests/VALIDACAO.md`. Testes de interface com URLs de teste não comprovam funcionamento financeiro.
 
 Antes da publicação faltam: cinco links/ofertas confirmados (e link privado mantido fora da divulgação); código nativo se escolhido; destinos de recusa e pós-compra; conferência do Manual real; mockup oficial do Manual e composição visual final; condições de parcelamento/garantia se anunciadas; entrega dos materiais; pixels/consentimento; homologação de cobrança, reembolso e deduplicação de conversões; revisão das campanhas; confirmação do mecanismo cPanel e aprovação da publicação.
+
+## Refinamento editorial em revisão
+
+A branch `codex/landing-pages-premium` acrescenta as cinco páginas com narrativas completas, extensões visuais restritas às páginas de venda e preparação de páginas pelo painel. A homepage e as configurações comerciais ficam preservadas. Veja [docs/LANDING-PAGES-PREMIUM.md](docs/LANDING-PAGES-PREMIUM.md) para o estado atual, testes e publicação pendente de nova aprovação. A tela **Aparência → Páginas de venda** é uma alternativa ao WP-CLI e cria somente rascunhos mediante ação autenticada explícita.

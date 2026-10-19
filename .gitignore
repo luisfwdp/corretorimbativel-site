@@ -23,3 +23,6 @@ Thumbs.db
 node_modules/
 .env
 *.zip
+
+# Local agent skill packages; provenance is recorded in skills-lock.json
+.agents/skills/

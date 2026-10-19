@@ -52,3 +52,28 @@ Executar `node tests/browser-checkouts.cjs`. O teste bloqueia a navegação por 
 Conta e ofertas Greenn reais, scripts oficiais, elegibilidade/token, autorização e valor cobrado, PIX/boleto/cartão, confirmação/recusa, entrega, acesso, reembolso, pixels/consentimento e deduplicação de `purchase`. Também faltam a conferência do Manual e sua arte, os plugins/configurações reais de produção, regras Apache/cPanel e validação por uma pessoa antes de publicar.
 
 As instalações locais usam SQLite do Playground, não o banco MySQL da HostGator. Os testes aprovados verificam o comportamento WordPress do tema; não atestam a infraestrutura nem a integração financeira em produção.
+
+## Rodada editorial premium
+
+Branch `codex/landing-pages-premium`: detalhes, resultados e limitações em [docs/LANDING-PAGES-PREMIUM.md](../docs/LANDING-PAGES-PREMIUM.md#testes-realizados). Além dos 24 cenários de regressão, foram executados comparação de homepage por HTML/pixels, cinco varreduras axe sem violações, 20 cenários de layout, texto a 200%, motion, administração e testes adicionais de registro. A versão atual do Blueprint inclui os testes de registro compartilhado.
+
+Para executar os testes adicionais, usar os mesmos mounts do comando acima, a aplicação atual em `127.0.0.1:9410`, e a base `7afdc2f` em outra instalação `127.0.0.1:9411`, com as mesmas opções e imagens. Ambos devem ter o tema ativo, permalinks amigáveis e cinco páginas associadas. Os scripts aceitam `CI_EDITORIAL_URL` e `CI_BASELINE_URL`.
+
+```bash
+NODE_USE_ENV_PROXY=1 node tests/editorial-browser.cjs
+NODE_USE_ENV_PROXY=1 node tests/admin-pages.cjs
+NODE_USE_ENV_PROXY=1 node tests/motion-performance.cjs
+```
+
+Axe exige o pacote `@axe-core/playwright` nas ferramentas de teste, fora do tema. O teste administrativo usa as credenciais públicas padrão da instalação descartável do Playground e bloqueia hosts diferentes de localhost. Não executá-lo contra produção.
+
+A instalação de PHP 7.4 com os checkouts de teste pode usar `CI_CHECKOUT_URL=http://127.0.0.1:9412 node tests/browser-checkouts.cjs`. Os links são fixtures reservadas; não há cobrança nem teste de entrega.
+
+Exportação das prévias (imagens verificadas e ferramentas precisam estar disponíveis):
+
+```bash
+CI_EBOOK_IMAGE=/caminho/ebook.png CI_AUTHOR_IMAGE=/caminho/autor.png \
+CI_PREVIEW_DIR=/caminho/previews NODE_USE_ENV_PROXY=1 node tests/export-preview.cjs
+```
+
+As capturas e os relatórios ficam fora do tema. O pacote HTML permite revisar layout e interações, mas não equivale a implantação WordPress nem validação de pagamento.
