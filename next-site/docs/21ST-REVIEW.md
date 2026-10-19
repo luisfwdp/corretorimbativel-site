@@ -13,7 +13,7 @@
 
 O original emprega Motion, provider/contexto, cloneElement e animação de altura. O conceito de accordion/trigger/content e o indicador de estado foram adaptados em `components/ui/accordion.tsx`, com atribuição MIT. Não se importou uma coleção inteira de componentes.
 
-Mudanças deliberadas: usar details/summary nativos, manter a resposta no HTML renderizado, permitir FAQ sem JS, usar teclado nativo, isolar a rotação do indicador com Motion, respeitar useReducedMotion e evitar animação de altura. Estado nativo aberto/fechado continua sendo a fonte da interação. Sem div clicável ou dependência de hover.
+Mudanças deliberadas: usar details/summary nativos, manter a resposta no HTML renderizado, permitir FAQ sem JS, usar teclado nativo, isolar a rotação do indicador com Motion, respeitar preferência de movimento reduzido com assinatura de mudanças em tempo real e evitar animação de altura. Estado nativo aberto/fechado continua sendo a fonte da interação. Sem div clicável ou dependência de hover.
 
 Compatibilidade: React 19 e App Router com ilha client pequena; textos e restante das páginas são renderizados no servidor. `motion/react` substitui a dependência histórica `framer-motion` indicada no catálogo, com uma única versão do Motion instalada.
 
