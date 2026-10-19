@@ -1,0 +1,23 @@
+<svg width="240" height="72" viewBox="0 0 480 144" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corretor Imbatível">
+	<title>Corretor Imbatível</title>
+	<defs>
+		<linearGradient id="ci-gold" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="#E4C468"/>
+			<stop offset="1" stop-color="#B8862F"/>
+		</linearGradient>
+	</defs>
+	<!-- shield -->
+	<path d="M72 4L136 26V64C136 100 108 128 72 140C36 128 8 100 8 64V26L72 4Z" fill="#0F2436"/>
+	<path d="M72 4L136 26V64C136 100 108 128 72 140C36 128 8 100 8 64V26L72 4Z" fill="none" stroke="url(#ci-gold)" stroke-width="4"/>
+	<path d="M72 16L124 34V64C124 93 101 116 72 127C43 116 20 93 20 64V34L72 16Z" fill="none" stroke="url(#ci-gold)" stroke-width="2"/>
+	<!-- house outline -->
+	<path d="M40 66L72 42L104 66" fill="none" stroke="url(#ci-gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+	<path d="M50 60V50H60V56" fill="none" stroke="url(#ci-gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+	<!-- document with check -->
+	<rect x="56" y="66" width="32" height="38" rx="3" fill="none" stroke="url(#ci-gold)" stroke-width="4"/>
+	<path d="M56 76L66 66H88" fill="none" stroke="url(#ci-gold)" stroke-width="4" stroke-linejoin="round"/>
+	<path d="M63 88L70 95L82 80" fill="none" stroke="url(#ci-gold)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+	<!-- wordmark -->
+	<text x="164" y="66" font-family="Georgia, 'Playfair Display', serif" font-size="42" fill="#0F2436">Corretor</text>
+	<text x="164" y="112" font-family="Georgia, 'Playfair Display', serif" font-size="42" fill="url(#ci-gold)">imbatível</text>
+</svg>

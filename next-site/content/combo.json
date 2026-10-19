@@ -1,0 +1,775 @@
+{
+  "slug": "combo",
+  "sourceCommit": "57e496b",
+  "sections": [
+    {
+      "id": "conhecimento-documentacao",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "Entender o risco é o começo. Organizar a atuação é o próximo passo."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Uma negociação imobiliária combina pessoas, interesses, documentos e compromissos. Conhecer a base jurídica da profissão ajuda a reconhecer o que está em jogo. Dar atenção à documentação ajuda a acompanhar o que foi combinado e o trabalho realizado."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Esses dois cuidados se complementam. O eBook oferece uma visão da atuação profissional, dos deveres e dos riscos da corretagem. O Manual aproxima essa reflexão dos contratos, propostas, distratos e registros presentes na rotina."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "O Combo reúne os dois produtos em uma única compra, para quem deseja consultar os temas de forma complementar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dor",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "O desafio não está apenas em encontrar o comprador."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Também está em compreender e documentar o caminho até o fechamento."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Uma comissão pode se tornar motivo de divergência. Uma proposta pode deixar condições em aberto. As partes podem mudar de ideia, ou concluir a negociação sem que o corretor saiba como demonstrar sua participação."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Somam-se a isso os acordos verbais, a documentação inadequada e os registros dispersos. São situações que pedem preparo para identificar dúvidas, organizar informações e reconhecer quando buscar orientação jurídica."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "O conjunto foi pensado para reunir conhecimento sobre a profissão e atenção aos instrumentos que acompanham a intermediação. A proposta é ampliar seu preparo, sem prometer eliminar riscos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conteudo",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "Dois produtos. Dois focos que se encontram na sua rotina."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Cada material tem uma função própria. Juntos, permitem relacionar a compreensão jurídica com os cuidados documentais."
+          ]
+        },
+        {
+          "tag": "article",
+          "children": [
+            {
+              "tag": "p",
+              "children": [
+                "Conhecimento jurídico"
+              ]
+            },
+            {
+              "tag": "h3",
+              "children": [
+                "eBook Corretor Imbatível"
+              ]
+            },
+            {
+              "tag": "p",
+              "children": [
+                "Uma leitura sobre a atividade de corretagem, sua base legal, responsabilidades, comissão e boas práticas. Ajuda você a enxergar a atuação profissional além da apresentação de imóveis."
+              ]
+            },
+            {
+              "tag": "p",
+              "children": [
+                "Seu ponto de partida para entender direitos, deveres e a importância de uma postura preventiva."
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "article",
+          "children": [
+            {
+              "tag": "p",
+              "children": [
+                "Orientação documental"
+              ]
+            },
+            {
+              "tag": "h3",
+              "children": [
+                "Manual Jurídico"
+              ]
+            },
+            {
+              "tag": "p",
+              "children": [
+                "Um material dedicado aos cuidados com contratos, propostas, distratos, comunicação sobre comissão e registros da intermediação."
+              ]
+            },
+            {
+              "tag": "p",
+              "children": [
+                "Uma forma de olhar com mais atenção para a documentação que participa das diferentes etapas de uma negociação."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ebook-conteudo",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "O que você aprende com o eBook."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "A visão jurídica e profissional que serve de base para compreender os cuidados da corretagem."
+          ]
+        },
+        {
+          "tag": "ol",
+          "children": [
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Introdução"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Uma visão do papel do corretor em decisões patrimoniais importantes e da relação entre preparo, conhecimento jurídico e atuação profissional."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "O Corretor de Imóveis: Conceito e Atuação"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "O que caracteriza a atividade de corretagem, suas atribuições e os limites que precisam ser observados ao aproximar as partes."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Base Jurídica: O que diz a Lei"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Uma apresentação da legislação da profissão e das regras do contrato de corretagem, conectando conceitos jurídicos à realidade do trabalho."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Corretor Angariador x Corretor Vendedor"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "As diferenças entre as duas atuações e a importância de reconhecer os papéis de cada profissional, inclusive nas discussões sobre remuneração."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "A Importância da Documentação na Intermediação"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Por que contratos, propostas, comunicações e registros ajudam a compreender o trabalho realizado e os acordos feitos durante uma negociação."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Boas Práticas na Intermediação Imobiliária"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Cuidados que atravessam o atendimento, a análise de informações, a formalização e o acompanhamento da negociação, com uma perspectiva preventiva."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Considerações Finais"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Uma retomada dos principais pontos da leitura e da importância de unir conhecimento, ética e organização no exercício da profissão."
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "syllabus"
+        }
+      ]
+    },
+    {
+      "id": "manual-conteudo",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "O que encontra no Manual Jurídico."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "O olhar sobre os instrumentos e os registros que ajudam a organizar a intermediação."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "A oferta apresenta os dois materiais de leitura. Não anuncia um pack de documentos editáveis como item incluído."
+          ]
+        },
+        {
+          "tag": "ol",
+          "children": [
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Contrato de Intermediação Imobiliária"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Entenda a importância de registrar a relação de intermediação, o serviço combinado e as condições que merecem atenção antes do início do trabalho."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Proposta de Compra"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Conheça os cuidados com a formalização das condições apresentadas pelas partes, para que preço, prazos e demais pontos não fiquem apenas na conversa."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Contrato Particular de Compra e Venda"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Observe o papel da documentação na definição dos compromissos entre comprador e vendedor e reconheça situações que exigem análise jurídica específica."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Distrato Imobiliário"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Compreenda por que a desistência ou o encerramento de uma negociação também precisa de atenção à documentação e aos compromissos anteriormente assumidos."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Notificação Extrajudicial de Cobrança de Comissão"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Entenda a finalidade da comunicação formal sobre a remuneração e a importância de avaliar os fatos e os registros antes de qualquer medida de cobrança."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Atuação do Corretor e Provas da Intermediação"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Reconheça o valor dos registros que ajudam a demonstrar a participação do corretor e a reconstruir as etapas do atendimento e da negociação."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Considerações Finais"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Reúna os cuidados documentais em uma perspectiva de organização e prevenção, respeitando as particularidades de cada caso."
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "syllabus"
+        }
+      ]
+    },
+    {
+      "id": "complementaridade",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "Como uma leitura conversa com a outra."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Você pode aproximar os conceitos da profissão das perguntas que aparecem ao acompanhar uma negociação."
+          ]
+        },
+        {
+          "tag": "table",
+          "children": [
+            {
+              "tag": "caption",
+              "children": [
+                "Conhecimento e cuidado documental em situações da corretagem"
+              ]
+            },
+            {
+              "tag": "thead",
+              "children": [
+                {
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "tag": "th",
+                      "children": [
+                        "Situação"
+                      ],
+                      "scope": "col"
+                    },
+                    {
+                      "tag": "th",
+                      "children": [
+                        "O olhar do eBook"
+                      ],
+                      "scope": "col"
+                    },
+                    {
+                      "tag": "th",
+                      "children": [
+                        "O olhar do Manual"
+                      ],
+                      "scope": "col"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "tbody",
+              "children": [
+                {
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "tag": "th",
+                      "children": [
+                        "Início da intermediação"
+                      ],
+                      "scope": "row"
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Compreender o papel do corretor e seus limites de atuação."
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Reconhecer a importância de formalizar o serviço combinado."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "tag": "th",
+                      "children": [
+                        "Negociação de condições"
+                      ],
+                      "scope": "row"
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Relacionar responsabilidade profissional e boas práticas."
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Dar atenção à proposta e aos compromissos documentados."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "tag": "th",
+                      "children": [
+                        "Discussão sobre comissão"
+                      ],
+                      "scope": "row"
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Entender os pontos jurídicos que podem gerar divergências."
+                      ]
+                    },
+                    {
+                      "tag": "td",
+                      "children": [
+                        "Reunir os registros da atuação e compreender a finalidade da comunicação formal."
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "kind": "comparison"
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Exemplos educativos. A análise de direitos e obrigações depende das particularidades de cada caso."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mentalidade",
+      "blocks": [
+        {
+          "tag": "p",
+          "children": [
+            "Mentalidade Corretor Imbatível"
+          ]
+        },
+        {
+          "tag": "h2",
+          "children": [
+            "Cinco pilares. Uma postura mais preventiva."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "O valor do conjunto também está na forma como você passa a observar e organizar sua atuação."
+          ]
+        },
+        {
+          "tag": "dl",
+          "children": [
+            {
+              "tag": "div",
+              "children": [
+                {
+                  "tag": "dt",
+                  "children": [
+                    "Formalização"
+                  ]
+                },
+                {
+                  "tag": "dd",
+                  "children": [
+                    "Colocar os acordos em termos claros, com atenção ao papel de cada pessoa na negociação."
+                  ]
+                }
+              ],
+              "kind": "group"
+            },
+            {
+              "tag": "div",
+              "children": [
+                {
+                  "tag": "dt",
+                  "children": [
+                    "Organização"
+                  ]
+                },
+                {
+                  "tag": "dd",
+                  "children": [
+                    "Manter documentos e informações acessíveis para acompanhar a história de cada atendimento."
+                  ]
+                }
+              ],
+              "kind": "group"
+            },
+            {
+              "tag": "div",
+              "children": [
+                {
+                  "tag": "dt",
+                  "children": [
+                    "Registro"
+                  ]
+                },
+                {
+                  "tag": "dd",
+                  "children": [
+                    "Valorizar propostas, comunicações e demais elementos que ajudam a compreender a intermediação."
+                  ]
+                }
+              ],
+              "kind": "group"
+            },
+            {
+              "tag": "div",
+              "children": [
+                {
+                  "tag": "dt",
+                  "children": [
+                    "Conhecimento"
+                  ]
+                },
+                {
+                  "tag": "dd",
+                  "children": [
+                    "Entender direitos, deveres e limites da profissão para reconhecer o que exige mais cuidado."
+                  ]
+                }
+              ],
+              "kind": "group"
+            },
+            {
+              "tag": "div",
+              "children": [
+                {
+                  "tag": "dt",
+                  "children": [
+                    "Prevenção"
+                  ]
+                },
+                {
+                  "tag": "dd",
+                  "children": [
+                    "Identificar dúvidas antes de assumir compromissos e buscar orientação individualizada quando necessário."
+                  ]
+                }
+              ],
+              "kind": "group"
+            }
+          ],
+          "kind": "principles"
+        }
+      ]
+    },
+    {
+      "id": "beneficios",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "Mais repertório para pensar. Mais atenção para documentar."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Com os dois materiais, você reúne em uma compra conteúdos sobre o exercício profissional e sobre os cuidados documentais da intermediação. Pode consultar o tema jurídico e, em seguida, relacioná-lo aos registros e instrumentos envolvidos."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Isso ajuda a construir um olhar mais atento para propostas, comunicações e responsabilidades. Também permite organizar melhor as dúvidas a levar a um advogado quando a situação exige uma análise específica."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "O benefício é ampliar suas referências de estudo e consulta. O resultado de cada negociação continua dependendo de seus fatos, das partes envolvidas e das condições jurídicas aplicáveis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "para-quem",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "A opção mais completa para quem quer estudar as duas dimensões da profissão."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Para corretores iniciantes que desejam uma base de conhecimento e atenção à formalização desde os primeiros atendimentos. Para profissionais experientes que querem revisar sua postura preventiva e sua organização documental."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
+            "Também para equipes e gestores de imobiliárias que buscam referências de leitura sobre a atuação do corretor e os cuidados da intermediação. Se você deseja os dois produtos, o Combo reúne essa escolha em uma única oferta."
+          ]
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O que está incluído no Combo Completo?",
+      "answer": "O Combo reúne o eBook Corretor Imbatível e o Manual Jurídico para Corretores de Imóveis e Imobiliárias. O eBook aborda a atuação profissional e sua base jurídica; o Manual concentra as orientações sobre documentação e formalização."
+    },
+    {
+      "question": "Preciso ter formação em Direito?",
+      "answer": "O conteúdo é voltado a corretores e profissionais do mercado imobiliário. A proposta é aproximar os cuidados jurídicos da rotina profissional, sem substituir a análise de um advogado sobre situações concretas."
+    },
+    {
+      "question": "Recebo modelos de documentos editáveis?",
+      "answer": "A oferta apresentada aqui contempla os materiais de leitura descritos na página. Documentos editáveis não são apresentados como itens incluídos. Confira a descrição da entrega no checkout antes de comprar."
+    },
+    {
+      "question": "Sou iniciante. Este conteúdo faz sentido para mim?",
+      "answer": "Sim. Reconhecer a importância da formalização, dos registros e dos limites da atuação profissional é útil desde o início da carreira. Profissionais experientes também podem usar a leitura para revisar seus cuidados e sua organização."
+    },
+    {
+      "question": "Como funciona o pagamento e o acesso?",
+      "answer": "O material é digital e o pagamento é realizado pela Greenn. Antes de concluir a compra, confira as condições de pagamento, entrega e acesso apresentadas no checkout."
+    },
+    {
+      "question": "O material garante minha comissão ou elimina riscos?",
+      "answer": "Não. Nenhum material educativo garante o resultado de uma negociação ou elimina riscos jurídicos. O objetivo é ampliar o conhecimento e a atenção aos cuidados profissionais. Casos concretos exigem orientação jurídica individualizada."
+    }
+  ]
+}

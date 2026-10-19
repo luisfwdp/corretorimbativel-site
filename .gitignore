@@ -26,3 +26,12 @@ node_modules/
 
 # Local agent skill packages; provenance is recorded in skills-lock.json
 .agents/skills/
+
+# Isolated Next.js application
+next-site/.next/
+next-site/.vercel/
+next-site/.env*
+!next-site/.env.example
+next-site/next-env.d.ts
+next-site/*.tsbuildinfo
+next-site/test-results/

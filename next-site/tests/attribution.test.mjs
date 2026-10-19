@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readAttribution,withAttribution,safePageLocation} from '../lib/attribution.ts';
+import {catalogue,separateTotal,savings} from '../lib/catalogue.ts';
+test('Only campaign attribution is retained; payment context and personal data stay out',()=>{assert.deepEqual(readAttribution('?utm_source=ads&utm_campaign=ebook&token=secret&email=x@x.com&card=123'),{utm_source:'ads',utm_campaign:'ebook'});assert.deepEqual(readAttribution('?utm_source='+ 'a'.repeat(501)),{});});
+test('Attribution preserves existing checkout parameters and never replaces them',()=>{assert.equal(withAttribution('https://example.invalid/checkout?offer=147&utm_source=original',{utm_source:'new',utm_campaign:'launch',token:'secret'}),'https://example.invalid/checkout?offer=147&utm_source=original&utm_campaign=launch');assert.equal(withAttribution('/ebook',{utm_source:'ads'}),'/ebook?utm_source=ads');assert.equal(withAttribution('#oferta',{utm_source:'ads'}),'#oferta');});
+test('Analytics location excludes tokens, personal information and click identifiers',()=>{assert.equal(safePageLocation('https://example.invalid/upsell-manual?token=secret&email=a@b.c&gclid=abc&utm_source=ads#oferta'),'https://example.invalid/upsell-manual?utm_source=ads');});
+test('Official prices, combo saving and both complementary journeys stay consistent',()=>{assert.equal(catalogue.ebook.price,147);assert.equal(catalogue['manual-juridico'].price,97);assert.equal(catalogue.combo.price,197);assert.equal(separateTotal,244);assert.equal(savings,47);assert.equal(catalogue.ebook.price+catalogue['upsell-manual'].price,197);assert.equal(catalogue['manual-juridico'].price+catalogue['upsell-ebook'].price,197);});

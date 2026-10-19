@@ -1,0 +1,3 @@
+'use client';
+import {useState} from 'react';
+export function Decline({url,label}:{url:string|null;label:string}){const[declined,setDeclined]=useState(false);return url?<a className="decline" href={url}>{label}</a>:<div><button type="button" className="decline" aria-expanded={declined} aria-controls="decline-guidance" onClick={()=>setDeclined(!declined)}>{label}</button><p id="decline-guidance" hidden={!declined} className="decline-guidance">Você pode fechar esta página e consultar as instruções da sua compra inicial. Recusar este complemento não cancela a compra anterior.</p><noscript><p>Se não desejar o complemento, feche esta página e consulte as instruções da compra inicial.</p></noscript></div>;}
