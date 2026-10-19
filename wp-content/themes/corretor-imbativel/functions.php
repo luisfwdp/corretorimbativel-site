@@ -96,3 +96,6 @@ add_action( 'wp_head', 'ci_tracking_head', 20 );
 require CI_THEME_DIR . '/inc/customizer.php';
 
 require CI_THEME_DIR . '/inc/funnel.php';
+
+require CI_THEME_DIR . '/inc/editorial.php';
+require CI_THEME_DIR . '/inc/funnel-pages.php';

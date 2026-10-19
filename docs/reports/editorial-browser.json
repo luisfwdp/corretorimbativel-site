@@ -1,0 +1,62 @@
+{
+  "homepage": [
+    {
+      "width": 1440,
+      "html": "identical",
+      "pixels": "identical"
+    },
+    {
+      "width": 390,
+      "html": "identical",
+      "pixels": "identical"
+    }
+  ],
+  "accessibility": [
+    {
+      "slug": "ebook",
+      "violations": []
+    },
+    {
+      "slug": "manual-juridico",
+      "violations": []
+    },
+    {
+      "slug": "combo",
+      "violations": []
+    },
+    {
+      "slug": "upsell-manual",
+      "violations": []
+    },
+    {
+      "slug": "upsell-ebook",
+      "violations": []
+    }
+  ],
+  "content": [
+    {
+      "slug": "ebook",
+      "words": 1271
+    },
+    {
+      "slug": "manual-juridico",
+      "words": 1428
+    },
+    {
+      "slug": "combo",
+      "words": 1515
+    },
+    {
+      "slug": "upsell-manual",
+      "words": 225
+    },
+    {
+      "slug": "upsell-ebook",
+      "words": 207
+    }
+  ],
+  "motion": [
+    "Reduced motion starts without running animations",
+    "Preference changes cancel editorial motion"
+  ]
+}

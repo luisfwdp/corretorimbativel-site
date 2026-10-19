@@ -11,3 +11,7 @@ Upsells têm modo de nova compra ou código oficial Greenn. O código executáve
 Campos opcionais vazios não anunciam garantia ou parcelamento. Não inserir marcadores, depoimentos sem comprovação, urgência artificial ou materiais editáveis não confirmados. O mockup oficial do Manual e seu arquivo de conteúdo ainda precisam ser conferidos antes de publicar.
 
 O checkout para amigos é privado e nunca é lido pelas páginas públicas. Divulgá-lo apenas diretamente aos destinatários da oferta.
+
+## Landings editoriais
+
+A estrutura da home está preservada. As cinco páginas usam a extensão `inc/editorial.php`, os textos de capítulos/FAQ de `inc/editorial-content.php` e templates próprios para Manual e Combo. Preços, nomes e checkout continuam nos campos existentes. Para preparar os registros no WordPress sem Terminal, usar **Aparência → Páginas de venda**, que cria rascunhos e associa templates mediante ação explícita. Revisar e publicar as páginas pelo editor após a aprovação.

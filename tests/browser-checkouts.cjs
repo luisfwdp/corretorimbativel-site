@@ -8,7 +8,8 @@ const assert=require('node:assert/strict');
   window.ciEvents=[];window.gtag=(...args)=>window.ciEvents.push(args);
   document.addEventListener('click',e=>{if(e.target.closest('a'))e.preventDefault()});
  });
- const base='http://127.0.0.1:9401';
+ const base=process.env.CI_CHECKOUT_URL||'http://127.0.0.1:9401';
+ assert.match(base,/^http:\/\/127\.0\.0\.1:\d+$/);
  await page.goto(base+'/?utm_source=qa');
  await page.locator('[data-product="ebook"]').click();
  assert.equal((await page.evaluate(()=>ciEvents)).filter(e=>e[1]==='select_item').length,1);
@@ -33,9 +34,11 @@ const assert=require('node:assert/strict');
    assert.equal(events.filter(e=>e[1]==='select_promotion').length,1);
    assert.equal(new URL(await page.locator('a.ci-decline').getAttribute('href')).pathname,`/completion/${slug}`);
   }else{
-   await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight));
+   await page.evaluate(()=>{document.activeElement.blur();window.scrollTo(0,document.getElementById('conteudo').offsetTop+100);});
    await page.waitForTimeout(150);
    assert.equal(await page.locator('#ci-sticky-cta').getAttribute('aria-hidden'),'false');
+   await page.locator('summary').first().focus();
+   assert.equal(await page.locator('#ci-sticky-cta').getAttribute('aria-hidden'),'true','Sticky must not cover keyboard focus');
   }
  }
  await browser.close();console.log('PASS: configured checkouts for 5 offers, product events, anchor distinction, UTMs, decline links, sticky accessibility; no purchase event. Fixture URLs only.');
