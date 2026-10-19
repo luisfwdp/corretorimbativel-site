@@ -4,7 +4,7 @@ import {Tracking} from '@/components/tracking';
 import {analyticsConfig,auditOffers} from '@/lib/commerce';
 import {site} from '@/lib/catalogue';
 import './globals.css';
-const playfair=localFont({src:[{path:'../public/fonts/playfair-regular.woff2',weight:'400'},{path:'../public/fonts/playfair-semibold.woff2',weight:'600'}],variable:'--font-playfair',display:'swap',fallback:['Georgia']});
+const playfair=localFont({src:[{path:'../public/fonts/playfair-regular.woff2',weight:'400'}],variable:'--font-playfair',display:'swap',fallback:['Georgia']});
 const lato=localFont({src:[{path:'../public/fonts/lato-regular.woff2',weight:'400'},{path:'../public/fonts/lato-bold.woff2',weight:'700'}],variable:'--font-lato',display:'swap',fallback:['Arial']});
 export const metadata:Metadata={metadataBase:new URL(site.url),applicationName:site.name,icons:{icon:'/images/logo.svg'}};
 export const viewport:Viewport={width:'device-width',initialScale:1,themeColor:'#102737'};

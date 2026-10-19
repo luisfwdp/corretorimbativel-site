@@ -33,7 +33,7 @@ for(const width of [1440,390]){
   const broken=await p.locator('main img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.getAttribute('alt')));assert.deepEqual(broken,[]);
   const axe=await new AxeBuilder({page:p}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
   report.results.push({slug:slug||'home',width,status:r.status(),words:text.split(/\s+/).length,violations:axe.violations.map(v=>({id:v.id,impact:v.impact})),brokenImages:broken});
-  await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}-hero.png`});await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
+  await p.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}-hero.png`});await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
  }
  await p.goto(base+'/ebook?utm_source=preview&utm_campaign=review');await p.locator('#hero .button').click();assert.ok(p.url().includes('#oferta'));const faq=p.locator('#faq details').first();await faq.locator('summary').click();assert.equal(await faq.getAttribute('open'),'');
  await p.goto(base+'/upsell-manual');await p.locator('button.decline').click();assert.ok(await p.locator('#decline-guidance').isVisible());await ctx.close();

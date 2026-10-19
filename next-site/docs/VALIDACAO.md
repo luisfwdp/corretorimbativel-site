@@ -42,9 +42,9 @@ Seis rotas em desktop 1440×1000 e mobile 390×844, respostas 200, imagens sem q
 
 Auditorias Lighthouse locais com build otimizado, emulação mobile/desktop e Chromium. Não são métricas de usuários reais ou da hospedagem Vercel. Os resultados numéricos finais estão em `docs/reports/lighthouse-summary.json`.
 
-Rodada de referência: eBook mobile 79 em performance, LCP 3,4s, TBT 480ms, CLS 0; Manual mobile 92, LCP 3,1s, TBT 130ms, CLS 0; Combo desktop 100, LCP 0,7s, TBT 20ms, CLS 0. Acessibilidade e boas práticas 100 nas três auditorias. SEO 69 porque o preview está intencionalmente bloqueado para indexação. Isso não autoriza remover noindex no ambiente de revisão.
+Rodada final do eBook após reduzir as fontes locais: mobile 97 em performance, LCP 2,7s, TBT 50ms, CLS 0. Referências anteriores ao último subset das fontes: Manual mobile 92, LCP 3,1s, TBT 130ms, CLS 0; Combo desktop 100, LCP 0,7s, TBT 20ms, CLS 0. As primeiras rodadas do eBook ficaram entre 74 e 79; o resultado final não deve ser interpretado como garantia de estabilidade entre ambientes. Acessibilidade e boas práticas 100 nas três auditorias. SEO 69 porque o preview está intencionalmente bloqueado para indexação. Isso não autoriza remover noindex no ambiente de revisão.
 
-Há espaço de melhoria no mobile, especialmente hidratação/JavaScript e tempo de renderização do título. Não declaro aprovação dos Core Web Vitals. Antes de tráfego pago, medir o deployment em condições de rede/dispositivo representativas e ajustar o que os dados mostrarem. O projeto usa imagens locais WebP (eBook ~87KB e autor ~55KB), fontes locais WOFF2 e Motion Mini; não há fonte remota bloqueando o carregamento ou dependência de WordPress para renderizar.
+Ainda há espaço de melhoria no tempo de renderização do título no mobile: o LCP local final de 2,7s está acima da referência de 2,5s. A redução de fontes manteve o conjunto necessário ao português e retirou um peso não utilizado. Não declaro aprovação dos Core Web Vitals. Antes de tráfego pago, medir o deployment em condições de rede/dispositivo representativas e ajustar o que os dados mostrarem. O projeto usa imagens locais WebP (eBook ~87KB e autor ~55KB), fontes locais WOFF2 e Motion Mini; não há fonte remota bloqueando o carregamento ou dependência de WordPress para renderizar.
 
 ## Comparação visual
 

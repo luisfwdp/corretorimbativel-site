@@ -29,7 +29,7 @@ for(const width of [1440,768,390,320]){
   report.routes.push({slug:slug||'home',width,words,images:'loaded',horizontalOverflow:false});
   if(width===1440||width===390){
    const axe=await new AxeBuilder({page:p}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();report.accessibility.push({slug:slug||'home',width,violations:axe.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)}))});
-   await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:path.join(out,(slug||'home')+'-'+(width===1440?'desktop':'mobile')+'-hero.png')});await p.screenshot({path:path.join(out,(slug||'home')+'-'+(width===1440?'desktop':'mobile')+'.png'),fullPage:true});
+   await p.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await p.screenshot({path:path.join(out,(slug||'home')+'-'+(width===1440?'desktop':'mobile')+'-hero.png')});await p.screenshot({path:path.join(out,(slug||'home')+'-'+(width===1440?'desktop':'mobile')+'.png'),fullPage:true});
   }
  }
  await ctx.close();
