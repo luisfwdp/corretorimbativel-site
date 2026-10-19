@@ -100,10 +100,10 @@ $para_quem = array(
 );
 ?>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 	<!-- HERO -->
-	<section class="ci-hero" id="hero">
+	<section class="ci-hero ci-reading-hero" id="hero">
 		<div class="ci-container ci-hero__grid">
 			<div class="ci-hero__content">
 				<p class="ci-eyebrow"><?php echo esc_html( $eyebrow ); ?></p>
@@ -111,20 +111,12 @@ $para_quem = array(
 				<p class="ci-hero__sub"><?php echo esc_html( $subheadline ); ?></p>
 				<p class="ci-hero__credit"><strong>Corretor Imbatível</strong> — conteúdo desenvolvido por Dr. Rodrigo Barbato Fabbris</p>
 				<div class="ci-hero__actions">
-					<?php ci_checkout_button( 'ebook', 'hero' ); ?>
+					<?php ci_editorial_primary( 'ebook', 'hero' ); ?>
 					<a href="#solucao" class="ci-link-arrow">Conheça o conteúdo ↓</a>
 				</div>
-				<p class="ci-hero__microcopy">Acesso digital &bull; Compra segura</p>
+				<p class="ci-hero__microcopy"><?php echo esc_html( ci_money( $product['price'] ) ); ?> · Acesso digital · Conteúdo educativo</p>
 			</div>
-			<div class="ci-hero__media">
-				<svg class="ci-hero__blueprint" viewBox="0 0 400 480" aria-hidden="true" focusable="false">
-					<rect x="20" y="20" width="360" height="440" fill="none" stroke="currentColor" stroke-width="1"/>
-					<line x1="20" y1="120" x2="380" y2="120" stroke="currentColor" stroke-width="1"/>
-					<line x1="200" y1="20" x2="200" y2="460" stroke="currentColor" stroke-width="1"/>
-					<circle cx="200" cy="240" r="90" fill="none" stroke="currentColor" stroke-width="1"/>
-				</svg>
-				<?php get_template_part( 'template-parts/mockup' ); ?>
-			</div>
+			<div class="ci-hero__media"><?php ci_editorial_visual( 'ebook', true ); ?></div>
 		</div>
 	</section>
 
@@ -145,7 +137,7 @@ $para_quem = array(
 			<h2 class="ci-heading">O problema não começa quando chega o processo.</h2>
 			<p class="ci-lede">Na maioria das vezes, ele começa muito antes: quando uma negociação importante é conduzida sem a formalização adequada.</p>
 
-			<ol class="ci-numbered-list">
+			<ul class="ci-numbered-list">
 				<?php foreach ( $dores as $i => $dor ) : ?>
 					<li class="ci-numbered-list__item">
 						<span class="ci-numbered-list__number"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
@@ -155,7 +147,7 @@ $para_quem = array(
 						</span>
 					</li>
 				<?php endforeach; ?>
-			</ol>
+			</ul>
 
 			<blockquote class="ci-pullquote">Uma negociação mal conduzida pode custar muito mais do que uma comissão.</blockquote>
 		</div>
@@ -194,7 +186,7 @@ $para_quem = array(
 		<div class="ci-container">
 			<h2 class="ci-heading">O que você vai aprender</h2>
 
-			<ol class="ci-numbered-list">
+			<ul class="ci-numbered-list">
 				<?php foreach ( $aprendizado as $i => $item ) : ?>
 					<li class="ci-numbered-list__item">
 						<span class="ci-numbered-list__number"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
@@ -204,9 +196,14 @@ $para_quem = array(
 						</span>
 					</li>
 				<?php endforeach; ?>
-			</ol>
+			</ul>
 		</div>
 	</section>
+
+	<section class="ci-section ci-practical-reading" id="resultado-pratico"><div class="ci-container ci-split">
+		<div class="ci-section-intro"><h2>Da leitura para as perguntas que você faz na negociação.</h2><p class="ci-lede">O preparo aparece antes de assinar, combinar ou deixar uma informação apenas na conversa.</p></div>
+		<div class="ci-prose"><p>Ao compreender os riscos e a importância da documentação, você ganha referências para observar a própria rotina: o serviço está claro para as partes? A proposta registra as condições apresentadas? É possível reconstruir o caminho da intermediação?</p><p>Imagine um atendimento em que comprador e vendedor continuam negociando depois da visita. Em vez de olhar apenas para o fechamento, uma postura preventiva também considera os registros da apresentação, as comunicações e os acordos feitos ao longo do trabalho.</p><p>O resultado esperado da leitura é ampliar o conhecimento e a atenção a esses cuidados. O material não garante o recebimento de comissão ou o desfecho de um conflito; ajuda você a reconhecer questões que podem exigir orientação jurídica individualizada.</p></div>
+	</div></section>
 
 	<!-- CONTEÚDO DO EBOOK -->
 	<section class="ci-section" id="conteudo">
@@ -215,14 +212,7 @@ $para_quem = array(
 			<div class="ci-ebook-content__body">
 				<h2 class="ci-heading">Dentro do Corretor Imbatível</h2>
 				<p class="ci-lede">Conhecimento jurídico aplicado à realidade do corretor de imóveis.</p>
-				<ol class="ci-chapter-list">
-					<?php foreach ( $capitulos as $i => $capitulo ) : ?>
-						<li class="ci-chapter-list__item">
-							<span class="ci-chapter-list__label">Capítulo <?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span>
-							<span class="ci-chapter-list__title"><?php echo esc_html( $capitulo ); ?></span>
-						</li>
-					<?php endforeach; ?>
-				</ol>
+				<?php ci_editorial_chapters( 'ebook' ); ?>
 			</div>
 		</div>
 	</section>
@@ -270,7 +260,12 @@ $para_quem = array(
 		</div>
 	</section>
 
-	<?php ci_sales_offer( 'ebook' ); ?>
+	<section class="ci-section ci-section--dark ci-commission-section" id="valor-comissao"><div class="ci-container ci-split">
+		<div class="ci-section-intro"><p class="ci-kicker">Uma perspectiva sobre o valor do preparo</p><h2>Quanto vale uma comissão?</h2><p>Considere apenas este exemplo hipotético: um imóvel de R$ 800 mil e uma comissão de 6%.</p></div>
+		<div class="ci-commission-example"><dl><div><dt>Valor do imóvel</dt><dd>R$ 800.000</dd></div><div><dt>Comissão ilustrativa</dt><dd>6%</dd></div><div class="ci-commission-example__result"><dt>Valor da comissão no exemplo</dt><dd>R$ 48.000</dd></div></dl><p>Quando uma negociação envolve valores assim, vale refletir sobre a atenção dada aos acordos, às responsabilidades e aos registros da sua atuação. O conhecimento jurídico faz parte desse preparo.</p><p class="ci-decision-note">Exemplo matemático ilustrativo. O percentual não é uma recomendação, e a leitura não garante remuneração, recuperação de valores ou retorno financeiro.</p></div>
+	</div></section>
+
+	<?php ci_editorial_offer( 'ebook' ); ?>
 
 
 	<?php if ( ! empty( $testimonials ) ) : ?>
@@ -296,11 +291,11 @@ $para_quem = array(
 	<?php get_template_part( 'template-parts/faq', null, array( 'items' => $faq_items ) ); ?>
 
 	<!-- CTA FINAL -->
-	<section class="ci-section ci-cta-final" id="cta-final">
+	<section class="ci-section ci-cta-final ci-ebook-closing" id="cta-final">
 		<div class="ci-container">
 			<h2 class="ci-heading">A próxima negociação começa antes do primeiro &ldquo;sim&rdquo;.</h2>
 			<p class="ci-lede">Comece com mais conhecimento, organização e segurança para conduzir cada etapa da sua atuação profissional.</p>
-			<?php ci_checkout_button( 'ebook', 'cta_final' ); ?>
+			<?php ci_editorial_primary( 'ebook', 'cta_final' ); ?>
 			<div class="ci-cta-final__mockup"><?php get_template_part( 'template-parts/mockup' ); ?></div>
 		</div>
 	</section>
