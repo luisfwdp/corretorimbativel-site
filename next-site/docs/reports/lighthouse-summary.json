@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "ebook",
+    "device": "mobile",
+    "phase": "final-font-subset",
+    "environment": "local optimized build; laboratory only",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "metrics": {
+      "largest-contentful-paint": {
+        "display": "2.7 s",
+        "value": 2672.22135
+      },
+      "cumulative-layout-shift": {
+        "display": "0",
+        "value": 0
+      },
+      "total-blocking-time": {
+        "display": "50 ms",
+        "value": 51
+      }
+    }
+  },
+  {
+    "slug": "manual-juridico",
+    "device": "mobile",
+    "phase": "reference-before-final-font-subset",
+    "environment": "local optimized build; laboratory only",
+    "scores": {
+      "performance": 92,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "metrics": {
+      "largest-contentful-paint": {
+        "display": "3.1 s",
+        "value": 3130.8761
+      },
+      "cumulative-layout-shift": {
+        "display": "0",
+        "value": 0
+      },
+      "total-blocking-time": {
+        "display": "130 ms",
+        "value": 127
+      }
+    }
+  },
+  {
+    "slug": "combo",
+    "device": "desktop",
+    "phase": "reference-before-final-font-subset",
+    "environment": "local optimized build; laboratory only",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "metrics": {
+      "largest-contentful-paint": {
+        "display": "0.7 s",
+        "value": 707.8109
+      },
+      "cumulative-layout-shift": {
+        "display": "0",
+        "value": 0
+      },
+      "total-blocking-time": {
+        "display": "20 ms",
+        "value": 19.5
+      }
+    }
+  }
+]

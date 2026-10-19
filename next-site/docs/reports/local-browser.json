@@ -1,0 +1,245 @@
+{
+  "routes": [
+    {
+      "slug": "home",
+      "width": 1440,
+      "words": 124,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "ebook",
+      "width": 1440,
+      "words": 1298,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 1440,
+      "words": 1479,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "combo",
+      "width": 1440,
+      "words": 1559,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 1440,
+      "words": 219,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 1440,
+      "words": 208,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "home",
+      "width": 768,
+      "words": 124,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "ebook",
+      "width": 768,
+      "words": 1298,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 768,
+      "words": 1479,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "combo",
+      "width": 768,
+      "words": 1559,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 768,
+      "words": 219,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 768,
+      "words": 208,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "home",
+      "width": 390,
+      "words": 124,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "ebook",
+      "width": 390,
+      "words": 1298,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 390,
+      "words": 1479,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "combo",
+      "width": 390,
+      "words": 1559,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 390,
+      "words": 219,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 390,
+      "words": 208,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "home",
+      "width": 320,
+      "words": 124,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "ebook",
+      "width": 320,
+      "words": 1298,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 320,
+      "words": 1479,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "combo",
+      "width": 320,
+      "words": 1559,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 320,
+      "words": 219,
+      "images": "loaded",
+      "horizontalOverflow": false
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 320,
+      "words": 208,
+      "images": "loaded",
+      "horizontalOverflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "slug": "home",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "ebook",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "combo",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "slug": "home",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "slug": "ebook",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "slug": "combo",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    "Home → landing with UTMs, excludes payment token",
+    "Offer anchor emits no checkout/purchase",
+    "Keyboard skip/focus",
+    "Native FAQ",
+    "Explicit refusal preserves original URL",
+    "200% typography reflow",
+    "Preview noindex, sitemap excludes upsells, 404 and OG",
+    "SSR narrative and FAQ work with JS disabled"
+  ],
+  "errors": []
+}
