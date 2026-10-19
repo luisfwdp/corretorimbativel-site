@@ -37,24 +37,53 @@
 	}
 
 	document.addEventListener( 'DOMContentLoaded', function () {
-		ciTrack( 'view_landing_page' );
-
-		/* CTA clicks -------------------------------------------------- */
-		var ctas = document.querySelectorAll( '.ci-js-cta' );
-		ctas.forEach( function ( cta ) {
-			if ( cta.hasAttribute( 'href' ) && /^https?:\/\//.test( cta.getAttribute( 'href' ) ) ) {
-				cta.setAttribute( 'href', ciAppendUtm( cta.getAttribute( 'href' ) ) );
+		var product = window.ciData && window.ciData.product;
+		function itemParams( p ) {
+			return p ? { currency: 'BRL', value: Number( p.price ), items: [ { item_id: p.id, item_name: p.name, price: Number( p.price ), quantity: 1 } ] } : {};
+		}
+		ciTrack( 'view_landing_page', product ? { product_id: product.id } : {} );
+		if ( product ) {
+			ciTrack( 'view_item', itemParams( product ) );
+			if ( product.promotion ) {
+				ciTrack( 'view_promotion', Object.assign( { promotion_id: product.id }, itemParams( product ) ) );
 			}
+		}
 
-			cta.addEventListener( 'click', function () {
-				var eventName = cta.getAttribute( 'data-event' ) || 'click_checkout';
-				var location  = cta.getAttribute( 'data-location' ) || 'unknown';
-
-				ciTrack( eventName, { cta_location: location } );
-
-				if ( 'oferta' === location ) {
-					ciTrack( 'begin_checkout', { cta_location: location } );
+		// Pass attribution through home -> landing -> checkout, without persisting personal data.
+		document.querySelectorAll( 'a[href]' ).forEach( function ( link ) {
+			var href = link.getAttribute( 'href' );
+			if ( href.charAt( 0 ) === '#' ) { return; }
+			try {
+				var target = new URL( href, window.location.href );
+				if ( target.origin === window.location.origin || link.hasAttribute( 'data-checkout' ) ) {
+					link.href = ciAppendUtm( href );
 				}
+			} catch ( e ) { /* Invalid optional links must not interrupt other interactions. */ }
+		} );
+		document.querySelectorAll( '.ci-js-product' ).forEach( function ( link ) {
+			link.addEventListener( 'click', function () {
+				ciTrack( 'select_item', Object.assign( { item_list_id: 'home_products' }, itemParams( { id: link.dataset.product, name: link.dataset.name, price: link.dataset.price } ) ) );
+			} );
+		} );
+		document.querySelectorAll( '[data-checkout]' ).forEach( function ( cta ) {
+			cta.addEventListener( 'click', function () {
+				if ( ! product || cta.dataset.checkout !== product.id ) { return; }
+				var params = Object.assign( { cta_location: cta.dataset.location || 'unknown' }, itemParams( product ) );
+				ciTrack( 'click_checkout', params );
+				if ( product.promotion ) { ciTrack( 'select_promotion', Object.assign( { promotion_id: product.id }, params ) ); }
+				ciTrack( 'begin_checkout', params );
+			} );
+		} );
+		// Observe the provider's generated button without replacing its payment handler.
+		document.querySelectorAll( '.ci-greenn-native' ).forEach( function ( container ) {
+			container.addEventListener( 'click', function ( event ) {
+				if ( ! product || ! event.target.closest( '[data-greenn-upsell]' ) ) { return; }
+				ciTrack( 'select_promotion', Object.assign( { promotion_id: product.id }, itemParams( product ) ) );
+			} );
+		} );
+		document.querySelectorAll( '.ci-faq__list details' ).forEach( function ( details ) {
+			details.addEventListener( 'toggle', function () {
+				if ( details.open ) { ciTrack( 'faq_open', { question: details.querySelector( 'summary' ).textContent.trim() } ); }
 			} );
 		} );
 
@@ -85,7 +114,11 @@
 			var observer = new IntersectionObserver(
 				function ( entries ) {
 					entries.forEach( function ( entry ) {
-						stickyCta.classList.toggle( 'is-visible', ! entry.isIntersecting );
+						var visible = ! entry.isIntersecting;
+						stickyCta.hidden = ! visible;
+						stickyCta.inert = ! visible;
+						stickyCta.setAttribute( 'aria-hidden', visible ? 'false' : 'true' );
+						stickyCta.classList.toggle( 'is-visible', visible );
 					} );
 				},
 				{ rootMargin: '-10% 0px 0px 0px' }
