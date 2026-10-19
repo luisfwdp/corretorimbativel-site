@@ -22,4 +22,4 @@ Node 24; versões de runtime travadas no package-lock. Sem banco, login ou entre
 - `components/ui/accordion.tsx`: componente adaptado de Motion Primitives, selecionado no 21st.dev; procedência e MIT em `docs/21ST-REVIEW.md`.
 - Fontes locais Playfair Display e Lato, sob OFL. Assets originais do eBook e autor otimizados para WebP. O Manual não utiliza capa inventada.
 
-Consulte `docs/MIGRACAO.md`, `docs/GREENN.md` e `docs/VALIDACAO.md` para bloqueios, resultados e rollback. Não mudar SITE_RELEASE para production nem conectar o domínio antes da aprovação expressa.
+Preview e commit implantado em `docs/VERCEL-PREVIEW.md`. Consulte `docs/MIGRACAO.md`, `docs/GREENN.md` e `docs/VALIDACAO.md` para bloqueios, resultados e rollback. Não mudar SITE_RELEASE para production nem conectar o domínio antes da aprovação expressa.
