@@ -1,3 +1,5 @@
+> Atualização do ecossistema: consulte [FUNIL-DE-VENDAS.md](FUNIL-DE-VENDAS.md) antes de publicar. As referências abaixo a `main` e à instalação inicial são históricas; a branch padrão auditada é `claude/corretor-imbativel-landing-vbkg56`. O estado real do cPanel precisa ser conferido. Os scripts não criam páginas WordPress e `rsync` não é atômico.
+
 # Deployment — HostGator / cPanel
 
 Fluxo alvo:
