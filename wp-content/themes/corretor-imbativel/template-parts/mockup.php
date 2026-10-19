@@ -8,8 +8,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$mockup_image = get_theme_mod( 'ci_mockup_image' );
-$product_name = get_theme_mod( 'ci_product_name', 'Corretor Imbatível' );
+$ebook        = ci_product( 'ebook' );
+$mockup_image = $ebook['image'];
+$product_name = $ebook['name'];
 ?>
 <?php if ( $mockup_image ) : ?>
 	<img

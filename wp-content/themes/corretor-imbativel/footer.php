@@ -16,19 +16,19 @@ defined( 'ABSPATH' ) || exit;
 			<p class="ci-footer__copy">
 				&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> Corretor Imbatível · Barbato Fabbris Advogados Associados. Todos os direitos reservados.
 			</p>
-			<p class="ci-footer__links">
-				<a href="#">Política de Privacidade</a>
-				<span aria-hidden="true">&bull;</span>
-				<a href="#">Termos de Uso</a>
-			</p>
+			<?php $privacy = get_privacy_policy_url(); $terms = ci_sales_url( get_theme_mod( 'ci_terms_url', '' ) ); ?>
+			<?php if ( $privacy || $terms ) : ?><p class="ci-footer__links">
+				<?php if ( $privacy ) : ?><a href="<?php echo esc_url( $privacy ); ?>">Política de Privacidade</a><?php endif; ?>
+				<?php if ( $terms ) : ?><a href="<?php echo esc_url( $terms ); ?>">Termos de Uso</a><?php endif; ?>
+			</p><?php endif; ?>
 		</div>
 	</footer>
 
-	<div class="ci-sticky-cta" id="ci-sticky-cta" aria-hidden="true">
-		<a href="#oferta" class="ci-btn ci-btn--primary ci-btn--block ci-js-cta" data-event="click_checkout" data-location="sticky">
-			<?php echo esc_html( get_theme_mod( 'ci_cta_sticky', 'QUERO ACESSAR' ) ); ?>
-		</a>
+	<?php $ci_key = ci_current_product(); if ( $ci_key && ! ci_is_upsell( $ci_key ) ) : ?>
+	<div class="ci-sticky-cta" id="ci-sticky-cta" hidden inert aria-hidden="true">
+		<?php ci_checkout_button( $ci_key, 'sticky' ); ?>
 	</div>
+	<?php endif; ?>
 
 	<?php wp_footer(); ?>
 </body>

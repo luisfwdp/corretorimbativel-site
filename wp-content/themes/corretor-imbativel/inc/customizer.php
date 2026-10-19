@@ -22,10 +22,10 @@ function ci_customize_register( $wp_customize ) {
 
 	$offer_fields = array(
 		'ci_product_name'   => array( 'label' => 'Nome do produto', 'default' => 'Corretor Imbatível — Manual Jurídico para Corretores de Imóveis', 'type' => 'text' ),
-		'ci_price_old'      => array( 'label' => 'Preço "de" (riscado)', 'default' => 'R$ 397,00', 'type' => 'text' ),
-		'ci_price_new'      => array( 'label' => 'Preço "por"', 'default' => 'R$ 97,00', 'type' => 'text' ),
-		'ci_installment'    => array( 'label' => 'Texto de parcelamento', 'default' => '[PARCELAMENTO]', 'type' => 'text' ),
-		'ci_checkout_url'   => array( 'label' => 'Link de checkout (Greenn)', 'default' => 'https://payfast.greenn.com.br/123089', 'type' => 'url' ),
+		'ci_price_old'      => array( 'label' => 'Preço "de" (riscado)', 'default' => '', 'type' => 'text' ),
+		'ci_price_new'      => array( 'label' => 'Preço "por"', 'default' => 'R$ 147,00', 'type' => 'text' ),
+		'ci_installment'    => array( 'label' => 'Texto de parcelamento', 'default' => '', 'type' => 'text' ),
+		'ci_checkout_url'   => array( 'label' => 'Checkout legado (preservado; novas páginas usam Vendas)', 'default' => '', 'type' => 'url' ),
 		'ci_guarantee_text' => array( 'label' => 'Texto da garantia (deixe em branco para não exibir a seção)', 'default' => '', 'type' => 'text' ),
 	);
 
@@ -137,7 +137,7 @@ function ci_customize_register( $wp_customize ) {
 		'ci_testimonials',
 		array(
 			'label'       => 'Depoimentos (um por linha: Nome | Cargo | Depoimento)',
-			'description' => 'Deixe em branco para manter os placeholders [DEPOIMENTO_01] etc.',
+			'description' => 'Deixe em branco para ocultar a seção.',
 			'section'     => 'ci_copy',
 			'type'        => 'textarea',
 		)

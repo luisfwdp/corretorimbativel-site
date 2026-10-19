@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CI_THEME_VERSION', '1.0.0' );
+define( 'CI_THEME_VERSION', '1.1.0' );
 define( 'CI_THEME_DIR', get_template_directory() );
 define( 'CI_THEME_URI', get_template_directory_uri() );
 
@@ -41,6 +41,7 @@ function ci_assets() {
 	);
 
 	wp_enqueue_style( 'ci-main', CI_THEME_URI . '/assets/css/main.css', array(), CI_THEME_VERSION );
+	wp_enqueue_style( 'ci-funnel', CI_THEME_URI . '/assets/css/funnel.css', array( 'ci-main' ), CI_THEME_VERSION );
 
 	wp_enqueue_script( 'ci-main', CI_THEME_URI . '/assets/js/main.js', array(), CI_THEME_VERSION, true );
 
@@ -48,7 +49,7 @@ function ci_assets() {
 		'ci-main',
 		'ciData',
 		array(
-			'checkoutUrl' => esc_url_raw( get_theme_mod( 'ci_checkout_url', '' ) ),
+			'product' => ci_sales_tracking_data(),
 			'ga4Id'        => esc_js( get_theme_mod( 'ci_ga4_id', '' ) ),
 		)
 	);
@@ -77,7 +78,15 @@ function ci_tracking_head() {
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
+			<?php if ( ci_is_upsell( ci_current_product() ) ) : ?>
+			var ciAnalyticsUrl = new URL(window.location.href);
+			Array.from(ciAnalyticsUrl.searchParams.keys()).forEach(function(key) {
+				if (key.toLowerCase() === 'token') { ciAnalyticsUrl.searchParams.delete(key); }
+			});
+			gtag('config', '<?php echo esc_js( $ga4_id ); ?>', {page_location: ciAnalyticsUrl.toString()});
+			<?php else : ?>
 			gtag('config', '<?php echo esc_js( $ga4_id ); ?>');
+			<?php endif; ?>
 		</script>
 		<?php
 	}
@@ -85,3 +94,5 @@ function ci_tracking_head() {
 add_action( 'wp_head', 'ci_tracking_head', 20 );
 
 require CI_THEME_DIR . '/inc/customizer.php';
+
+require CI_THEME_DIR . '/inc/funnel.php';

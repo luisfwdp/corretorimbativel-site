@@ -1,32 +1,11 @@
 # Tracking
 
-## Configuração
+Consulte [FUNIL-DE-VENDAS.md](FUNIL-DE-VENDAS.md#tracking-e-seo) para eventos, parâmetros, UTMs e requisitos de conversão real.
 
-Em **Aparência → Personalizar → Corretor Imbatível — Tracking**:
+O GA4 usa o campo existente `ci_ga4_id`. Nenhum Pixel removido na base foi reativado. Eventos são enviados a `gtag` e, se disponível por integração correta, `fbq`. A instalação e o consentimento devem ser homologados no WordPress real.
 
-- **Google Analytics 4 — Measurement ID**: formato `G-XXXXXXXXXX`. Enquanto vazio, o GA4 não é carregado (nenhum ID fictício foi inserido no código).
+Eventos por produto: `view_item`, `select_item`, `begin_checkout`; ofertas complementares: `view_promotion`, `select_promotion`. Eventos legados `view_landing_page`, `click_checkout`, `faq_open`, `scroll_50` e `scroll_90` continuam disponíveis.
 
-O script só é impresso no `<head>` quando o campo está preenchido (`functions.php`, função `ci_tracking_head()`), então não há impacto de performance nem chamadas de rede desnecessárias antes da configuração.
+O tema não dispara `purchase`. Cliques e abertura de páginas não comprovam venda. Usar integração oficial Greenn ou backend autenticado, confirmar estado pago e deduplicar pelo ID da transação antes de registrar compra. Não foi criado webhook sem autenticação confirmada.
 
-Não há integração com Meta Pixel/Conversions API no tema no momento (removida — o Pixel colado anteriormente era de outro produto). `assets/js/main.js` já checa `typeof window.fbq === 'function'` antes de disparar qualquer evento, então religar o Meta Pixel no futuro (quando o Pixel correto do Corretor Imbatível estiver em mãos) é só reintroduzir o snippet de carregamento do `fbq` — os eventos de conversão abaixo já ficam prontos para ele automaticamente, sem precisar editar `main.js`.
-
-## Eventos de conversão implementados
-
-Todos em `assets/js/main.js`, disparados via `gtag('event', ...)` (GA4) quando o script está carregado:
-
-| Evento | Quando dispara |
-|---|---|
-| `view_landing_page` | Ao carregar a página |
-| `click_checkout` | Clique em qualquer CTA (`data-event="click_checkout"`), com parâmetro `cta_location` (`hero`, `oferta`, `sticky`, `cta_final`) |
-| `begin_checkout` | Clique no CTA da seção Oferta especificamente |
-| `scroll_50` | Usuário rola 50% da página |
-| `scroll_90` | Usuário rola 90% da página |
-| `faq_open` | Usuário expande uma pergunta do FAQ, com o texto da pergunta |
-
-## UTM passthrough
-
-`main.js` lê `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term` da URL atual e os anexa automaticamente a qualquer CTA cujo `href` seja uma URL absoluta (ou seja, o link de checkout da Greenn), preservando a atribuição da campanha até o checkout.
-
-## Adicionando novos eventos
-
-Use o helper `ciTrack('nome_do_evento', { chave: 'valor' })` já definido em `main.js` — ele cobre GA4 e Meta Pixel automaticamente.
+UTMs passam da home às landings e aos checkouts. Tokens da Greenn não são copiados para links ou parâmetros de eventos; se usar upsell nativo, conferir também o tratamento da URL coletada pelo analytics.

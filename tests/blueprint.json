@@ -1,0 +1,32 @@
+{
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "6.8"
+  },
+  "steps": [
+    {
+      "step": "activateTheme",
+      "themeFolderName": "corretor-imbativel"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; update_option('permalink_structure','/%postname%/'); set_theme_mod('ci_price_new','R$ 97,00'); set_theme_mod('ci_price_old','R$ 397,00'); set_theme_mod('ci_checkout_url','https://payfast.greenn.com.br/123089'); set_theme_mod('ci_mockup_image','https://corretorimbativel.com.br/wp-content/uploads/2026/08/ChatGPT-Image-8-de-ago.-de-2026-11_27_31.png'); set_theme_mod('ci_author_photo','https://corretorimbativel.com.br/wp-content/uploads/2026/08/Untitled-design-1.png'); flush_rewrite_rules(false);"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp eval-file /tools/register-funnel-pages.php"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp eval-file /tools/register-funnel-pages.php apply publish"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp eval-file /tools/register-funnel-pages.php apply publish"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp eval-file /tests/wordpress.php"
+    }
+  ]
+}
