@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "home",
+    "headline": "Sua carreira imobiliária merece mais segurança jurídica.",
+    "brokenAnchors": [],
+    "description": "Conheça o eBook, o Manual Jurídico e o Combo Completo do Corretor Imbatível e escolha o material ideal para sua atuação profissional.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  },
+  {
+    "slug": "ebook",
+    "headline": "Você conhece os riscos jurídicos que podem surgir durante uma negociação imobiliária?",
+    "brokenAnchors": [],
+    "description": "Estude direitos, deveres, comissão e cuidados da corretagem com o eBook Corretor Imbatível. Conteúdo educativo por R$ 147,00.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  },
+  {
+    "slug": "manual-juridico",
+    "headline": "Na corretagem, o que foi combinado também precisa ser bem documentado.",
+    "brokenAnchors": [],
+    "description": "Conheça os cuidados com contratos, propostas, distratos e registros da intermediação. Manual Jurídico digital por R$ 97,00.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  },
+  {
+    "slug": "combo",
+    "headline": "Conheça os riscos da corretagem. Entenda os documentos. Prepare-se melhor para negociar.",
+    "brokenAnchors": [],
+    "description": "Reúna o eBook Corretor Imbatível e o Manual Jurídico por R$ 197,00. Economia de R$ 47,00 em relação à compra separada.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  },
+  {
+    "slug": "upsell-manual",
+    "headline": "Complemente seu eBook com orientação documental por mais R$ 50,00.",
+    "brokenAnchors": [],
+    "description": "Oferta opcional do Manual Jurídico por mais R$ 50,00 para compradores do eBook. Confira o valor adicional e as condições da compra.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  },
+  {
+    "slug": "upsell-ebook",
+    "headline": "Aprofunde seu estudo da corretagem com o eBook por mais R$ 100,00.",
+    "brokenAnchors": [],
+    "description": "Oferta opcional do eBook por mais R$ 100,00 para compradores do Manual. Confira o valor adicional e as condições da compra.",
+    "ogImage": "https://corretorimbativel.com.br/opengraph-image",
+    "ctaState": "blocked: checkout not verified"
+  }
+]

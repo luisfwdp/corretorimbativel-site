@@ -1,0 +1,7 @@
+{
+  "singleReveal": true,
+  "revealEnds": true,
+  "revisitDoesNotReplay": true,
+  "reducedMotionCancels": true,
+  "reducedMotionDisablesHover": true
+}
