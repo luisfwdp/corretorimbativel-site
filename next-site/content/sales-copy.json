@@ -1,0 +1,82 @@
+{
+  "ebook": {
+    "hero": {
+      "eyebrow": "eBook Corretor Imbatível",
+      "headline": "Você conhece os riscos jurídicos que podem surgir durante uma negociação imobiliária?",
+      "subheadline": "O eBook Corretor Imbatível explica direitos, deveres e cuidados jurídicos da profissão. Estude situações que envolvem comissão, responsabilidade e intermediação para reconhecer pontos de atenção nas suas negociações."
+    },
+    "intermediate": {
+      "título": "Estude os cuidados por trás do atendimento, da proposta e da comissão.",
+      "texto": "Os sete capítulos do Corretor Imbatível reúnem uma base jurídica para você examinar essas etapas com mais conhecimento.",
+      "microcopy": "eBook digital por R$ 147,00."
+    },
+    "closing": {
+      "título": "Conheça a base jurídica da profissão que você exerce.",
+      "texto": "Estude os cuidados com a intermediação, a responsabilidade profissional e os registros do seu trabalho nos sete capítulos do Corretor Imbatível.",
+      "microcopy": "R$ 147,00. Conteúdo digital educativo."
+    },
+    "offer": {
+      "description": "Uma leitura digital com sete capítulos sobre atuação profissional, base jurídica, comissão, documentação e boas práticas da corretagem.",
+      "note": "Você seguirá para o checkout da Greenn. Confira as condições de pagamento, entrega e acesso antes de concluir a compra.",
+      "educational": "Material de finalidade educacional e informativa. Não substitui orientação jurídica individualizada nem garante resultados em negociações ou conflitos."
+    }
+  },
+  "manual-juridico": {
+    "hero": {
+      "eyebrow": "Manual Jurídico para Corretores de Imóveis e Imobiliárias",
+      "headline": "Na corretagem, o que foi combinado também precisa ser bem documentado.",
+      "subheadline": "O Manual Jurídico para Corretores de Imóveis e Imobiliárias explica a função de contratos, propostas, distratos e registros da intermediação. Uma leitura para compreender os cuidados com a formalização e revisar sua organização documental."
+    },
+    "intermediate": {
+      "título": "Conheça a função dos documentos que acompanham seu trabalho.",
+      "texto": "Reúna orientações sobre intermediação, propostas, contratos, distratos e comissão em uma leitura com foco documental.",
+      "microcopy": "Manual digital por R$ 97,00."
+    },
+    "closing": {
+      "título": "Estude os cuidados com os documentos que passam pela sua rotina.",
+      "texto": "Conheça a finalidade de contratos, propostas, distratos e registros da intermediação no Manual Jurídico.",
+      "microcopy": "R$ 97,00. Conteúdo digital educativo."
+    },
+    "offer": {
+      "description": "Orientações de leitura sobre contratos, propostas, distratos, comissão e registros da intermediação.",
+      "note": "Você seguirá para o checkout da Greenn. Confira as condições de pagamento, entrega e acesso antes de concluir a compra.",
+      "educational": "Material de finalidade educacional e informativa. Não substitui orientação jurídica individualizada nem garante resultados em negociações ou conflitos."
+    }
+  },
+  "combo": {
+    "hero": {
+      "eyebrow": "Combo Completo • eBook + Manual Jurídico",
+      "headline": "Conheça os riscos da corretagem. Entenda os documentos. Prepare-se melhor para negociar.",
+      "subheadline": "O Combo Completo reúne o eBook Corretor Imbatível e o Manual Jurídico. Conhecimento sobre a profissão e orientação documental por R$ 197,00, com economia de R$ 47,00 em relação à compra separada."
+    },
+    "intermediate": {
+      "título": "Reúna as duas leituras e economize R$ 47,00.",
+      "texto": "O eBook custa R$ 147,00 e o Manual, R$ 97,00. No Combo, você adquire os dois por R$ 197,00.",
+      "microcopy": "Economia calculada sobre o total de R$ 244,00 dos produtos separados."
+    },
+    "closing": {
+      "título": "eBook e Manual Jurídico por R$ 197,00.",
+      "texto": "Reúna conhecimento sobre a profissão e orientação documental com economia de R$ 47,00 em relação à compra separada.",
+      "microcopy": "Dois materiais digitais educativos. Pagamento pela Greenn."
+    },
+    "offer": {
+      "description": "Inclui o eBook Corretor Imbatível e o Manual Jurídico para Corretores de Imóveis e Imobiliárias. Conhecimento sobre a profissão e orientação documental em dois materiais digitais de leitura.",
+      "note": "Você seguirá para o checkout específico do Combo na Greenn. Confira as condições de pagamento, entrega e acesso antes de concluir a compra.",
+      "educational": "Os materiais possuem finalidade educacional e informativa. Não substituem orientação jurídica individualizada nem garantem resultados em negociações ou conflitos."
+    }
+  },
+  "upsell-manual": {
+    "hero": {
+      "eyebrow": "Oferta complementar para compradores do eBook",
+      "headline": "Complemente seu eBook com orientação documental por mais R$ 50,00.",
+      "subheadline": "O Manual Jurídico concentra a leitura em contratos, propostas, distratos e registros da intermediação. Um complemento para relacionar o conhecimento do Corretor Imbatível aos cuidados com a formalização das negociações."
+    }
+  },
+  "upsell-ebook": {
+    "hero": {
+      "eyebrow": "Oferta complementar para compradores do Manual Jurídico",
+      "headline": "Aprofunde seu estudo da corretagem com o eBook por mais R$ 100,00.",
+      "subheadline": "O Corretor Imbatível apresenta direitos, deveres, limites da profissão e boas práticas. Uma leitura para relacionar a documentação estudada no Manual às responsabilidades de quem intermedeia negócios imobiliários."
+    }
+  }
+}

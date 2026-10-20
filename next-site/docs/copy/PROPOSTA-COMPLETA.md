@@ -1,10 +1,10 @@
 # Corretor Imbatível — copy completa para aprovação
 
-Versão editorial 1.0, 20/10/2026. **Proposta, ainda não implementada.**
+Versão editorial 1.1, 20/10/2026. Estrutura aprovada, com headlines e ajustes editoriais solicitados pelo proprietário. Implementada na branch isolada `codex/copy-aprovada-next` para validação em preview; não publicada no domínio oficial.
 
 Leia junto à [auditoria com dez comparativos](AUDITORIA.md). Cada página abaixo contém o texto destinado ao visitante, separado por posições editoriais. Não é uma proposta de mudança de layout. A implementação deverá aproveitar as seções e os componentes existentes, sem retirar conteúdo para caber no design.
 
-As indicações “Primeira dobra”, “CTA intermediário”, “Oferta” e “Encerramento” identificam a posição dos blocos; não precisam aparecer como títulos no site. CTAs de compra só podem ficar ativos quando o checkout correspondente estiver validado. Enquanto isso, preservar os estados atuais “Conhecer a oferta” e “Oferta indisponível no momento”. Não há autorização para publicar esta copy.
+As indicações “Primeira dobra”, “CTA intermediário”, “Oferta” e “Encerramento” identificam a posição dos blocos; não precisam aparecer como títulos no site. CTAs de compra só podem ficar ativos quando o checkout correspondente estiver validado. Enquanto isso, preservar os estados atuais “Conhecer a oferta” e “Oferta indisponível no momento”. A autorização atual limita-se à implementação e à geração de preview na Vercel. Publicação no domínio oficial, merge em produção e DNS exigem autorização separada.
 
 ---
 
@@ -14,9 +14,9 @@ As indicações “Primeira dobra”, “CTA intermediário”, “Oferta” e �
 
 **Eyebrow:** eBook Corretor Imbatível
 
-**Headline:** Entenda os cuidados jurídicos por trás da sua próxima negociação.
+**Headline:** Você conhece os riscos jurídicos que podem surgir durante uma negociação imobiliária?
 
-**Subheadline:** O eBook Corretor Imbatível explica direitos, deveres e pontos de atenção da corretagem. Uma leitura para compreender sua atuação, reconhecer riscos e fazer perguntas mais precisas antes de assumir compromissos.
+**Subheadline:** O eBook Corretor Imbatível explica direitos, deveres e cuidados jurídicos da profissão. Estude situações que envolvem comissão, responsabilidade e intermediação para reconhecer pontos de atenção nas suas negociações.
 
 **Preço:** R$ 147,00
 
@@ -209,9 +209,9 @@ O produto é digital e o pagamento é processado pela Greenn. Confira no checkou
 
 **Eyebrow:** Manual Jurídico para Corretores de Imóveis e Imobiliárias
 
-**Headline:** Dê atenção ao que precisa ficar registrado em cada negociação.
+**Headline:** Na corretagem, o que foi combinado também precisa ser bem documentado.
 
-**Subheadline:** Entenda a função de contratos, propostas e distratos e os cuidados com os registros da intermediação. O Manual Jurídico concentra essas orientações em uma leitura voltada à formalização e à organização documental.
+**Subheadline:** O Manual Jurídico para Corretores de Imóveis e Imobiliárias explica a função de contratos, propostas, distratos e registros da intermediação. Uma leitura para compreender os cuidados com a formalização e revisar sua organização documental.
 
 **Preço:** R$ 97,00
 
@@ -391,7 +391,7 @@ O produto é digital e a compra é processada pela Greenn. As condições de ent
 
 **Eyebrow:** Combo Completo • eBook + Manual Jurídico
 
-**Headline:** Entenda os riscos da corretagem e os cuidados com os documentos da negociação.
+**Headline:** Conheça os riscos da corretagem. Entenda os documentos. Prepare-se melhor para negociar.
 
 **Subheadline:** O Combo Completo reúne o eBook Corretor Imbatível e o Manual Jurídico. Conhecimento sobre a profissão e orientação documental por R$ 197,00, com economia de R$ 47,00 em relação à compra separada.
 

@@ -5,7 +5,7 @@ import {chromium} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const access=JSON.parse(await fs.readFile(process.env.CI_PREVIEW_ACCESS_FILE||'/tmp/ci-next-preview-access.json','utf8'));
 const root=new URL(access.url);assert.match(root.hostname,/^corretor-imbativel-next-preview-[a-z0-9]+\.vercel\.app$/);
-const base=root.origin;const out='/workspace/scratch/corretor-next-preview/hosted';await fs.mkdir(out,{recursive:true});const report={deployment:base,results:[],errors:[]};
+const base=root.origin;const out=process.env.CI_NEXT_RESULTS||'/workspace/scratch/corretor-next-preview/hosted';await fs.mkdir(out,{recursive:true});const report={deployment:base,results:[],errors:[]};
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],headless:true});
 for(const width of [1440,390]){
  const ctx=await browser.newContext({viewport:{width,height:width===1440?1000:844},reducedMotion:'reduce'});
