@@ -9,7 +9,7 @@ if(!/^http:\/\/127\.0\.0\.1:\d+$/.test(base))throw Error('Local test only; use s
 const paths=['','ebook','manual-juridico','combo','upsell-manual','upsell-ebook'];
 const report={routes:[],accessibility:[],interactions:[],errors:[]};
 await fs.mkdir(out,{recursive:true});
-const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],headless:true});
+const b=await chromium.launch({executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH||'/usr/bin/chromium',args:['--no-sandbox'],headless:true});
 for(const width of [1440,768,390,320]){
  const ctx=await b.newContext({viewport:{width,height:width===1440?1000:844},reducedMotion:'reduce'});const p=await ctx.newPage();p.on('pageerror',e=>report.errors.push(e.message));
  for(const slug of paths){
@@ -21,7 +21,7 @@ for(const width of [1440,768,390,320]){
   const clipped=await p.locator('main h1,main h2,main h3,main p,main a.button,main td,main dt,main dd').evaluateAll(els=>els.filter(el=>{if(!el.getClientRects().length)return false;const r=el.getBoundingClientRect();return r.right>innerWidth+1||r.left< -1||el.scrollWidth>el.clientWidth+2;}).map(el=>el.tagName+'.'+el.className));assert.deepEqual(clipped,[],`Clipped ${slug} ${width}`);
   const text=await p.locator('main').innerText();const words=text.trim().split(/\s+/).length;
   if(slug&&!slug.startsWith('upsell-')){assert.ok(words>1100,`${slug} narrative ${words}`);assert.equal(await p.locator('.intermediate-cta .button').count(),1);assert.equal(await p.locator('.content-syllabus>li').count(),slug==='combo'?14:7);assert.ok(await p.locator('#faq details').count()>=6);}
-  if(slug==='combo')for(const amount of ['244','197','47'])assert.ok(text.includes(amount));
+  if(slug==='combo'){for(const amount of ['244','197','47'])assert.ok(text.includes(amount));const transforms=await p.locator('[data-scroll-motion]').evaluateAll(els=>els.map(el=>getComputedStyle(el).transform));assert.ok(transforms.every(value=>value==='none'||value==='matrix(1, 0, 0, 1, 0, 0)'),'Reduced motion keeps scroll showcase static');}
   if(slug==='upsell-manual')assert.match(text,/50,00/);if(slug==='upsell-ebook')assert.match(text,/100,00/);
   assert.doesNotMatch(text,/\[(FOTO|GARANTIA|DEPOIMENTO)|lorem ipsum|Na maioria das vezes|Proteja sua comissão/);
   assert.equal(await p.locator('main [data-checkout]').count(),0,'Real checkouts are unconfigured');
