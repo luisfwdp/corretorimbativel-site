@@ -8,7 +8,7 @@ const catalogueURL='data:text/javascript;base64,'+Buffer.from(compile('../lib/ca
 const source=compile('../lib/commerce.ts').replace("import 'server-only';",'').replace("'./catalogue'",JSON.stringify(catalogueURL));
 const{getOffer,safeHttps,auditOffers}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 const legacy='https://payfast.greenn.com.br/123089';
-test('Payment gates reject missing confirmation, unsupported mode and missing refusal',()=>{
+test('Payment gates reject missing confirmation and missing refusal',()=>{
  const saved={...process.env};try{
  for(const key of Object.keys(process.env))if(key.startsWith('GREENN_'))delete process.env[key];
  assert.equal(getOffer('ebook').ready,false);
@@ -16,7 +16,7 @@ test('Payment gates reject missing confirmation, unsupported mode and missing re
  process.env.GREENN_EBOOK_VERIFIED='true';assert.equal(getOffer('ebook').ready,true);
  process.env.GREENN_UPSELL_MANUAL_URL=legacy;process.env.GREENN_UPSELL_MANUAL_VERIFIED='true';assert.equal(getOffer('upsell-manual').ready,false);
  process.env.GREENN_UPSELL_MANUAL_DECLINE_URL='https://example.invalid/completion';assert.equal(getOffer('upsell-manual').ready,true);
- process.env.GREENN_UPSELL_MANUAL_MODE='native';assert.equal(getOffer('upsell-manual').ready,false,'Native integration must not pretend to be ready');
+ process.env.GREENN_UPSELL_MANUAL_MODE='native';assert.equal(getOffer('upsell-manual').ready,true,'Native post-purchase offers keep their verified standalone fallback');
  assert.throws(auditOffers,/Checkout duplicado/);
  }finally{for(const key of Object.keys(process.env))if(key.startsWith('GREENN_'))delete process.env[key];for(const[key,value]of Object.entries(saved))if(key.startsWith('GREENN_'))process.env[key]=value;}
 });

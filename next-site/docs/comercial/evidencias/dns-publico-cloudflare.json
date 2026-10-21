@@ -1,0 +1,85 @@
+[
+  {
+    "name": "corretorimbativel.com.br",
+    "type": "MX",
+    "status": 0,
+    "answers": [
+      {
+        "name": "corretorimbativel.com.br",
+        "type": 15,
+        "TTL": 3600,
+        "data": "20 mx2.titan.email."
+      },
+      {
+        "name": "corretorimbativel.com.br",
+        "type": 15,
+        "TTL": 3600,
+        "data": "10 mx1.titan.email."
+      }
+    ]
+  },
+  {
+    "name": "corretorimbativel.com.br",
+    "type": "NS",
+    "status": 0,
+    "answers": [
+      {
+        "name": "corretorimbativel.com.br",
+        "type": 2,
+        "TTL": 86400,
+        "data": "ns434.hostgator.com.br."
+      },
+      {
+        "name": "corretorimbativel.com.br",
+        "type": 2,
+        "TTL": 86400,
+        "data": "ns435.hostgator.com.br."
+      }
+    ]
+  },
+  {
+    "name": "corretorimbativel.com.br",
+    "type": "A",
+    "status": 0,
+    "answers": [
+      {
+        "name": "corretorimbativel.com.br",
+        "type": 1,
+        "TTL": 14400,
+        "data": "216.172.161.43"
+      }
+    ]
+  },
+  {
+    "name": "cpanel.corretorimbativel.com.br",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "cpanel.corretorimbativel.com.br",
+        "type": 5,
+        "TTL": 14400,
+        "data": "corretorimbativel.com.br."
+      }
+    ]
+  },
+  {
+    "name": "ftp.corretorimbativel.com.br",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "ftp.corretorimbativel.com.br",
+        "type": 5,
+        "TTL": 14400,
+        "data": "corretorimbativel.com.br."
+      }
+    ]
+  },
+  {
+    "name": "_dmarc.corretorimbativel.com.br",
+    "type": "TXT",
+    "status": 3,
+    "answers": []
+  }
+]

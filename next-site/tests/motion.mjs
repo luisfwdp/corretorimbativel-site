@@ -2,7 +2,7 @@ import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 const base=process.env.CI_NEXT_URL||'http://127.0.0.1:9432';assert.match(base,/^http:\/\/127\.0\.0\.1:\d+$/);
-const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
+const b=await chromium.launch({executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 try{
 const p=await b.newPage({viewport:{width:1440,height:1000},reducedMotion:'no-preference'});await p.goto(base+'/ebook',{waitUntil:'networkidle'});await p.addStyleTag({content:'html{scroll-behavior:auto!important}'});
 await p.locator('#solucao').scrollIntoViewIfNeeded();await p.waitForTimeout(40);const running=await p.locator('#solucao').evaluate(e=>e.getAnimations({subtree:true}).filter(a=>a.playState==='running').length);assert.ok(running>0);
