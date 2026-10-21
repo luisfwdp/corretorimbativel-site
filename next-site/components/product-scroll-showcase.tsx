@@ -47,15 +47,15 @@ export function ProductScrollShowcase({ id }: { id: LandingId }) {
     >
       <ContainerScroll
         titleComponent={
-          <div className="mx-auto max-w-4xl px-4">
+          <div className="mx-auto max-w-4xl px-1 sm:px-4">
             <p className="small-label">{showcase.eyebrow}</p>
             <h2
               id={titleId}
-              className="text-[clamp(2rem,4vw,4rem)] text-[#f8f6f0]"
+              className="mb-5 text-[clamp(1.85rem,4vw,3.75rem)] leading-[1.12] text-[#f8f6f0]"
             >
               {showcase.headline}
             </h2>
-            <p className="mx-auto max-w-2xl text-[#d4dce0]">
+            <p className="mx-auto mb-0 max-w-2xl text-[#d4dce0]">
               {showcase.description}
             </p>
           </div>
@@ -66,8 +66,8 @@ export function ProductScrollShowcase({ id }: { id: LandingId }) {
             src={showcase.image}
             alt={showcase.alt}
             fill
-            sizes="(max-width: 768px) 92vw, 1024px"
-            className="object-contain object-center"
+            sizes="(max-width: 768px) calc(100vw - 40px), 768px"
+            className="object-cover object-center"
           />
         </div>
       </ContainerScroll>
