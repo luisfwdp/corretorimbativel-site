@@ -1,17 +1,17 @@
 # Prontidão comercial e plano de lançamento
 
-Auditoria de 20/10/2026, horário de Brasília. Aplicação auditada: `69d166f`; documentação de entrega: `95215cf`. Branch desta auditoria: `codex/prontidao-comercial`. PR #4 aberto, em rascunho, sem merge. Copy e design aprovados e preservados.
+Auditoria iniciada em 20/10/2026 e atualizada em 21/10/2026, horário de Brasília. Release configurado no commit `785407f`, branch `codex/greenn-checkouts`, com revisão no PR #5. Copy, design, produtos e publicação foram aprovados pelo responsável.
 
-**Conclusão: apresentação pronta para validação; operação comercial ainda não homologada.** A migração da web para a Vercel é tecnicamente viável mantendo e-mail e DNS na infraestrutura atual, mas não pode ser certificada como sem impacto antes do inventário e dos testes abaixo. Há dependências DNS concretas a resolver antes do corte.
+**Conclusão atual:** os três produtos públicos e o build de produção estão ativos e validados na Vercel. O domínio oficial já foi associado ao projeto, mas o DNS autoritativo continua apontando a web para a HostGator. Os dois complementos estão ativos, porém ainda **Em análise** na Greenn; os upsells nativos e o corte DNS só podem ser concluídos depois dessas dependências operacionais.
 
 ## Evidências e limites desta auditoria
 
 - Código Next.js: `.env.example`, `lib/commerce.ts`, `components/tracking.tsx`, `navigation.tsx`, `decline.tsx`, `app/layout.tsx`, metadados e documentos de migração.
-- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: **zero variáveis cadastradas visíveis e zero variáveis de produção ocultas**, conforme resposta autenticada de listagem sem descriptografia. Isso descreve este projeto, não outras contas/projetos.
-- Prévia atual READY: https://corretor-imbativel-next-preview-j4kuyocki.vercel.app . O domínio oficial não está associado ao projeto auditado.
+- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: variáveis comerciais de produção configuradas; analytics mantido desativado; complementos mantidos como não verificados.
+- Produção READY: https://corretor-imbativel-next-preview-ensqw4lch.vercel.app . `corretorimbativel.com.br` e `www.corretorimbativel.com.br` estão associados ao projeto; `www` redireciona permanentemente para a raiz. O DNS externo ainda não foi alterado.
 - DNS público consultado por Google e confirmado nos registros críticos por Cloudflare. Respostas e horários em `evidencias/`. Consultas públicas não equivalem a exportação integral da zona ou teste de funcionamento de e-mail.
 - Raiz oficial respondeu HTTP 200 e informou a API WordPress no cabeçalho Link. `.cpanel.yml` publica somente o tema WordPress; “Deploy HEAD” do cPanel não publica o Next.js.
-- Não houve acesso à conta Greenn, autenticação no cPanel/WordPress, consulta a caixas postais, pagamento, configuração remota, deploy ou alteração de DNS nesta etapa.
+- Houve configuração autenticada da Greenn e deploy de produção na Vercel, sem compra real, sem ativação de analytics e sem alteração de DNS. Não houve autenticação no cPanel/WordPress nem consulta a caixas postais.
 
 ## Ordem de execução e responsáveis
 
@@ -33,19 +33,17 @@ Legenda: **Codex** = preparação técnica automatizável; **Você** = dados, ac
 | 12 | Preservar aliases administrativos, alterar só os registros web aprovados e validar | Conjunto, somente após a etapa 11 | Web/HTTPS, e-mail e serviços críticos aprovados |
 | 13 | Monitorar e manter WordPress, DNS HostGator e e-mail ativos | Conjunto | Estabilidade observada e reconciliação comercial sem incidentes |
 
-**Bloqueios para lançamento hoje:** checkouts não configurados; entrega/eligibilidade não confirmadas; ausência de homologação financeira; analytics de compra sem produtor definido; inventário DNS/cPanel incompleto; acesso ao fallback e backup não testados. Sem aprovação de publicação, o processo para antes das etapas de produção.
+**Pendências para o lançamento completo:** aprovação automática das duas ofertas complementares e gravação dos upsells nativos; inventário/exportação autenticada do DNS/cPanel; preservação de `cpanel` e `ftp`; teste financeiro somente se autorizado em separado; analytics permanece desligado até definição e homologação.
 
-## 1. Configuração Greenn que falta, produto por produto
+## 1. Configuração Greenn, produto por produto
 
-“Falta” abaixo significa não fornecido ou não comprovado ao projeto. O produto pode já existir na conta; não criar duplicatas antes de conferir.
-
-| Oferta | Valor | O que conferir na Greenn | O que falta na aplicação |
+| Oferta | Valor | Estado autenticado na Greenn | Estado na aplicação |
 |---|---:|---|---|
-| eBook | R$ 147,00 | Produto e oferta do eBook; moeda BRL; arquivo correto; entrega; pagamento; pós-compra por status | `GREENN_EBOOK_URL`, `GREENN_EBOOK_VERIFIED` |
-| Manual Jurídico | R$ 97,00 | Produto separado; oferta de R$ 97; PDF final; conteúdo incluído; entrega; pós-compra | `GREENN_MANUAL_URL`, `GREENN_MANUAL_VERIFIED` |
-| Combo Completo | R$ 197,00 | Oferta específica; concessão dos dois materiais; soma avulsa R$ 244 não é preço cobrado; sem duplicar concessões desnecessárias | `GREENN_COMBO_URL`, `GREENN_COMBO_VERIFIED` |
-| Complemento Manual | R$ 50,00 adicionais | Oferta vinculada ao Manual; comprador elegível do eBook; entrega apenas do complemento; não cobrar o Manual público de R$ 97 | `GREENN_UPSELL_MANUAL_URL`, `_VERIFIED`, `_MODE`, `_DECLINE_URL` |
-| Complemento eBook | R$ 100,00 adicionais | Oferta vinculada ao eBook; comprador elegível do Manual; entrega apenas do complemento; não cobrar o eBook público de R$ 147 | `GREENN_UPSELL_EBOOK_URL`, `_VERIFIED`, `_MODE`, `_DECLINE_URL` |
+| eBook | R$ 147,00 | Produto `123089`, oferta `0qEOa5` ativa/aprovada; PDF definitivo publicado no Club | URL configurada e `GREENN_EBOOK_VERIFIED=true` |
+| Manual Jurídico | R$ 97,00 | Produto `141872`, oferta `ZUSxQ1` ativa/aprovada; PDF protegido e cinco DOCX para download | URL configurada e `GREENN_MANUAL_VERIFIED=true` |
+| Combo Completo | R$ 197,00 | Produto `199450`, oferta `iEN8Vn` ativa/aprovada; duas turmas vinculadas | URL configurada e `GREENN_COMBO_VERIFIED=true` |
+| Complemento Manual | R$ 50,00 adicionais | Oferta `jPi4sa` ativa, ainda **Em análise** | URL e recusa configuradas; `_VERIFIED=false` até aprovação e upsell nativo salvo |
+| Complemento eBook | R$ 100,00 adicionais | Oferta `87Z6rU` ativa, ainda **Em análise** | URL e recusa configuradas; `_VERIFIED=false` até aprovação e upsell nativo salvo |
 
 Para todas: confirmar nome no checkout, vendedor responsável, formas de pagamento realmente habilitadas, parcelamento/juros, política de acesso, suporte e políticas de cancelamento/reembolso aplicáveis. A página não configura esses itens na plataforma.
 
@@ -177,9 +175,9 @@ Não contar PIX/boleto pendente, tentativa recusada, clique em aceite ou recusa 
 | Registro/serviço | Observado em 20/10/2026 | Tratamento na migração |
 |---|---|---|
 | NS | `ns434.hostgator.com.br`, `ns435.hostgator.com.br` | Manter nameservers; sem transferência de registro necessária |
-| Raiz A | `216.172.161.43`, TTL observado 14400 s | Registrar para rollback; destino novo somente o exigido pela Vercel |
+| Raiz A | `216.172.161.43`, TTL observado 14400 s | Registrar para rollback; Vercel recomendou, para este projeto, `216.198.79.1` e `64.29.17.1` |
 | Raiz AAAA | Sem resposta AAAA nas consultas | Reconsultar na janela; não deixar destino IPv6 antigo se existir depois |
-| `www` | CNAME para a raiz | Vai acompanhar a raiz; decidir canonical/redirect e incluir www na configuração futura Vercel |
+| `www` | CNAME para a raiz | Projeto Vercel já configurado para redirecionar `www` à raiz com status 308; destino CNAME recomendado `efe95d024463269a.vercel-dns-017.com.` |
 | MX | prioridade 10 `mx1.titan.email`, 20 `mx2.titan.email` | Preservar exatamente; serviço de e-mail independente do destino A da web |
 | TXT SPF | `v=spf1 include:spf.titan.email ~all` | Preservar; este valor não depende do A da raiz |
 | `default._domainkey` TXT | Chave DKIM pública encontrada | Preservar; não confirma qual seletor é usado pela Titan. Conferir cabeçalhos reais com o proprietário |
@@ -209,7 +207,7 @@ A zona completa pode conter verificações e seletores não descobertos por cons
 - Confirmar qual projeto será produção: reutilizar o projeto separado ou criar outro exige decisão. Garantir que o fluxo Git de produção não publique automaticamente branches de revisão ou o tema via cPanel.
 - Preparar e testar o build de produção que será efetivamente publicado, com suas variáveis finais; promover um preview pode gerar outro build e não equivale a publicar o artefato já testado.
 - Preparar release de produção sem apontar domínio: três ofertas públicas operacionais; complementos só se homologados; metadados oficiais, `SITE_RELEASE=production`, indexação pública correta, upsells noindex e acesso público ao build de lançamento. A proteção atual de preview não deve bloquear clientes em produção.
-- Plano exato de A/AAAA/CNAME, domínio raiz/www, verificação e TLS deve vir da Vercel para o projeto final. Não foi solicitado vínculo de domínio nesta auditoria; nenhum destino genérico foi presumido.
+- O plano exato veio da configuração autenticada do projeto: raiz com A `216.198.79.1` e `64.29.17.1`; `www` com CNAME `efe95d024463269a.vercel-dns-017.com.`. A Vercel marcou os domínios como verificados, porém ainda `misconfigured` enquanto o DNS público continua na HostGator. Esses valores devem ser reconfirmados imediatamente antes do corte.
 - Fixar responsáveis, janela e critérios de sucesso. Se for aprovada redução de TTL, fazê-la previamente e aguardar o TTL anterior dos registros afetados. O A observado tem 14400 s, aproximadamente quatro horas; isso não garante propagação universal em quatro horas.
 
 ### Execução, somente com aprovação de publicação/DNS
