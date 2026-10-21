@@ -18,7 +18,7 @@ export function Upsell({id}:{id:ProductId}){
    <p className="small-label">{hero.eyebrow}</p><h1>{hero.headline}</h1><p className="hero-sub">{hero.subheadline}</p>
    <div className="upsell-decision" id="oferta"><p>Valor adicional {manual?'do Manual Jurídico':'do eBook Corretor Imbatível'}</p><p className="price">{money(p.price)}</p>
     <p className="journey-total">Compra inicial {manual?'do eBook':'do Manual'}: {money(base.price)}. Complemento opcional: {money(p.price)}. <strong>Total com os dois materiais: {money(base.price+p.price)}.</strong></p>
-    <p className="purchase-notice">{config.mode==='native-pending'?'A oferta pós-compra depende de confirmação da Greenn. Nenhuma cobrança é feita ao visitar esta página.':'Esta oferta é uma nova compra, em checkout separado da Greenn. Você revisará o valor e autorizará o pagamento. Visitar esta página não gera cobrança.'}</p>
+    <p className="purchase-notice">{config.mode==='native'?'No fluxo pós-compra, a Greenn pode apresentar este complemento em um clique. Nesta página de apoio, o botão abre um checkout separado para você revisar o valor e autorizar o pagamento. Visitar a página não gera cobrança.':'Esta oferta é uma nova compra, em checkout separado da Greenn. Você revisará o valor e autorizará o pagamento. Visitar esta página não gera cobrança.'}</p>
     <PaymentAction id={key}/><Decline url={config.decline} label={manual?'Não, obrigado. Quero continuar apenas com o eBook.':'Não, obrigado. Quero continuar apenas com o Manual.'}/>
     <p className="decision-note">Recusar o complemento não cancela sua compra anterior. Consulte as instruções de acesso {manual?'do eBook':'do Manual'}.</p>
    </div>

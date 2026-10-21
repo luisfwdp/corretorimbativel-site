@@ -1,13 +1,13 @@
 # Prontidão comercial e plano de lançamento
 
-Auditoria iniciada em 20/10/2026 e atualizada em 21/10/2026, horário de Brasília. Release configurado no commit `785407f`, branch `codex/greenn-checkouts`, com revisão no PR #5. Copy, design, produtos e publicação foram aprovados pelo responsável.
+Auditoria iniciada em 20/10/2026 e atualizada em 21/10/2026, horário de Brasília. Release preparado na branch `codex/greenn-checkouts`, com revisão no PR #5. Copy, design, produtos e publicação foram aprovados pelo responsável.
 
 **Conclusão atual:** os três produtos públicos e o build de produção estão ativos e validados na Vercel. O domínio oficial já foi associado ao projeto, mas o DNS autoritativo continua apontando a web para a HostGator. Os dois complementos foram recriados como produtos independentes, ativos e aprovados, sem upsell próprio. As páginas nativas estão ligadas apenas aos produtos principais, eliminando o ciclo entre complementos.
 
 ## Evidências e limites desta auditoria
 
 - Código Next.js: `.env.example`, `lib/commerce.ts`, `components/tracking.tsx`, `navigation.tsx`, `decline.tsx`, `app/layout.tsx`, metadados e documentos de migração.
-- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: variáveis comerciais de produção configuradas; analytics mantido desativado; complementos verificados e registrados em modo nativo.
+- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: variáveis comerciais de preview e produção configuradas; analytics mantido desativado; complementos verificados e registrados em modo nativo.
 - Produção READY: https://corretor-imbativel-next-preview-ensqw4lch.vercel.app . `corretorimbativel.com.br` e `www.corretorimbativel.com.br` estão associados ao projeto; `www` redireciona permanentemente para a raiz. O DNS externo ainda não foi alterado.
 - DNS público consultado por Google e confirmado nos registros críticos por Cloudflare. Respostas e horários em `evidencias/`. Consultas públicas não equivalem a exportação integral da zona ou teste de funcionamento de e-mail.
 - Raiz oficial respondeu HTTP 200 e informou a API WordPress no cabeçalho Link. `.cpanel.yml` publica somente o tema WordPress; “Deploy HEAD” do cPanel não publica o Next.js.
@@ -42,8 +42,8 @@ Legenda: **Codex** = preparação técnica automatizável; **Você** = dados, ac
 | eBook | R$ 147,00 | Produto `123089`, oferta `0qEOa5` ativa/aprovada; PDF definitivo publicado no Club | URL configurada e `GREENN_EBOOK_VERIFIED=true` |
 | Manual Jurídico | R$ 97,00 | Produto `141872`, oferta `ZUSxQ1` ativa/aprovada; PDF protegido e cinco DOCX para download | URL configurada e `GREENN_MANUAL_VERIFIED=true` |
 | Combo Completo | R$ 197,00 | Produto `199450`, oferta `iEN8Vn` ativa/aprovada; duas turmas vinculadas | URL configurada e `GREENN_COMBO_VERIFIED=true` |
-| Complemento Manual | R$ 50,00 adicionais | Produto `199482`, oferta `3ZTVhJ` ativa/aprovada; entrega ao Manual; página nativa `/one-click/7196` ligada ao eBook principal | URL nova, `_VERIFIED=true`, `_MODE=native`; CTA do fallback Next permanece bloqueado |
-| Complemento eBook | R$ 100,00 adicionais | Produto `199483`, oferta `LzV3lU` ativa/aprovada; entrega ao eBook; página nativa `/one-click/7197` ligada ao Manual principal | URL nova, `_VERIFIED=true`, `_MODE=native`; CTA do fallback Next permanece bloqueado |
+| Complemento Manual | R$ 50,00 adicionais | Produto `199482`, oferta `3ZTVhJ` ativa/aprovada; entrega ao Manual; página nativa `/one-click/7196` ligada ao eBook principal | URL nova, `_VERIFIED=true`, `_MODE=native`; rota de apoio usa o checkout separado do mesmo produto |
+| Complemento eBook | R$ 100,00 adicionais | Produto `199483`, oferta `LzV3lU` ativa/aprovada; entrega ao eBook; página nativa `/one-click/7197` ligada ao Manual principal | URL nova, `_VERIFIED=true`, `_MODE=native`; rota de apoio usa o checkout separado do mesmo produto |
 
 Para todas: confirmar nome no checkout, vendedor responsável, formas de pagamento realmente habilitadas, parcelamento/juros, política de acesso, suporte e políticas de cancelamento/reembolso aplicáveis. A página não configura esses itens na plataforma.
 
@@ -85,7 +85,7 @@ A configuração automática foi ativada sem compra real. O ciclo foi eliminado 
 - Definir a regra de confirmação em conjunto. Não habilitar cobrança imediata nesta auditoria. A documentação permite comportamentos diferentes, e o valor de atributos gerados não pode ser presumido.
 - Manter as rotas Next de upsell fora do fluxo ativo; elas ainda explicam checkout separado e não devem ser apresentadas como a página nativa.
 
-**Recomendação operacional:** manter `_MODE=native` no código. O checkout e o 1 clique pertencem à página hospedada pela Greenn; as rotas Next permanecem como fallback indisponível até eventual integração específica.
+**Recomendação operacional:** manter `_MODE=native` no código. O 1 clique pertence à página hospedada pela Greenn. Nas rotas Next, o CTA é explicitamente um checkout separado, com revisão e autorização do pagamento pelo visitante; o site não simula nem dispara o aceite nativo.
 
 ### Riscos de cobrança duplicada e controles exigidos
 
@@ -107,14 +107,14 @@ Os nomes completos estão em `.env.example`. Configure no projeto e no ambiente 
 
 | Configuração | Estado atual no projeto auditado | Condição para usar |
 |---|---|---|
-| Cinco `GREENN_*_URL` | Configuradas em produção | Links emitidos pela conta e conferidos |
+| Cinco `GREENN_*_URL` | Configuradas em preview e produção | Links emitidos pela conta e conferidos |
 | Cinco `GREENN_*_VERIFIED` | Configuradas como `true` | Homologação documentada de cada oferta |
-| `GREENN_UPSELL_MANUAL_MODE`, `GREENN_UPSELL_EBOOK_MODE` | Configuradas como `native` | Jornadas nativas ativas na Greenn; fallbacks Next bloqueados |
+| `GREENN_UPSELL_MANUAL_MODE`, `GREENN_UPSELL_EBOOK_MODE` | Configuradas como `native` | Jornadas nativas ativas na Greenn; rotas Next usam apenas o checkout separado |
 | `GREENN_UPSELL_MANUAL_DECLINE_URL`, `GREENN_UPSELL_EBOOK_DECLINE_URL` | Configuradas com as aulas correspondentes | Destinos reais distintos conforme a jornada |
 | `GA4_ID`, `META_PIXEL_ID` | Ausentes | IDs corretos fornecidos e permissões de teste |
-| `ANALYTICS_ENABLED` | Ausente; padrão desativado | Homologação de medição e consentimento |
-| `SITE_RELEASE` | Ausente; padrão preview | Usar production somente no build de lançamento aprovado |
-| `MANUAL_IMAGE_URL` | Ausente | Arte oficial aprovada; opcional tecnicamente, pendente editorialmente |
+| `ANALYTICS_ENABLED` | `false` em preview e produção | Homologação de medição e consentimento antes de ativar |
+| `SITE_RELEASE` | `preview` no preview e `production` na produção | Manter a separação para indexação e metadados corretos |
+| `MANUAL_IMAGE_URL` | Ausente | Os mockups aprovados são arquivos locais do site; a variável externa permanece opcional e sem uso |
 
 São páginas estáticas: alterar variáveis na Vercel requer **novo build/deployment** para refletir textos de estado, links, tracking e indexação. Alterar o painel não atualiza o build já pronto. O nome do ambiente Vercel e `SITE_RELEASE` são controles independentes. Testar configuração de lançamento em um build isolado, sem apontar o domínio e sem ativar compras reais inadvertidamente.
 
@@ -237,4 +237,4 @@ Gatilhos: quebra de checkout ou entrega, cobrança indevida/duplicada, perda de 
 - DNS: evidências públicas anexas; nenhum registro alterado.
 - Referências para a etapa de instrumentação: https://developers.google.com/analytics/devguides/collection/ga4/reference/events#purchase e https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/ . Não comprovam integração habilitada na conta Greenn.
 
-A ficha complementar `DADOS-PARA-CONFIGURACAO.md` reúne o que você precisa fornecer ou configurar. Esta entrega é de auditoria e preparação documental: nenhum fluxo financeiro, tracking, copy ou design foi alterado.
+A ficha complementar `DADOS-PARA-CONFIGURACAO.md` reúne dados de operação e homologação. A revisão atual altera apresentação, CTAs e configuração pública dos checkouts, mas não executa compra, não ativa analytics e não modifica DNS.

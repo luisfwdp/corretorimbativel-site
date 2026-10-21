@@ -12,7 +12,7 @@
 
 Cada base possui `_URL` e `_VERIFIED`. Somente URL HTTPS no domínio greenn.com.br/subdomínio + confirmação explícita habilita um CTA. Uma URL idêntica para produtos diferentes causa falha de build. Confirmar produto/preço/entrega na conta antes de marcar VERIFIED. O preço exibido não altera o preço da plataforma.
 
-Upsells exigem também `_DECLINE_URL` HTTPS real. `_MODE=native` registra que a jornada ativa está hospedada na Greenn e mantém os CTAs das rotas de fallback do Next bloqueados; o site não deve iniciar uma segunda cobrança paralela.
+Upsells exigem também `_DECLINE_URL` HTTPS real. `_MODE=native` registra que a jornada principal de pós-compra está hospedada na Greenn. As rotas de apoio do Next exibem o checkout separado do respectivo produto complementar; elas nunca executam o aceite nativo e o checkout separado ao mesmo tempo.
 
 ## Mecanismo oficial e limite verificado na conta
 
@@ -24,7 +24,7 @@ O produto eBook principal também contém a oferta privada para amigos. Por deci
 
 Em 21/10/2026, as páginas de vendas dos produtos principais foram salvas no painel: eBook em `https://corretorimbativel.com.br/ebook` e Manual em `https://corretorimbativel.com.br/manual-juridico`.
 
-As rotas `/upsell-manual` e `/upsell-ebook` permanecem apenas como fallback editorial, fora do fluxo financeiro ativo. O painel Greenn controla a jornada nativa. Downsell não foi definido ou implementado.
+As rotas `/upsell-manual` e `/upsell-ebook` permanecem como apoio fora da jornada nativa e apontam para os checkouts independentes dos produtos `199482` e `199483`. No fluxo pós-compra normal, o painel Greenn continua controlando o 1 clique. Downsell não foi definido ou implementado.
 
 ## Homologação obrigatória
 
