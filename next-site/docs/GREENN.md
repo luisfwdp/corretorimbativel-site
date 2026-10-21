@@ -12,17 +12,17 @@
 
 Cada base possui `_URL` e `_VERIFIED`. Somente URL HTTPS no domínio greenn.com.br/subdomínio + confirmação explícita habilita um CTA. Uma URL idêntica para produtos diferentes causa falha de build. Confirmar produto/preço/entrega na conta antes de marcar VERIFIED. O preço exibido não altera o preço da plataforma.
 
-Upsells exigem também `_DECLINE_URL` HTTPS real e `_MODE=separate`. Nesse modo, a página informa que o complemento é nova compra em checkout separado. A visita não cobra automaticamente. Falta de recusa real mantém o aceite bloqueado; a recusa local revela instruções e não simula conclusão.
+Upsells exigem também `_DECLINE_URL` HTTPS real. `_MODE=native` registra que a jornada ativa está hospedada na Greenn e mantém os CTAs das rotas de fallback do Next bloqueados; o site não deve iniciar uma segunda cobrança paralela.
 
-## Mecanismo oficial verificado
+## Mecanismo oficial e limite verificado na conta
 
-Fonte consultada em 19/10/2026: https://ajuda.greenn.com.br/pt-br/article/criando-um-upsell-na-greenn-78muq1/ . O artigo descreve ofertas pós-compra, seleção do produto/oferta, recusa, confirmação e código para páginas externas. Código gerado e contexto da compra anterior, incluindo token, são necessários. A plataforma também documenta página de upsell própria: https://ajuda.greenn.com.br/pt-br/article/criando-uma-pagina-de-upsell-na-greenn-1vxd6j/ . A interface e as condições da conta ainda precisam de conferência autenticada.
+Fontes consultadas em 19/10/2026: https://ajuda.greenn.com.br/pt-br/article/criando-um-upsell-na-greenn-78muq1/ e https://ajuda.greenn.com.br/pt-br/article/criando-uma-pagina-de-upsell-na-greenn-1vxd6j/ . Os artigos descrevem produto/oferta, recusa, confirmação, código externo e página hospedada. Em 21/10/2026, a interface autenticada mostrou que a página de obrigado com upsell é vinculada ao **produto inicial inteiro**, sem seletor da oferta de origem.
 
-**Não há código oficial de uma oferta desta conta disponível. Por isso não foi criado um script que imita a cobrança nativa.** `_MODE=native` mantém o pagamento bloqueado nesta versão. A integração do embed externo em React (montagem, navegação, CSP, confirmação, contexto e recusa) é uma pendência explícita se esse modo for escolhido. O suporte geral documentado pela Greenn não confirma habilitação, preço ou entrega da conta.
+Foram criadas duas páginas nativas: `Após eBook — Manual Jurídico por R$ 50` (`/one-click/7196`) e `Após Manual público — eBook por R$ 100` (`/one-click/7197`). Para eliminar o ciclo, cada complemento ganhou um produto próprio, sem upsell: Manual `199482` e eBook `199483`. As páginas nativas foram atualizadas para esses produtos e ligadas somente aos produtos principais `123089` e `141872`.
 
-O caminho pronto para configuração nesta entrega é o checkout separado, com explicação de nova compra. Para cobrança pós-compra nativa, usar o código exato fornecido pela Greenn e homologar em ambiente apropriado antes de habilitar. Não acrescentar token a links avulsos nem enviar token a analytics. Não remover os parâmetros originais da URL do upsell. Não confundir uma página visual com o fluxo financeiro concluído.
+O produto eBook principal também contém a oferta privada para amigos. Por decisão comercial expressa, ela participa do mesmo upsell de Manual por R$ 50. As antigas ofertas complementares `jPi4sa` e `87Z6rU` foram desativadas nos produtos principais. Não acrescentar token a links avulsos nem enviar token a analytics.
 
-Elegibilidade: o site não tem prova autenticada da primeira compra. No modo separado, a Greenn precisa assegurar que as ofertas reduzidas sejam acessíveis apenas conforme a regra comercial. Noindex não é controle de acesso. Downsell não foi definido ou implementado.
+As rotas `/upsell-manual` e `/upsell-ebook` permanecem apenas como fallback editorial, fora do fluxo financeiro ativo. O painel Greenn controla a jornada nativa. Downsell não foi definido ou implementado.
 
 ## Homologação obrigatória
 

@@ -2,7 +2,7 @@
 
 Auditoria iniciada em 20/10/2026 e atualizada em 21/10/2026, horário de Brasília. Release configurado no commit `785407f`, branch `codex/greenn-checkouts`, com revisão no PR #5. Copy, design, produtos e publicação foram aprovados pelo responsável.
 
-**Conclusão atual:** os três produtos públicos e o build de produção estão ativos e validados na Vercel. O domínio oficial já foi associado ao projeto, mas o DNS autoritativo continua apontando a web para a HostGator. Os dois complementos estão ativos, porém ainda **Em análise** na Greenn; os upsells nativos e o corte DNS só podem ser concluídos depois dessas dependências operacionais.
+**Conclusão atual:** os três produtos públicos e o build de produção estão ativos e validados na Vercel. O domínio oficial já foi associado ao projeto, mas o DNS autoritativo continua apontando a web para a HostGator. Os dois complementos foram recriados como produtos independentes, ativos e aprovados, sem upsell próprio. As páginas nativas estão ligadas apenas aos produtos principais, eliminando o ciclo entre complementos.
 
 ## Evidências e limites desta auditoria
 
@@ -33,7 +33,7 @@ Legenda: **Codex** = preparação técnica automatizável; **Você** = dados, ac
 | 12 | Preservar aliases administrativos, alterar só os registros web aprovados e validar | Conjunto, somente após a etapa 11 | Web/HTTPS, e-mail e serviços críticos aprovados |
 | 13 | Monitorar e manter WordPress, DNS HostGator e e-mail ativos | Conjunto | Estabilidade observada e reconciliação comercial sem incidentes |
 
-**Pendências para o lançamento completo:** aprovação automática das duas ofertas complementares e gravação dos upsells nativos; inventário/exportação autenticada do DNS/cPanel; preservação de `cpanel` e `ftp`; teste financeiro somente se autorizado em separado; analytics permanece desligado até definição e homologação.
+**Pendências para o lançamento completo:** correção final das páginas de vendas do eBook e do Manual no painel; inventário/exportação autenticada do DNS/cPanel; preservação de `cpanel` e `ftp`; teste financeiro somente se autorizado em separado; analytics permanece desligado até definição e homologação.
 
 ## 1. Configuração Greenn, produto por produto
 
@@ -42,8 +42,8 @@ Legenda: **Codex** = preparação técnica automatizável; **Você** = dados, ac
 | eBook | R$ 147,00 | Produto `123089`, oferta `0qEOa5` ativa/aprovada; PDF definitivo publicado no Club | URL configurada e `GREENN_EBOOK_VERIFIED=true` |
 | Manual Jurídico | R$ 97,00 | Produto `141872`, oferta `ZUSxQ1` ativa/aprovada; PDF protegido e cinco DOCX para download | URL configurada e `GREENN_MANUAL_VERIFIED=true` |
 | Combo Completo | R$ 197,00 | Produto `199450`, oferta `iEN8Vn` ativa/aprovada; duas turmas vinculadas | URL configurada e `GREENN_COMBO_VERIFIED=true` |
-| Complemento Manual | R$ 50,00 adicionais | Oferta `jPi4sa` ativa, ainda **Em análise** | URL e recusa configuradas; `_VERIFIED=false` até aprovação e upsell nativo salvo |
-| Complemento eBook | R$ 100,00 adicionais | Oferta `87Z6rU` ativa, ainda **Em análise** | URL e recusa configuradas; `_VERIFIED=false` até aprovação e upsell nativo salvo |
+| Complemento Manual | R$ 50,00 adicionais | Produto `199482`, oferta `3ZTVhJ` ativa/aprovada; entrega ao Manual; página nativa `/one-click/7196` ligada ao eBook principal | URL nova, `_VERIFIED=true`, `_MODE=native`; CTA do fallback Next permanece bloqueado |
+| Complemento eBook | R$ 100,00 adicionais | Produto `199483`, oferta `LzV3lU` ativa/aprovada; entrega ao eBook; página nativa `/one-click/7197` ligada ao Manual principal | URL nova, `_VERIFIED=true`, `_MODE=native`; CTA do fallback Next permanece bloqueado |
 
 Para todas: confirmar nome no checkout, vendedor responsável, formas de pagamento realmente habilitadas, parcelamento/juros, política de acesso, suporte e políticas de cancelamento/reembolso aplicáveis. A página não configura esses itens na plataforma.
 
@@ -51,7 +51,7 @@ Para todas: confirmar nome no checkout, vendedor responsável, formas de pagamen
 - A aplicação aceita HTTPS em `greenn.com.br` e subdomínios. Se a conta fornecer um domínio oficial diferente, confirmar procedência e adaptar a validação após revisão; não contornar o bloqueio nem encurtar links.
 - `_VERIFIED=true` é uma declaração manual de homologação, não uma verificação automática da Greenn. Mantê-la falsa até comprovar oferta e entrega.
 - Não reutilizar o checkout legado sem verificar a oferta atual. O checkout de amigos do eBook a R$ 97 é privado, não entra nos CTAs públicos e não tem variável dedicada no aplicativo. O preço R$ 97 do Manual é de outro produto.
-- A elegibilidade dos complementos precisa considerar a **oferta e a transação inicial**, não apenas o nome do produto: o checkout privado do eBook para amigos a R$ 97 não pode entrar automaticamente na jornada pública de R$ 147 + R$ 50. Excluir também compradores que já têm o complemento, compras reembolsadas/canceladas e o Combo, conforme regra comercial confirmada.
+- O upsell do produto eBook também aparece para a oferta privada de amigos a R$ 97. Isso foi aprovado expressamente: amigos podem adquirir o Manual por R$ 50. O Combo e os produtos complementares permanecem separados e sem encadeamento.
 - Não há entrega de arquivos no Next.js. A concessão correta de acesso depende da configuração Greenn, inclusive no Combo e nas compras complementares.
 - Oferta de R$ 50/R$ 100 acessível por link direto precisa de proteção de elegibilidade no provedor ou de implementação autenticada. `noindex`, URL pouco divulgada, UTM e um parâmetro contendo ID não comprovam compra anterior.
 
@@ -61,33 +61,31 @@ Para todas: confirmar nome no checkout, vendedor responsável, formas de pagamen
 
 1. Visitante vai de `/` para `/ebook` e, com checkout habilitado, para a oferta Greenn de R$ 147.
 2. Pagamento pendente, recusado ou abandonado não autoriza tratar o visitante como comprador pago. Conferir em que estado a Greenn executa o redirecionamento.
-3. Após pagamento confirmado e elegibilidade validada, apresentar `/upsell-manual` com adicional de R$ 50.
-4. **Aceite no modo separado:** abrir o checkout específico do complemento de R$ 50. O cliente revisa e autoriza uma segunda compra. Não enviar o contexto/token do pagamento anterior ao checkout avulso por conta própria.
+3. Após o pagamento, a Greenn apresenta a página nativa `/one-click/7196` com o produto `199482` por R$ 50.
+4. **Aceite no modo nativo:** a Greenn executa o mecanismo de 1 clique conforme a configuração da conta. O Next.js não inicia uma segunda cobrança paralela.
 5. Complemento aprovado: Greenn entrega o Manual; eBook anterior permanece disponível. Registrar duas transações reais: R$ 147 e R$ 50. Total da jornada: R$ 197.
 6. Complemento pendente/recusado: manter somente a entrega confirmada da primeira compra; não exibir confirmação do complemento nem repetir cobrança automaticamente.
-7. **Recusa:** destino real de conclusão/acesso do eBook, sem cancelar a compra anterior. É preciso fornecer esse destino HTTPS; o fallback atual só mostra instruções, não conclui uma operação na Greenn.
+7. **Recusa:** destino direto da aula do eBook no Greenn Club, sem cancelar a compra anterior.
 
 ### Jornada B: Manual para eBook
 
-O fluxo é equivalente: `/manual-juridico` → checkout de R$ 97 → pagamento confirmado → `/upsell-ebook` → aceite para checkout adicional de R$ 100 → entrega do eBook quando o complemento for aprovado. Recusa leva à conclusão/acesso do Manual. Duas transações reais, R$ 97 e R$ 100; total R$ 197.
+O fluxo é equivalente: `/manual-juridico` → checkout de R$ 97 → página nativa `/one-click/7197` → produto `199483` por R$ 100 → entrega do eBook quando o complemento for aprovado. Recusa leva diretamente à aula do Manual. Duas transações reais, R$ 97 e R$ 100; total R$ 197.
 
 ### Combo e término das jornadas
 
 `/combo` → checkout específico de R$ 197 → confirmação e entrega dos dois produtos. Não apresentar um dos mesmos complementos a quem já comprou o Combo. Após completar uma jornada de dois produtos, não encadear o upsell inverso. Não há downsell definido, precificado ou implementado; não o anunciar como pronto.
 
-### Se for escolhido o mecanismo nativo Greenn
+### Limite encontrado no mecanismo nativo Greenn
 
-A documentação oficial relida em 20/10/2026 descreve produto/oferta, botão “Não Comprar”, página de obrigado, código externo, contexto da compra e atributos `data-greenn-*`. Também descreve confirmação e compra imediata conforme a configuração. Suporte documentado não comprova habilitação ou condições desta conta.
+A documentação oficial relida em 20/10/2026 descreve produto/oferta, botão “Não Comprar”, página de obrigado, código externo, contexto da compra e atributos `data-greenn-*`. Também descreve confirmação e compra imediata conforme a configuração. A inspeção autenticada em 21/10 comprovou que a página de obrigado é escolhida no nível do produto inicial, sem filtro da oferta de origem.
 
-A configuração `_MODE=native` atualmente resulta em `native-pending` e mantém o aceite bloqueado. Não basta alterar a variável. Será necessário:
+A configuração automática foi ativada sem compra real. O ciclo foi eliminado com produtos complementares independentes e sem upsell. As páginas `/one-click/7196` e `/one-click/7197` estão ativas nos produtos principais. Ainda será necessário:
 
-- Você fornecer o código oficial completo da oferta, sem dados de compradores, e confirmar os ajustes na conta.
-- Codex adaptar montagem/desmontagem do script ao App Router, integridade dos atributos, confirmação e preservação do contexto. Não substituir o mecanismo oficial por chamada financeira inventada.
-- Homologar token, acesso direto sem compra, voltar/atualizar, duplo clique, troca de rota, recusa e status de pagamento. Respeitar o formato de URL e barras exigido pelo provedor; redirects do Next precisam preservar o contexto.
+- homologar token, voltar/atualizar, duplo clique, aceite, recusa e status de pagamento em teste autorizado;
 - Definir a regra de confirmação em conjunto. Não habilitar cobrança imediata nesta auditoria. A documentação permite comportamentos diferentes, e o valor de atributos gerados não pode ser presumido.
-- Revisar, com sua aprovação futura, a microcopy que hoje explica “nova compra em checkout separado”. Ela não pode descrever incorretamente um fluxo nativo. Copy e design permanecem intocados agora.
+- Manter as rotas Next de upsell fora do fluxo ativo; elas ainda explicam checkout separado e não devem ser apresentadas como a página nativa.
 
-**Recomendação operacional:** manter os complementos bloqueados até a escolha e homologação de um modo. O checkout separado é o caminho já preparado no código; ainda exige controle de elegibilidade e configuração da plataforma. Não classificar esse caminho como one-click.
+**Recomendação operacional:** manter `_MODE=native` no código. O checkout e o 1 clique pertencem à página hospedada pela Greenn; as rotas Next permanecem como fallback indisponível até eventual integração específica.
 
 ### Riscos de cobrança duplicada e controles exigidos
 
