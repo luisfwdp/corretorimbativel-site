@@ -7,7 +7,7 @@ Auditoria iniciada em 20/10/2026 e atualizada em 21/10/2026, horário de Brasíl
 ## Evidências e limites desta auditoria
 
 - Código Next.js: `.env.example`, `lib/commerce.ts`, `components/tracking.tsx`, `navigation.tsx`, `decline.tsx`, `app/layout.tsx`, metadados e documentos de migração.
-- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: variáveis comerciais de produção configuradas; analytics mantido desativado; complementos mantidos como não verificados.
+- Projeto Vercel `corretor-imbativel-next-preview`, ID `prj_OroF7tfTxDA3GljRKjuszK0ovmcf`, equipe `luisfwdp-2259s-projects`: variáveis comerciais de produção configuradas; analytics mantido desativado; complementos verificados e registrados em modo nativo.
 - Produção READY: https://corretor-imbativel-next-preview-ensqw4lch.vercel.app . `corretorimbativel.com.br` e `www.corretorimbativel.com.br` estão associados ao projeto; `www` redireciona permanentemente para a raiz. O DNS externo ainda não foi alterado.
 - DNS público consultado por Google e confirmado nos registros críticos por Cloudflare. Respostas e horários em `evidencias/`. Consultas públicas não equivalem a exportação integral da zona ou teste de funcionamento de e-mail.
 - Raiz oficial respondeu HTTP 200 e informou a API WordPress no cabeçalho Link. `.cpanel.yml` publica somente o tema WordPress; “Deploy HEAD” do cPanel não publica o Next.js.
@@ -33,7 +33,7 @@ Legenda: **Codex** = preparação técnica automatizável; **Você** = dados, ac
 | 12 | Preservar aliases administrativos, alterar só os registros web aprovados e validar | Conjunto, somente após a etapa 11 | Web/HTTPS, e-mail e serviços críticos aprovados |
 | 13 | Monitorar e manter WordPress, DNS HostGator e e-mail ativos | Conjunto | Estabilidade observada e reconciliação comercial sem incidentes |
 
-**Pendências para o lançamento completo:** correção final das páginas de vendas do eBook e do Manual no painel; inventário/exportação autenticada do DNS/cPanel; preservação de `cpanel` e `ftp`; teste financeiro somente se autorizado em separado; analytics permanece desligado até definição e homologação.
+**Pendências para o lançamento completo:** inventário/exportação autenticada do DNS/cPanel; preservação de `cpanel` e `ftp`; teste financeiro somente se autorizado em separado; analytics permanece desligado até definição e homologação.
 
 ## 1. Configuração Greenn, produto por produto
 
@@ -107,10 +107,10 @@ Os nomes completos estão em `.env.example`. Configure no projeto e no ambiente 
 
 | Configuração | Estado atual no projeto auditado | Condição para usar |
 |---|---|---|
-| Cinco `GREENN_*_URL` | Ausentes | Links emitidos pela conta e conferidos |
-| Cinco `GREENN_*_VERIFIED` | Ausentes; padrão false | Homologação documentada de cada oferta |
-| `GREENN_UPSELL_MANUAL_MODE`, `GREENN_UPSELL_EBOOK_MODE` | Ausentes; padrão separate | Decisão do modo; native não está implementado |
-| `GREENN_UPSELL_MANUAL_DECLINE_URL`, `GREENN_UPSELL_EBOOK_DECLINE_URL` | Ausentes | Destinos reais distintos conforme a jornada |
+| Cinco `GREENN_*_URL` | Configuradas em produção | Links emitidos pela conta e conferidos |
+| Cinco `GREENN_*_VERIFIED` | Configuradas como `true` | Homologação documentada de cada oferta |
+| `GREENN_UPSELL_MANUAL_MODE`, `GREENN_UPSELL_EBOOK_MODE` | Configuradas como `native` | Jornadas nativas ativas na Greenn; fallbacks Next bloqueados |
+| `GREENN_UPSELL_MANUAL_DECLINE_URL`, `GREENN_UPSELL_EBOOK_DECLINE_URL` | Configuradas com as aulas correspondentes | Destinos reais distintos conforme a jornada |
 | `GA4_ID`, `META_PIXEL_ID` | Ausentes | IDs corretos fornecidos e permissões de teste |
 | `ANALYTICS_ENABLED` | Ausente; padrão desativado | Homologação de medição e consentimento |
 | `SITE_RELEASE` | Ausente; padrão preview | Usar production somente no build de lançamento aprovado |

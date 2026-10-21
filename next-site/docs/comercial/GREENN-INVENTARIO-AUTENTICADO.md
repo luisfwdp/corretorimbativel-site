@@ -16,7 +16,7 @@ O checkout legado do produto `123089`, de `R$ 197,00`, permanece separado e não
 
 O checkout do produto `141872` foi conferido no painel e na página de pagamento como ativo e aprovado por `R$ 97,00`. A entrega pelo Club está vinculada a todas as ofertas e à turma `Compradores do Manual Jurídico`. A descrição do produto foi corrigida para corresponder exatamente aos cinco DOCX finais.
 
-Os mockups aprovados foram aplicados também aos dois produtos complementares. As antigas ofertas `jPi4sa` (`R$ 50,00`) e `87Z6rU` (`R$ 100,00`), antes inseridas nos produtos principais, foram desativadas. Em 21/10, a conferência final encontrou as páginas de vendas do eBook e do Manual apontando indevidamente para esses checkouts antigos; a correção para as rotas oficiais foi preparada e depende do salvamento final no painel.
+Os mockups aprovados foram aplicados também aos dois produtos complementares. As antigas ofertas `jPi4sa` (`R$ 50,00`) e `87Z6rU` (`R$ 100,00`), antes inseridas nos produtos principais, foram desativadas. Em 21/10, as páginas de vendas do eBook e do Manual, que apontavam indevidamente para esses checkouts antigos, foram corrigidas e salvas nas rotas oficiais.
 
 ## Matriz ainda necessária
 
@@ -29,7 +29,7 @@ Os mockups aprovados foram aplicados também aos dois produtos complementares. A
 | Complemento Manual após eBook | Manual | R$ 50,00 | Produto `199482`, oferta `3ZTVhJ` ativa/aprovada; entrega pelo Club vinculada; sem upsell próprio |
 | Complemento eBook após Manual | PDF do eBook | R$ 100,00 | Produto `199483`, oferta `LzV3lU` ativa/aprovada; entrega pelo Club vinculada; sem upsell próprio |
 
-As páginas de vendas a configurar na Greenn são:
+As páginas de vendas configuradas na Greenn são:
 
 - eBook: `https://corretorimbativel.com.br/ebook`
 - Manual Jurídico: `https://corretorimbativel.com.br/manual-juridico`

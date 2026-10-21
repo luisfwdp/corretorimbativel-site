@@ -22,6 +22,8 @@ Foram criadas duas páginas nativas: `Após eBook — Manual Jurídico por R$ 50
 
 O produto eBook principal também contém a oferta privada para amigos. Por decisão comercial expressa, ela participa do mesmo upsell de Manual por R$ 50. As antigas ofertas complementares `jPi4sa` e `87Z6rU` foram desativadas nos produtos principais. Não acrescentar token a links avulsos nem enviar token a analytics.
 
+Em 21/10/2026, as páginas de vendas dos produtos principais foram salvas no painel: eBook em `https://corretorimbativel.com.br/ebook` e Manual em `https://corretorimbativel.com.br/manual-juridico`.
+
 As rotas `/upsell-manual` e `/upsell-ebook` permanecem apenas como fallback editorial, fora do fluxo financeiro ativo. O painel Greenn controla a jornada nativa. Downsell não foi definido ou implementado.
 
 ## Homologação obrigatória
