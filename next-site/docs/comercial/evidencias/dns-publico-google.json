@@ -1,0 +1,702 @@
+{
+  "checkedAtUtc": "2026-10-20T19:52:48.289951+00:00",
+  "resolver": "Google Public DNS over HTTPS",
+  "records": [
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "NS",
+      "status": 0,
+      "answers": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 2,
+          "TTL": 21600,
+          "data": "ns434.hostgator.com.br."
+        },
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 2,
+          "TTL": 21600,
+          "data": "ns435.hostgator.com.br."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "SOA",
+      "status": 0,
+      "answers": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 21600,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "MX",
+      "status": 0,
+      "answers": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 15,
+          "TTL": 3600,
+          "data": "10 mx1.titan.email."
+        },
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 15,
+          "TTL": 3600,
+          "data": "20 mx2.titan.email."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "TXT",
+      "status": 0,
+      "answers": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 16,
+          "TTL": 3600,
+          "data": "v=spf1 include:spf.titan.email ~all"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "corretorimbativel.com.br",
+      "type": "CAA",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "www.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "www.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        },
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "www.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [
+        {
+          "name": "www.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "www.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [
+        {
+          "name": "www.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "mail.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "mail.corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "mail.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "mail.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "smtp.corretorimbativel.com.br",
+      "type": "A",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "smtp.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "smtp.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "imap.corretorimbativel.com.br",
+      "type": "A",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "imap.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "imap.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "pop.corretorimbativel.com.br",
+      "type": "A",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "pop.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "pop.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "webmail.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "webmail.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "titan.hostgator.com.br."
+        },
+        {
+          "name": "titan.hostgator.com.br.",
+          "type": 5,
+          "TTL": 300,
+          "data": "d1fndj8mqj71xj.cloudfront.net."
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 1,
+          "TTL": 60,
+          "data": "18.238.152.66"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 1,
+          "TTL": 60,
+          "data": "18.238.152.102"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 1,
+          "TTL": 60,
+          "data": "18.238.152.39"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 1,
+          "TTL": 60,
+          "data": "18.238.152.61"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "webmail.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [
+        {
+          "name": "webmail.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "titan.hostgator.com.br."
+        },
+        {
+          "name": "titan.hostgator.com.br.",
+          "type": 5,
+          "TTL": 300,
+          "data": "d1fndj8mqj71xj.cloudfront.net."
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:1800:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:3400:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:5a00:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:2000:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:9400:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:fa00:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:1e00:16:3540:21c0:93a1"
+        },
+        {
+          "name": "d1fndj8mqj71xj.cloudfront.net.",
+          "type": 28,
+          "TTL": 60,
+          "data": "2600:9000:26ca:2a00:16:3540:21c0:93a1"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "webmail.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [
+        {
+          "name": "webmail.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "titan.hostgator.com.br."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "ftp.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "ftp.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        },
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "ftp.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [
+        {
+          "name": "ftp.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "ftp.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [
+        {
+          "name": "ftp.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "cpanel.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "cpanel.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        },
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "cpanel.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [
+        {
+          "name": "cpanel.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "cpanel.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [
+        {
+          "name": "cpanel.corretorimbativel.com.br.",
+          "type": 5,
+          "TTL": 14400,
+          "data": "corretorimbativel.com.br."
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "autodiscover.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "autodiscover.corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "autodiscover.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "autodiscover.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "autoconfig.corretorimbativel.com.br",
+      "type": "A",
+      "status": 0,
+      "answers": [
+        {
+          "name": "autoconfig.corretorimbativel.com.br.",
+          "type": 1,
+          "TTL": 14400,
+          "data": "216.172.161.43"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "autoconfig.corretorimbativel.com.br",
+      "type": "AAAA",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "autoconfig.corretorimbativel.com.br",
+      "type": "CNAME",
+      "status": 0,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "_dmarc.corretorimbativel.com.br",
+      "type": "TXT",
+      "status": 3,
+      "answers": [],
+      "authority": [
+        {
+          "name": "corretorimbativel.com.br.",
+          "type": 6,
+          "TTL": 1800,
+          "data": "ns434.hostgator.com.br. root.br434.hostgator.com.br. 2026102000 86400 7200 3600000 86400"
+        }
+      ]
+    },
+    {
+      "name": "default._domainkey.corretorimbativel.com.br",
+      "type": "TXT",
+      "status": 0,
+      "answers": [
+        {
+          "name": "default._domainkey.corretorimbativel.com.br.",
+          "type": 16,
+          "TTL": 14400,
+          "data": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5nclfgbhkRoujRCcktwzbpO2LXOkFDg0Lz5UWe0kDccTUAcxZQd35YxqNgz2hii59TDL1TFr2f9SSuX+6NGIUDQH4+z1Yd2sFllx5scFbC3AmhPDCgo4VGYv8aT123RKPD3jZOzkoSb8PdE+7TPaBEFmbgVKmcYz0Z50imYM54Jeu4Mrd8WEuFZDMpE+KjNADWoo9G+ujthu/P+S7Z5RpySjCNU+zcvTiWOz+xCEop4k5zkiULKfbMWDWtnrFEm2eOVz3O7OF/2kbXm4BHa1rl5AB32hDbs3SS10TkNxm1J8rA3mmoYbo2oOpGTyewF9JJkucnyadsp6SEsg/1XWSQIDAQAB;"
+        }
+      ],
+      "authority": []
+    },
+    {
+      "name": "_autodiscover._tcp.corretorimbativel.com.br",
+      "type": "SRV",
+      "status": 0,
+      "answers": [
+        {
+          "name": "_autodiscover._tcp.corretorimbativel.com.br.",
+          "type": 33,
+          "TTL": 14400,
+          "data": "0 0 443 cpanelemaildiscovery.cpanel.net."
+        }
+      ],
+      "authority": []
+    }
+  ],
+  "limits": "Public samples, not a full DNS zone export or proof of mail health."
+}

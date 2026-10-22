@@ -1,5 +1,13 @@
 # Resultado do preview
 
+## Atualização de copy — 20/10/2026
+
+Nova prévia READY: https://corretor-imbativel-next-preview-j4kuyocki.vercel.app
+
+Commit da aplicação: `69d166f`. Deployment: `dpl_GEk6yGvY7SmA45RSg42jGkTnWsGp`. Branch isolada: `codex/copy-aprovada-next`. Sem merge, DNS ou publicação no domínio oficial. Ver [implementação e testes da copy](copy/IMPLEMENTACAO.md).
+
+## Prévia anterior, mantida como histórico
+
 - **URL:** https://corretor-imbativel-next-preview-1fa281q98.vercel.app
 - **Target:** preview (a API retorna `target: null`; o campo deve ser omitido na criação).
 - **Status:** READY.

@@ -1,0 +1,62 @@
+{
+  "upsell-manual": {
+    "introduction": {
+      "title": "Um foco documental para acompanhar seu estudo",
+      "paragraphs": [
+        "O eBook aborda a profissão, sua base jurídica e boas práticas. O Manual tem um foco próprio: a finalidade dos instrumentos e dos registros usados ao longo do trabalho.",
+        "Você encontra orientações sobre o contrato de intermediação, a proposta de compra, o contrato particular de compra e venda e o distrato. O conteúdo também aborda a notificação extrajudicial de cobrança de comissão e as provas da atuação do corretor.",
+        "Essa leitura complementar permite estudar quais cuidados documentais merecem atenção em cada etapa. O eBook adquirido continua sendo um material independente; adicionar o Manual é uma escolha opcional."
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Os R$ 50,00 estão incluídos na compra anterior?",
+        "answer": "Não. São o valor adicional do Manual nesta oferta complementar. Se escolher comprá-lo, o total dos dois materiais será de R$ 197,00: R$ 147,00 do eBook mais R$ 50,00 do Manual."
+      },
+      {
+        "question": "Preciso adicionar o Manual para usar o eBook?",
+        "answer": "Não. O eBook é um material independente. O Manual oferece uma leitura complementar sobre documentação e formalização."
+      },
+      {
+        "question": "Como funciona o acesso ao complemento?",
+        "answer": "Confira as condições de pagamento, entrega e acesso ao Manual no checkout desta oferta antes de autorizar a nova compra."
+      }
+    ],
+    "benefits": [
+      "Atenção à formalização do serviço e das condições apresentadas pelas partes.",
+      "Compreensão das diferentes finalidades de contratos, propostas e distratos.",
+      "Referências para estudar os registros da intermediação e a comunicação sobre comissão."
+    ],
+    "note": "A oferta contempla o Manual digital de leitura. Documentos editáveis não estão anunciados como itens incluídos."
+  },
+  "upsell-ebook": {
+    "introduction": {
+      "title": "Conhecimento sobre a profissão para acompanhar a leitura dos documentos",
+      "paragraphs": [
+        "O Manual concentra as orientações em documentação e formalização. O eBook amplia o estudo para o papel do corretor, sua base jurídica e os cuidados envolvidos na atuação profissional.",
+        "São sete capítulos que percorrem a atividade de corretagem, a legislação, os papéis do angariador e do vendedor, a importância dos registros e as boas práticas da intermediação.",
+        "Você pode relacionar esses conceitos aos instrumentos apresentados no Manual e organizar dúvidas sobre sua própria atuação. A compra do complemento é opcional; o Manual adquirido mantém seu foco e sua utilidade como material independente."
+      ]
+    },
+    "faqs": [
+      {
+        "question": "Os R$ 100,00 são uma cobrança adicional?",
+        "answer": "Sim. Esse é o valor do eBook nesta oferta complementar. Se escolher comprá-lo, o total dos dois materiais será de R$ 197,00: R$ 97,00 do Manual mais R$ 100,00 do eBook."
+      },
+      {
+        "question": "O eBook repete o Manual?",
+        "answer": "Os materiais têm temas relacionados e focos diferentes. O Manual concentra a leitura nos documentos e na formalização. O eBook aborda a profissão, sua base jurídica e boas práticas. A proposta é estudar esses assuntos de forma complementar."
+      },
+      {
+        "question": "Como funcionam pagamento e acesso ao eBook?",
+        "answer": "Confira as condições de pagamento, entrega e acesso no checkout desta oferta antes de autorizar a nova compra."
+      }
+    ],
+    "benefits": [
+      "Uma base de leitura sobre atribuições, direitos, deveres e limites da profissão.",
+      "Contexto para estudar divergências sobre participação na negociação e comissão.",
+      "Referências de boas práticas para revisar atendimento, informações e registros do trabalho."
+    ],
+    "note": "O conteúdo é de Dr. Rodrigo Barbato Fabbris, advogado e corretor de imóveis, e foi desenvolvido para aproximar os temas jurídicos da rotina da corretagem."
+  }
+}

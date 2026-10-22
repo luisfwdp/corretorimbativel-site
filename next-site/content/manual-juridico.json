@@ -8,31 +8,25 @@
         {
           "tag": "h2",
           "children": [
-            "Quando tudo fica na conversa, o que sustenta a história da negociação?"
+            "Quando cada condição fica em uma conversa diferente"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "A confiança aproxima as partes. A documentação ajuda a entender o que foi combinado."
+            "O preço foi combinado por mensagem. O prazo mudou por telefone. Uma condição apareceu na visita, mas não foi incluída na proposta enviada depois."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Você acompanha visitas, esclarece condições e mantém contato com comprador e vendedor. Mas, quando surge uma divergência, pode ser difícil reunir o que aconteceu: uma condição estava no áudio, outra ficou em uma conversa presencial e a versão final da proposta não foi registrada."
+            "Se surge uma divergência, reunir essas informações exige voltar a conversas e descobrir qual versão representa o que foi discutido. O mesmo acontece quando o serviço de intermediação fica pouco definido ou os documentos de uma negociação estão dispersos."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Negociação sem contrato, proposta mal formalizada e documentação dispersa deixam espaço para dúvidas sobre prazos, responsabilidades e comissão. Uma desistência pode tornar ainda mais importante compreender os compromissos assumidos por cada pessoa."
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "O cuidado documental começa antes do conflito. Ele faz parte da forma como você organiza e acompanha seu trabalho."
+            "Dar atenção à documentação permite acompanhar o que foi apresentado e o que foi formalizado. Esse cuidado começa durante o atendimento, antes de ser necessário explicar a história do negócio a outra pessoa."
           ]
         }
       ]
@@ -43,25 +37,25 @@
         {
           "tag": "h2",
           "children": [
-            "Formalizar é dar clareza ao que foi combinado."
+            "Formalizar ajuda a esclarecer o serviço e os compromissos"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Quem participa? Qual serviço foi ajustado? Quais condições foram apresentadas? O que mudou durante a conversa?"
+            "Quem participa da negociação? Qual serviço foi ajustado? Quais condições constam da proposta? O que mudou desde a primeira conversa?"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Registrar essas informações permite consultar os acordos e acompanhar a evolução do negócio. Isso não torna uma negociação imune a problemas, mas evita depender apenas da memória quando as versões deixam de coincidir."
+            "Essas perguntas mostram por que documentos diferentes cumprem funções diferentes. Conhecer essas funções ajuda o corretor a organizar informações e identificar dúvidas antes de encaminhar uma nova etapa."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Para o corretor, entender a finalidade de cada documento é um passo importante para reconhecer o que deve ser organizado e o que precisa de orientação jurídica específica."
+            "O Manual foi pensado para estudar esse cuidado documental. A adequação de um contrato ou de uma medida ao caso concreto continua exigindo análise profissional."
           ]
         }
       ]
@@ -70,33 +64,34 @@
       "id": "solucao",
       "blocks": [
         {
-          "tag": "p",
-          "children": [
-            "Uma referência para sua rotina"
-          ]
-        },
-        {
           "tag": "h2",
           "children": [
-            "Conheça o Manual Jurídico."
+            "Um material dedicado aos documentos da intermediação"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "O Manual Jurídico para Corretores de Imóveis e Imobiliárias concentra a atenção nos documentos e nos registros que acompanham a intermediação. A proposta é aproximar o cuidado jurídico de situações concretas da rotina profissional."
+            "O ",
+            {
+              "tag": "strong",
+              "children": [
+                "Manual Jurídico para Corretores de Imóveis e Imobiliárias"
+              ]
+            },
+            " reúne orientações sobre contratos, propostas, distratos, comissão e provas da atuação do corretor."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "O material aborda contratos, propostas, distratos, comunicação sobre comissão e provas da atuação do corretor. Cada tema ajuda a compreender a função da documentação e os pontos que merecem atenção ao formalizar uma negociação."
+            "O foco é compreender a finalidade dos instrumentos presentes na negociação e os cuidados ao lidar com eles. Você encontra uma referência de leitura para relacionar a documentação às etapas do trabalho."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "É um produto independente do eBook Corretor Imbatível. Seu foco está na documentação e na formalização, sem prometer que uma leitura substitua a análise individual de um advogado."
+            "O Manual é um produto independente do eBook Corretor Imbatível. Pode ser escolhido por quem procura concentrar o estudo em formalização e organização documental."
           ]
         }
       ]
@@ -107,23 +102,12 @@
         {
           "tag": "h2",
           "children": [
-            "Da intermediação aos registros: o conteúdo do Manual."
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "Sete temas para compreender por que documentos diferentes cumprem funções diferentes em uma negociação."
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "Conhecer a finalidade de um instrumento ajuda a reconhecer os cuidados necessários. A adequação ao caso concreto exige análise profissional."
+            "Os sete temas do Manual"
           ]
         },
         {
           "tag": "ol",
+          "kind": "syllabus",
           "children": [
             {
               "tag": "li",
@@ -131,13 +115,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Contrato de Intermediação Imobiliária"
+                    "1. Contrato de Intermediação Imobiliária"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Entenda a importância de registrar a relação de intermediação, o serviço combinado e as condições que merecem atenção antes do início do trabalho."
+                    "Entenda a importância de formalizar o serviço combinado e a relação de intermediação. Um ponto de partida para examinar o que precisa ser esclarecido antes de iniciar o trabalho."
                   ]
                 }
               ]
@@ -148,13 +132,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Proposta de Compra"
+                    "2. Proposta de Compra"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Conheça os cuidados com a formalização das condições apresentadas pelas partes, para que preço, prazos e demais pontos não fiquem apenas na conversa."
+                    "Conheça os cuidados ao registrar as condições apresentadas pelas partes. Preço, prazos e forma de pagamento precisam ser compreendidos no contexto da proposta e das alterações negociadas."
                   ]
                 }
               ]
@@ -165,13 +149,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Contrato Particular de Compra e Venda"
+                    "3. Contrato Particular de Compra e Venda"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Observe o papel da documentação na definição dos compromissos entre comprador e vendedor e reconheça situações que exigem análise jurídica específica."
+                    "Estude o papel do contrato na formalização de compromissos entre comprador e vendedor. Reconheça a importância de examinar as condições e buscar análise jurídica quando houver dúvidas."
                   ]
                 }
               ]
@@ -182,13 +166,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Distrato Imobiliário"
+                    "4. Distrato Imobiliário"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Compreenda por que a desistência ou o encerramento de uma negociação também precisa de atenção à documentação e aos compromissos anteriormente assumidos."
+                    "O encerramento de uma relação também exige atenção ao que foi assumido. Compreenda por que uma desistência pede análise dos documentos e das circunstâncias antes de definir novos compromissos."
                   ]
                 }
               ]
@@ -199,13 +183,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Notificação Extrajudicial de Cobrança de Comissão"
+                    "5. Notificação Extrajudicial de Cobrança de Comissão"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Entenda a finalidade da comunicação formal sobre a remuneração e a importância de avaliar os fatos e os registros antes de qualquer medida de cobrança."
+                    "Conheça a finalidade dessa comunicação formal. A avaliação do serviço prestado, dos acordos e dos registros disponíveis precisa anteceder a escolha de uma medida de cobrança."
                   ]
                 }
               ]
@@ -216,13 +200,13 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Atuação do Corretor e Provas da Intermediação"
+                    "6. Atuação do Corretor e Provas da Intermediação"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Reconheça o valor dos registros que ajudam a demonstrar a participação do corretor e a reconstruir as etapas do atendimento e da negociação."
+                    "Entenda a relevância dos registros para reconstruir as etapas do trabalho. Apresentações, visitas, propostas e comunicações podem integrar a análise da participação do corretor."
                   ]
                 }
               ]
@@ -233,19 +217,18 @@
                 {
                   "tag": "h3",
                   "children": [
-                    "Considerações Finais"
+                    "7. Considerações Finais"
                   ]
                 },
                 {
                   "tag": "p",
                   "children": [
-                    "Reúna os cuidados documentais em uma perspectiva de organização e prevenção, respeitando as particularidades de cada caso."
+                    "Uma retomada dos cuidados documentais e da importância de organizar a intermediação respeitando as particularidades de cada negociação."
                   ]
                 }
               ]
             }
-          ],
-          "kind": "syllabus"
+          ]
         }
       ]
     },
@@ -255,89 +238,71 @@
         {
           "tag": "h2",
           "children": [
-            "Onde esse cuidado aparece no dia a dia."
+            "Onde essa leitura se conecta à rotina"
+          ]
+        },
+        {
+          "tag": "div",
+          "kind": "scenarios",
+          "children": [
+            {
+              "tag": "article",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Ao iniciar uma intermediação."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    " O proprietário pede a divulgação do imóvel. O tema do contrato de intermediação ajuda a observar o serviço combinado e o que merece ser formalizado antes das próximas etapas."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "article",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Ao encaminhar uma proposta."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    " O comprador apresenta outro prazo ou outra forma de pagamento. O estudo da proposta reforça a atenção ao registro das condições e às versões que circulam entre as partes."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "article",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "Ao lidar com uma desistência."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    " Uma das partes decide não continuar. A leitura sobre distrato ajuda a reconhecer a necessidade de examinar o que foi assumido antes de tratar das consequências."
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Cenários ilustrativos para conectar a leitura à rotina, sem prometer resultados para casos concretos."
+            "Esses cenários são ilustrativos. O Manual oferece orientação educativa; a decisão adequada depende dos documentos e das circunstâncias de cada caso."
           ]
-        },
-        {
-          "tag": "div",
-          "children": [
-            {
-              "tag": "article",
-              "children": [
-                {
-                  "tag": "p",
-                  "children": [
-                    "Antes de começar"
-                  ]
-                },
-                {
-                  "tag": "h3",
-                  "children": [
-                    "O proprietário pede que você anuncie o imóvel."
-                  ]
-                },
-                {
-                  "tag": "p",
-                  "children": [
-                    "Além de combinar a divulgação, é importante entender como registrar o serviço de intermediação e as condições acertadas. O tema do contrato de intermediação ajuda a perceber o valor dessa formalização inicial."
-                  ]
-                }
-              ]
-            },
-            {
-              "tag": "article",
-              "children": [
-                {
-                  "tag": "p",
-                  "children": [
-                    "Durante a negociação"
-                  ]
-                },
-                {
-                  "tag": "h3",
-                  "children": [
-                    "O comprador apresenta condições diferentes."
-                  ]
-                },
-                {
-                  "tag": "p",
-                  "children": [
-                    "Preço, prazos e forma de pagamento mudam ao longo das conversas. O estudo da proposta de compra reforça a atenção ao registro das condições apresentadas, para que as partes possam consultá-las com mais clareza."
-                  ]
-                }
-              ]
-            },
-            {
-              "tag": "article",
-              "children": [
-                {
-                  "tag": "p",
-                  "children": [
-                    "Quando o caminho muda"
-                  ]
-                },
-                {
-                  "tag": "h3",
-                  "children": [
-                    "Uma das partes decide não continuar."
-                  ]
-                },
-                {
-                  "tag": "p",
-                  "children": [
-                    "O encerramento da negociação também pede cuidado. O tema do distrato ajuda a reconhecer a importância de examinar o que foi formalizado e de buscar orientação antes de assumir novas obrigações."
-                  ]
-                }
-              ]
-            }
-          ],
-          "kind": "scenarios"
         }
       ]
     },
@@ -347,31 +312,25 @@
         {
           "tag": "h2",
           "children": [
-            "Contrato, proposta e distrato não são a mesma coisa."
+            "Contratos, propostas e distratos pedem cuidados diferentes"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Cada documento participa de um momento e responde a uma necessidade."
+            "Uma proposta pode apresentar condições para um negócio. O contrato formaliza compromissos que precisam ser entendidos pelas partes. O distrato trata do encerramento de uma relação anteriormente estabelecida."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "A proposta registra condições apresentadas para um negócio. O contrato formaliza compromissos que precisam ser compreendidos pelas partes. O distrato trata do encerramento de uma relação anteriormente estabelecida."
+            "Conhecer essas finalidades é relevante antes de adaptar ou utilizar qualquer documento. As partes, o imóvel, os prazos e as condições negociadas precisam ser considerados."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Tratá-los como formulários intercambiáveis pode fazer com que detalhes relevantes passem despercebidos. O imóvel, as partes, os prazos e as condições negociadas precisam ser considerados antes de adaptar ou utilizar qualquer instrumento."
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "O Manual convida você a olhar para a finalidade de cada documento. Diante de dúvidas sobre cláusulas, obrigações ou consequências, procure uma análise jurídica individualizada."
+            "O Manual aproxima você dessas questões. Dúvidas sobre cláusulas, validade ou consequências devem ser levadas a um advogado para análise individualizada."
           ]
         }
       ]
@@ -380,33 +339,27 @@
       "id": "comissao",
       "blocks": [
         {
-          "tag": "p",
-          "children": [
-            "Comissão e intermediação"
-          ]
-        },
-        {
           "tag": "h2",
           "children": [
-            "Seu trabalho tem uma história. Os registros ajudam a contá-la."
+            "A comissão também exige atenção ao histórico da intermediação"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Uma visita, uma proposta encaminhada, uma apresentação entre as partes e as comunicações mantidas ao longo do atendimento podem ajudar a compreender a atuação do corretor. Quando esses elementos estão dispersos, reconstruir a sequência dos fatos se torna mais difícil."
+            "Quando surge uma divergência sobre remuneração, a discussão pode envolver o serviço ajustado, o trabalho realizado e as circunstâncias do negócio. Ter mensagens, propostas e registros organizados ajuda a reunir informações para essa análise."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Por isso, a discussão sobre comissão não se resume a lembrar o percentual. Também envolve o serviço ajustado, as circunstâncias da negociação e os registros disponíveis. O Manual aborda a atuação do corretor, as provas da intermediação e a finalidade da notificação extrajudicial de cobrança."
+            "O Manual aborda a atuação do corretor, as provas da intermediação e a finalidade da notificação extrajudicial de cobrança. O objetivo é compreender esses temas antes de confundir a existência de um documento com a definição de um direito."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Documentação não é garantia de recebimento. A existência de um direito e a medida adequada para exercê-lo dependem da análise do caso concreto."
+            "Registros não asseguram, por si só, o recebimento de comissão. A avaliação jurídica precisa considerar o conjunto dos fatos."
           ]
         }
       ]
@@ -417,80 +370,20 @@
         {
           "tag": "h2",
           "children": [
-            "Uma rotina documental organizada muda a forma de acompanhar a negociação."
+            "Uma referência para revisar sua organização documental"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Você passa a dar mais atenção ao que precisa ser formalizado, ao lugar em que os documentos ficam guardados e às informações que devem acompanhar cada etapa do atendimento."
+            "Compreender a função dos instrumentos ajuda a perceber quais informações precisam acompanhar cada etapa. Isso inclui distinguir uma proposta de uma alteração posterior e relacionar comunicações ao atendimento correspondente."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Esse cuidado facilita a consulta ao histórico da negociação e ajuda a preparar informações mais claras quando é necessário conversar com as partes ou buscar assessoria jurídica."
+            "Essa atenção também é útil ao preparar dúvidas e reunir informações para conversar com as partes ou com sua assessoria jurídica. O benefício da leitura está em oferecer referências para revisar esses cuidados na sua rotina."
           ]
-        },
-        {
-          "tag": "dl",
-          "children": [
-            {
-              "tag": "div",
-              "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Mais clareza"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "Reconhecer a finalidade dos documentos e as condições que precisam ser compreendidas."
-                  ]
-                }
-              ],
-              "kind": "group"
-            },
-            {
-              "tag": "div",
-              "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Mais organização"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "Relacionar propostas, comunicações e compromissos a cada negociação."
-                  ]
-                }
-              ],
-              "kind": "group"
-            },
-            {
-              "tag": "div",
-              "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Mais atenção preventiva"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "Perceber dúvidas que merecem análise antes de seguir adiante."
-                  ]
-                }
-              ],
-              "kind": "group"
-            }
-          ],
-          "kind": "benefits"
         }
       ]
     },
@@ -500,19 +393,19 @@
         {
           "tag": "h2",
           "children": [
-            "Para quem quer dar mais atenção à formalização."
+            "Para quem lida com acordos e documentos durante o atendimento"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "O Manual é voltado a corretores autônomos, profissionais vinculados a imobiliárias, equipes e gestores que lidam com documentos e condições de negociação em sua rotina."
+            "O Manual atende ao interesse de corretores autônomos, profissionais vinculados a imobiliárias e gestores que desejam estudar os cuidados com a documentação das negociações."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Para quem está começando, é uma oportunidade de reconhecer o papel dos principais instrumentos. Para quem já atua, é um convite a revisar como acordos e registros são organizados. Em ambos os casos, a leitura é educativa e não dispensa apoio jurídico para situações específicas."
+            "Quem está começando encontra uma apresentação da função dos principais instrumentos. Quem já atua pode relacionar a leitura à forma como reúne propostas, contratos e comunicações no dia a dia."
           ]
         }
       ]
@@ -520,28 +413,29 @@
   ],
   "faqs": [
     {
-      "question": "O Manual Jurídico é o mesmo material que o eBook?",
-      "answer": "São produtos separados. O eBook Corretor Imbatível apresenta conhecimentos jurídicos sobre a profissão. O Manual Jurídico concentra as orientações sobre documentos, contratos, propostas, distratos e registros da intermediação."
+      "question": "Qual é a diferença entre o Manual e o eBook?",
+      "answer": "O Manual concentra as orientações em documentos e formalização. O eBook Corretor Imbatível apresenta a profissão, sua base jurídica e boas práticas. São produtos separados, com focos complementares."
     },
     {
-      "question": "Preciso ter formação em Direito?",
-      "answer": "O conteúdo é voltado a corretores e profissionais do mercado imobiliário. A proposta é aproximar os cuidados jurídicos da rotina profissional, sem substituir a análise de um advogado sobre situações concretas."
+      "question": "Preciso comprar o eBook para estudar o Manual?",
+      "answer": "O Manual é um produto independente. Sua oferta é voltada a quem deseja estudar documentação e formalização, sem exigir a compra do eBook."
     },
     {
-      "question": "Recebo modelos de documentos editáveis?",
-      "answer": "A oferta apresentada aqui contempla os materiais de leitura descritos na página. Documentos editáveis não são apresentados como itens incluídos. Confira a descrição da entrega no checkout antes de comprar."
+      "question": "Recebo contratos e documentos editáveis?",
+      "answer": "Esta página oferece o Manual digital de leitura. Documentos editáveis não estão anunciados como parte desta oferta. Considere como incluídos somente os materiais expressamente descritos na compra."
     },
     {
-      "question": "Sou iniciante. Este conteúdo faz sentido para mim?",
-      "answer": "Sim. Reconhecer a importância da formalização, dos registros e dos limites da atuação profissional é útil desde o início da carreira. Profissionais experientes também podem usar a leitura para revisar seus cuidados e sua organização."
+      "question": "Posso usar a leitura como análise de um contrato específico?",
+      "answer": "O Manual tem finalidade educacional. A análise de um contrato específico exige considerar suas cláusulas, as partes e as circunstâncias da negociação com orientação jurídica individualizada."
     },
     {
-      "question": "Como funciona o pagamento e o acesso?",
-      "answer": "O material é digital e o pagamento é realizado pela Greenn. Antes de concluir a compra, confira as condições de pagamento, entrega e acesso apresentadas no checkout."
+      "question": "O Manual garante o recebimento da comissão?",
+      "answer": "Não. O conteúdo apresenta cuidados com documentação, atuação e comunicação sobre comissão. A existência do direito e as medidas cabíveis dependem do caso concreto."
     },
     {
-      "question": "O material garante minha comissão ou elimina riscos?",
-      "answer": "Não. Nenhum material educativo garante o resultado de uma negociação ou elimina riscos jurídicos. O objetivo é ampliar o conhecimento e a atenção aos cuidados profissionais. Casos concretos exigem orientação jurídica individualizada."
+      "question": "Como recebo o material?",
+      "answer": "O produto é digital e a compra é processada pela Greenn. As condições de entrega e acesso devem ser conferidas no checkout antes do pagamento."
     }
-  ]
+  ],
+  "copyRevision": "approved-2026-10-20"
 }

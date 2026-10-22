@@ -5,7 +5,7 @@ import {chromium} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const access=JSON.parse(await fs.readFile(process.env.CI_PREVIEW_ACCESS_FILE||'/tmp/ci-next-preview-access.json','utf8'));
 const root=new URL(access.url);assert.match(root.hostname,/^corretor-imbativel-next-preview-[a-z0-9]+\.vercel\.app$/);
-const base=root.origin;const out='/workspace/scratch/corretor-next-preview/hosted';await fs.mkdir(out,{recursive:true});const report={deployment:base,results:[],errors:[]};
+const base=root.origin;const out=process.env.CI_NEXT_RESULTS||'/workspace/scratch/corretor-next-preview/hosted';await fs.mkdir(out,{recursive:true});const report={deployment:base,results:[],errors:[]};
 const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],headless:true});
 for(const width of [1440,390]){
  const ctx=await browser.newContext({viewport:{width,height:width===1440?1000:844},reducedMotion:'reduce'});
@@ -36,6 +36,6 @@ for(const width of [1440,390]){
   await p.evaluate(()=>scrollTo({top:0,behavior:'instant'}));await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}-hero.png`});await p.screenshot({path:`${out}/${slug||'home'}-${width===1440?'desktop':'mobile'}.png`,fullPage:true});
  }
  await p.goto(base+'/ebook?utm_source=preview&utm_campaign=review');await p.locator('#hero .button').click();assert.ok(p.url().includes('#oferta'));const faq=p.locator('#faq details').first();await faq.locator('summary').click();assert.equal(await faq.getAttribute('open'),'');
- await p.goto(base+'/upsell-manual');await p.locator('button.decline').click();assert.ok(await p.locator('#decline-guidance').isVisible());await ctx.close();
+ await p.goto(base+'/upsell-manual');const decline=p.locator('.decline');assert.equal(await decline.getAttribute('href'),'https://app.greenn.club/curso/143434/modulo/349509/aula/1094888');await ctx.close();
 }
 await browser.close();await fs.writeFile(out+'/report.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));assert.deepEqual(report.errors,[]);assert.deepEqual(report.results.flatMap(r=>r.violations),[]);console.log('PASS: authenticated hosted preview, six routes, desktop/mobile, content, images, FAQ, refusal and noindex.');

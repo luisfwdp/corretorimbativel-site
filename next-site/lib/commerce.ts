@@ -1,6 +1,6 @@
 import 'server-only';
 import {catalogue,ids,type ProductId,isUpsell} from './catalogue';
-export type OfferConfig={url:string|null;verified:boolean;mode:'separate'|'native-pending';decline:string|null;ready:boolean};
+export type OfferConfig={url:string|null;verified:boolean;mode:'separate'|'native';decline:string|null;ready:boolean};
 export function safeHttps(value:string|undefined,greennOnly=false):string|null {
  if(!value)return null;
  try {const u=new URL(value);if(u.protocol!=='https:'||u.username||u.password)return null;
@@ -11,9 +11,9 @@ const prefixes:Record<ProductId,string>={ebook:'EBOOK','manual-juridico':'MANUAL
 export function getOffer(id:ProductId):OfferConfig{
  const prefix=prefixes[id];const url=safeHttps(process.env[`GREENN_${prefix}_URL`],true);
  const verified=process.env[`GREENN_${prefix}_VERIFIED`]==='true';
- const mode=process.env[`GREENN_${prefix}_MODE`]==='native'?'native-pending':'separate';
+ const mode=process.env[`GREENN_${prefix}_MODE`]==='native'?'native':'separate';
  const decline=safeHttps(process.env[`GREENN_${prefix}_DECLINE_URL`]);
- return {url,verified,mode,decline,ready:!!url&&verified&&mode==='separate'&&(!isUpsell(id)||!!decline)};
+ return {url,verified,mode,decline,ready:!!url&&verified&&(!isUpsell(id)||!!decline)};
 }
 export function auditOffers(){
  const seen=new Map<string,ProductId>();

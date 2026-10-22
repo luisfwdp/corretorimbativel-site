@@ -1,0 +1,22 @@
+[
+  {
+    "capture": "desktop-hero",
+    "sameSize": true,
+    "identical": true
+  },
+  {
+    "capture": "mobile-hero",
+    "sameSize": true,
+    "identical": true
+  },
+  {
+    "capture": "desktop",
+    "sameSize": true,
+    "identical": true
+  },
+  {
+    "capture": "mobile",
+    "sameSize": true,
+    "identical": true
+  }
+]

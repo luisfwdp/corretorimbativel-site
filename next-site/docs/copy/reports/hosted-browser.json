@@ -1,0 +1,102 @@
+{
+  "deployment": "https://corretor-imbativel-next-preview-j4kuyocki.vercel.app",
+  "results": [
+    {
+      "slug": "home",
+      "width": 1440,
+      "status": 200,
+      "words": 124,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "ebook",
+      "width": 1440,
+      "status": 200,
+      "words": 1480,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 1440,
+      "status": 200,
+      "words": 1400,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "combo",
+      "width": 1440,
+      "status": 200,
+      "words": 1364,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 1440,
+      "status": 200,
+      "words": 369,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 1440,
+      "status": 200,
+      "words": 357,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "home",
+      "width": 390,
+      "status": 200,
+      "words": 124,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "ebook",
+      "width": 390,
+      "status": 200,
+      "words": 1480,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "manual-juridico",
+      "width": 390,
+      "status": 200,
+      "words": 1400,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "combo",
+      "width": 390,
+      "status": 200,
+      "words": 1364,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "upsell-manual",
+      "width": 390,
+      "status": 200,
+      "words": 369,
+      "violations": [],
+      "brokenImages": []
+    },
+    {
+      "slug": "upsell-ebook",
+      "width": 390,
+      "status": 200,
+      "words": 357,
+      "violations": [],
+      "brokenImages": []
+    }
+  ],
+  "errors": []
+}

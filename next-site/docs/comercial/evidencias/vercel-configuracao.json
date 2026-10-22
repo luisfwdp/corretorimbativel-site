@@ -1,0 +1,17 @@
+{
+  "checkedDate": "2026-10-20",
+  "project": "corretor-imbativel-next-preview",
+  "projectId": "prj_OroF7tfTxDA3GljRKjuszK0ovmcf",
+  "team": "luisfwdp-2259s-projects",
+  "visibleEnvCount": 0,
+  "hiddenProductionEnvCount": 0,
+  "decrypt": false,
+  "deploymentTarget": "preview",
+  "officialDomainAssociated": false,
+  "pr4": {
+    "state": "OPEN",
+    "draft": true,
+    "merged": false
+  },
+  "scope": "Only inspected preview project. No credentials or values retrieved."
+}

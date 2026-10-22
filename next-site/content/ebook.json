@@ -8,225 +8,25 @@
         {
           "tag": "h2",
           "children": [
-            "O problema não começa quando chega o processo."
+            "Os riscos aparecem nas decisões do dia a dia"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Ele pode começar muito antes: quando uma negociação importante é conduzida sem a formalização adequada."
+            "Você apresenta o imóvel, aproxima as partes e acompanha as condições da venda. Nesse caminho, surgem decisões que também têm consequências jurídicas: como o serviço foi combinado, quais informações foram transmitidas e o que ficou registrado."
           ]
         },
         {
-          "tag": "ul",
+          "tag": "p",
           "children": [
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Negociação sem formalização"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Acordos fechados apenas verbalmente, sem qualquer registro da atuação do corretor."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Divergência sobre comissão"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Discussões sobre percentual, forma de pagamento ou quem tem direito à remuneração."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Ausência de provas da intermediação"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Dificuldade em comprovar que foi o corretor quem aproximou as partes e viabilizou o negócio."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Proposta mal estruturada"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Documentos incompletos que não protegem nem o corretor, nem as partes envolvidas."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Desistência das partes"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Insegurança sobre quais consequências e direitos se aplicam quando o negócio não se conclui."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Documentação inadequada"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Falta de contratos, autorizações e registros que sustentem a atuação profissional."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Negociação concluída sem o corretor"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Comprador e vendedor fecham diretamente, deixando o corretor fora do resultado que ele gerou."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Relação mal definida entre as partes"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Papéis pouco claros entre comprador, vendedor e intermediador ao longo da negociação."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            }
-          ],
-          "kind": "topics"
+            "Uma divergência sobre comissão pode começar em uma condição pouco clara. Uma desistência pode trazer dúvidas sobre compromissos já assumidos. E uma negociação concluída diretamente entre as partes pode exigir a reconstrução do trabalho de intermediação."
+          ]
         },
         {
-          "tag": "blockquote",
+          "tag": "p",
           "children": [
-            "Uma negociação mal conduzida pode custar muito mais do que uma comissão."
+            "Conhecer esses pontos faz parte da preparação para atuar. O eBook reúne uma base de leitura sobre a profissão, seus limites e os cuidados que merecem atenção antes de uma divergência."
           ]
         }
       ]
@@ -237,7 +37,7 @@
         {
           "tag": "h2",
           "children": [
-            "Isso já aconteceu com você?"
+            "Você reconhece alguma destas situações?"
           ]
         },
         {
@@ -246,25 +46,25 @@
             {
               "tag": "li",
               "children": [
-                "“Você apresentou o comprador, mas depois as partes negociaram diretamente.”"
+                "Depois da visita, comprador e vendedor seguem conversando diretamente. Você precisa entender o que foi combinado e quais registros tem da sua participação."
               ]
             },
             {
               "tag": "li",
               "children": [
-                "“Você trabalhou semanas em uma venda e começou uma discussão sobre sua comissão.”"
+                "A venda avança, mas surge uma discussão sobre quem intermediou o negócio e como a remuneração foi ajustada."
               ]
             },
             {
               "tag": "li",
               "children": [
-                "“Um cliente desistiu e ninguém sabia exatamente quais eram as consequências.”"
+                "Uma condição muda durante as conversas. Cada pessoa se lembra de uma versão diferente da proposta."
               ]
             },
             {
               "tag": "li",
               "children": [
-                "“Você percebeu que precisava de um documento, mas não sabia qual utilizar.”"
+                "O cliente desiste e você tem dúvidas sobre as consequências para as partes e para o serviço prestado."
               ]
             }
           ]
@@ -272,7 +72,7 @@
         {
           "tag": "p",
           "children": [
-            "É justamente nesse espaço entre a venda e a segurança jurídica que nasce o Corretor Imbatível."
+            "São exemplos de situações da corretagem. O preparo começa por entender o papel do profissional e os fatos que precisam ser examinados em cada caso."
           ]
         }
       ]
@@ -283,25 +83,31 @@
         {
           "tag": "h2",
           "children": [
-            "Conheça o Corretor Imbatível."
+            "Conheça o Corretor Imbatível"
           ]
         },
         {
           "tag": "p",
           "children": [
-            " O Corretor Imbatível reúne conhecimento jurídico aplicado à realidade do corretor de imóveis, ajudando o profissional a atuar de maneira mais organizada, documentada, segura e profissional em cada etapa da negociação — da captação até a assinatura do contrato. "
+            {
+              "tag": "strong",
+              "children": [
+                "Corretor Imbatível — Manual Jurídico para Corretores de Imóveis"
+              ]
+            },
+            " é o eBook de Dr. Rodrigo Barbato Fabbris sobre a atuação jurídica e profissional do corretor."
           ]
         },
         {
           "tag": "p",
           "children": [
-            " A proposta é ampliar seu conhecimento sobre os cuidados jurídicos da intermediação e ajudar a reconhecer situações que exigem orientação individualizada. "
+            "A leitura aproxima a base legal da profissão de temas como comissão, responsabilidade, documentação e boas práticas. O objetivo é oferecer referências para compreender seu trabalho além do fechamento da venda."
           ]
         },
         {
-          "tag": "blockquote",
+          "tag": "p",
           "children": [
-            "Venda é consequência. Preparação vem antes."
+            "Você encontra explicações para estudar sua atuação e reconhecer dúvidas que precisam de análise individualizada. Trata-se de um produto separado do Manual Jurídico para Corretores de Imóveis e Imobiliárias, cujo foco é documental."
           ]
         }
       ]
@@ -312,164 +118,68 @@
         {
           "tag": "h2",
           "children": [
-            "O que você vai aprender"
+            "O que esse conhecimento permite observar"
           ]
         },
         {
-          "tag": "ul",
+          "tag": "p",
           "children": [
             {
-              "tag": "li",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Riscos jurídicos da profissão"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Entenda os principais pontos de atenção na atuação do corretor de imóveis."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
+                "Seu papel na intermediação."
               ]
             },
+            " Entenda atribuições e limites para avaliar os compromissos assumidos durante o atendimento."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
             {
-              "tag": "li",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Segurança na intermediação"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Aprenda por que formalizar cada etapa da negociação pode ser tão importante."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
+                "As discussões sobre remuneração."
               ]
             },
+            " Conheça questões que podem gerar divergências sobre comissão, inclusive quando há profissionais com papéis diferentes na negociação."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
             {
-              "tag": "li",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Comissão de corretagem"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Entenda situações que podem gerar conflitos relacionados à sua remuneração."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
+                "A importância dos registros."
               ]
             },
+            " Relacione visitas, propostas e comunicações ao histórico da intermediação. Assim, você entende por que esses registros merecem atenção ao acompanhar o trabalho realizado."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
             {
-              "tag": "li",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Documentação"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Conheça a importância de registrar propostas, visitas, negociações e acordos."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
+                "Os deveres profissionais."
               ]
             },
+            " Estude a relação entre informação, diligência e responsabilidade no contato com as partes."
+          ]
+        },
+        {
+          "tag": "p",
+          "children": [
             {
-              "tag": "li",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Responsabilidade profissional"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Entenda deveres, responsabilidades e limites da atuação do corretor."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
+                "O momento de buscar apoio."
               ]
             },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "span",
-                  "children": [
-                    {
-                      "tag": "strong",
-                      "children": [
-                        "Boas práticas"
-                      ],
-                      "kind": ""
-                    },
-                    {
-                      "tag": "span",
-                      "children": [
-                        "Estruture uma atuação mais organizada, ética e profissional no mercado imobiliário."
-                      ],
-                      "kind": "inline"
-                    }
-                  ],
-                  "kind": "inline"
-                }
-              ]
-            }
-          ],
-          "kind": "topics"
+            " Identifique questões que precisam ser levadas a um advogado antes de decidir sobre obrigações, cláusulas ou medidas de cobrança."
+          ]
         }
       ]
     },
@@ -479,31 +189,25 @@
         {
           "tag": "h2",
           "children": [
-            "Da leitura para as perguntas que você faz na negociação."
+            "Da leitura às perguntas da próxima negociação"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "O preparo aparece antes de assinar, combinar ou deixar uma informação apenas na conversa."
+            "Antes de aceitar uma intermediação, você pode olhar com mais atenção para o serviço ajustado e para o papel de cada participante. Durante a negociação, pode revisar se as condições apresentadas estão claras e se o histórico das conversas está organizado."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Ao compreender os riscos e a importância da documentação, você ganha referências para observar a própria rotina: o serviço está claro para as partes? A proposta registra as condições apresentadas? É possível reconstruir o caminho da intermediação?"
+            "Imagine que, depois de uma visita, as partes mudem preço e prazo de pagamento. Compreender a importância dos registros ajuda a perceber quais informações precisam ser reunidas para acompanhar essa mudança e esclarecer dúvidas."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Imagine um atendimento em que comprador e vendedor continuam negociando depois da visita. Em vez de olhar apenas para o fechamento, uma postura preventiva também considera os registros da apresentação, as comunicações e os acordos feitos ao longo do trabalho."
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "O resultado esperado da leitura é ampliar o conhecimento e a atenção a esses cuidados. O material não garante o recebimento de comissão ou o desfecho de um conflito; ajuda você a reconhecer questões que podem exigir orientação jurídica individualizada."
+            "O aprendizado está em ampliar sua compreensão e seu repertório de perguntas. A existência de um direito, o recebimento de comissão e o desfecho de um conflito dependem dos fatos e da análise jurídica aplicável."
           ]
         }
       ]
@@ -514,255 +218,251 @@
         {
           "tag": "h2",
           "children": [
-            "Dentro do Corretor Imbatível"
+            "Os sete capítulos do eBook"
+          ]
+        },
+        {
+          "tag": "ol",
+          "kind": "syllabus",
+          "children": [
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "1. Introdução"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "O papel do corretor em decisões patrimoniais importantes e a relação entre conhecimento jurídico, preparo e atuação profissional. Um ponto de partida para entender a responsabilidade envolvida na aproximação das partes."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "2. O Corretor de Imóveis: Conceito e Atuação"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "As atribuições da corretagem e os limites da atividade. A leitura ajuda a distinguir a apresentação de um imóvel das responsabilidades que acompanham a intermediação."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "3. Base Jurídica: O que diz a Lei"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "A legislação da profissão e as regras sobre o contrato de corretagem. Conheça referências legais para compreender direitos e deveres presentes na rotina de trabalho."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "4. Corretor Angariador x Corretor Vendedor"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "As diferenças entre essas atuações e os pontos de atenção quando profissionais participam de etapas distintas do negócio. Um tema relevante para compreender papéis e discussões sobre remuneração."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "5. A Importância da Documentação na Intermediação"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "O papel de contratos, propostas, comunicações e comprovantes da atuação. Entenda por que reunir o histórico do trabalho merece atenção desde o início do atendimento."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "6. Boas Práticas na Intermediação Imobiliária"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Cuidados com atendimento, informações, documentação e acompanhamento da negociação. Referências para revisar sua rotina sob uma perspectiva ética e preventiva."
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "li",
+              "children": [
+                {
+                  "tag": "h3",
+                  "children": [
+                    "7. Considerações Finais"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "children": [
+                    "Uma retomada dos pontos centrais da leitura e da importância de relacionar conhecimento, organização e responsabilidade no exercício da profissão."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mentalidade",
+      "blocks": [
+        {
+          "tag": "h2",
+          "children": [
+            "Cinco pilares para revisar sua atuação"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Conhecimento jurídico aplicado à realidade do corretor de imóveis."
+            "A Mentalidade Corretor Imbatível organiza a postura preventiva em cinco cuidados que você pode observar na rotina:"
           ]
         },
         {
-          "tag": "ol",
+          "tag": "dl",
           "children": [
             {
-              "tag": "li",
+              "tag": "div",
+              "kind": "group",
               "children": [
                 {
-                  "tag": "h3",
+                  "tag": "dt",
                   "children": [
-                    "Introdução"
+                    "Formalização"
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "dd",
                   "children": [
-                    "Uma visão do papel do corretor em decisões patrimoniais importantes e da relação entre preparo, conhecimento jurídico e atuação profissional."
+                    "dar atenção ao serviço ajustado e às condições que precisam ficar claras para as partes."
                   ]
                 }
               ]
             },
             {
-              "tag": "li",
+              "tag": "div",
+              "kind": "group",
               "children": [
                 {
-                  "tag": "h3",
+                  "tag": "dt",
                   "children": [
-                    "O Corretor de Imóveis: Conceito e Atuação"
+                    "Organização"
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "dd",
                   "children": [
-                    "O que caracteriza a atividade de corretagem, suas atribuições e os limites que precisam ser observados ao aproximar as partes."
+                    "reunir informações e documentos por negociação, para consultar o histórico quando necessário."
                   ]
                 }
               ]
             },
             {
-              "tag": "li",
+              "tag": "div",
+              "kind": "group",
               "children": [
                 {
-                  "tag": "h3",
+                  "tag": "dt",
                   "children": [
-                    "Base Jurídica: O que diz a Lei"
+                    "Registro"
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "dd",
                   "children": [
-                    "Uma apresentação da legislação da profissão e das regras do contrato de corretagem, conectando conceitos jurídicos à realidade do trabalho."
+                    "valorizar propostas, comunicações e outros elementos que permitam compreender o trabalho realizado."
                   ]
                 }
               ]
             },
             {
-              "tag": "li",
+              "tag": "div",
+              "kind": "group",
               "children": [
                 {
-                  "tag": "h3",
+                  "tag": "dt",
                   "children": [
-                    "Corretor Angariador x Corretor Vendedor"
+                    "Conhecimento"
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "dd",
                   "children": [
-                    "As diferenças entre as duas atuações e a importância de reconhecer os papéis de cada profissional, inclusive nas discussões sobre remuneração."
+                    "estudar direitos, deveres e limites da profissão para reconhecer os pontos que exigem cuidado."
                   ]
                 }
               ]
             },
             {
-              "tag": "li",
+              "tag": "div",
+              "kind": "group",
               "children": [
                 {
-                  "tag": "h3",
+                  "tag": "dt",
                   "children": [
-                    "A Importância da Documentação na Intermediação"
+                    "Prevenção"
                   ]
                 },
                 {
-                  "tag": "p",
+                  "tag": "dd",
                   "children": [
-                    "Por que contratos, propostas, comunicações e registros ajudam a compreender o trabalho realizado e os acordos feitos durante uma negociação."
-                  ]
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "h3",
-                  "children": [
-                    "Boas Práticas na Intermediação Imobiliária"
-                  ]
-                },
-                {
-                  "tag": "p",
-                  "children": [
-                    "Cuidados que atravessam o atendimento, a análise de informações, a formalização e o acompanhamento da negociação, com uma perspectiva preventiva."
-                  ]
-                }
-              ]
-            },
-            {
-              "tag": "li",
-              "children": [
-                {
-                  "tag": "h3",
-                  "children": [
-                    "Considerações Finais"
-                  ]
-                },
-                {
-                  "tag": "p",
-                  "children": [
-                    "Uma retomada dos principais pontos da leitura e da importância de unir conhecimento, ética e organização no exercício da profissão."
+                    "esclarecer dúvidas antes de assumir compromissos e buscar orientação específica quando o caso exigir."
                   ]
                 }
               ]
             }
           ],
-          "kind": "syllabus"
-        }
-      ]
-    },
-    {
-      "id": "transformacao",
-      "blocks": [
-        {
-          "tag": "h2",
-          "children": [
-            "O que muda quando você começa a tratar sua atuação como um negócio profissional?"
-          ]
+          "kind": "principles"
         },
         {
-          "tag": "div",
+          "tag": "p",
           "children": [
-            {
-              "tag": "div",
-              "children": [
-                {
-                  "tag": "h3",
-                  "children": [
-                    "Sem uma rotina preventiva"
-                  ]
-                },
-                {
-                  "tag": "ul",
-                  "children": [
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Acordos verbais"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Registros dispersos"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Dúvidas sobre documentos"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Dificuldade para comprovar atuação"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Problemas descobertos tarde demais"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "kind": "group"
-            },
-            {
-              "tag": "div",
-              "children": [
-                {
-                  "tag": "h3",
-                  "children": [
-                    "Mentalidade Corretor Imbatível"
-                  ]
-                },
-                {
-                  "tag": "ul",
-                  "children": [
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Formalização"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Organização"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Registro"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Conhecimento"
-                      ]
-                    },
-                    {
-                      "tag": "li",
-                      "children": [
-                        "Prevenção"
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "kind": "group"
-            }
-          ],
-          "kind": "transformation"
-        },
-        {
-          "tag": "blockquote",
-          "children": [
-            "Conhecer os riscos ajuda a reconhecer os cuidados que cada negociação exige."
+            "São referências de conduta e estudo. A aplicação depende da rotina do profissional e das particularidades de cada negociação."
           ]
         }
       ]
@@ -773,67 +473,19 @@
         {
           "tag": "h2",
           "children": [
-            "O Corretor Imbatível foi feito para quem quer levar a profissão a sério."
-          ]
-        },
-        {
-          "tag": "h3",
-          "children": [
-            "Corretores iniciantes"
+            "Para quem precisa tomar decisões além da apresentação do imóvel"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Construa sua carreira já com uma base jurídica sólida."
-          ]
-        },
-        {
-          "tag": "h3",
-          "children": [
-            "Corretores experientes"
+            "Se você está começando, encontra uma introdução aos conceitos jurídicos da profissão. Se já atua, tem uma referência para revisar dúvidas e cuidados que surgem ao longo das negociações."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Reforce e atualize sua atuação com boas práticas documentais."
-          ]
-        },
-        {
-          "tag": "h3",
-          "children": [
-            "Corretores autônomos"
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "Compreenda os cuidados com sua comissão e reconheça quando buscar orientação jurídica."
-          ]
-        },
-        {
-          "tag": "h3",
-          "children": [
-            "Equipes imobiliárias"
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "Padronize a forma como toda a equipe documenta e conduz negociações."
-          ]
-        },
-        {
-          "tag": "h3",
-          "children": [
-            "Gestores de imobiliárias"
-          ]
-        },
-        {
-          "tag": "p",
-          "children": [
-            "Revise os cuidados de organização e formalização da equipe."
+            "Corretores autônomos, profissionais vinculados a imobiliárias e gestores podem usar a leitura para estudar a intermediação e organizar perguntas sobre suas próprias rotinas. O conteúdo é educativo; situações concretas precisam ser analisadas individualmente."
           ]
         }
       ]
@@ -842,92 +494,48 @@
       "id": "valor-comissao",
       "blocks": [
         {
-          "tag": "p",
-          "children": [
-            "Uma perspectiva sobre o valor do preparo"
-          ]
-        },
-        {
           "tag": "h2",
           "children": [
-            "Quanto vale uma comissão?"
+            "Quanto vale a atenção dada a uma comissão?"
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Considere apenas este exemplo hipotético: um imóvel de R$ 800 mil e uma comissão de 6%."
-          ]
-        },
-        {
-          "tag": "dl",
-          "children": [
+            "Considere um exemplo hipotético: um imóvel de ",
             {
-              "tag": "div",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Valor do imóvel"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "R$ 800.000"
-                  ]
-                }
-              ],
-              "kind": "group"
+                "R$ 800.000,00"
+              ]
             },
+            ", com comissão ilustrativa de ",
             {
-              "tag": "div",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Comissão ilustrativa"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "6%"
-                  ]
-                }
-              ],
-              "kind": "group"
+                "6%"
+              ]
             },
+            ". O resultado matemático é ",
             {
-              "tag": "div",
+              "tag": "strong",
               "children": [
-                {
-                  "tag": "dt",
-                  "children": [
-                    "Valor da comissão no exemplo"
-                  ]
-                },
-                {
-                  "tag": "dd",
-                  "children": [
-                    "R$ 48.000"
-                  ]
-                }
-              ],
-              "kind": "group"
-            }
+                "R$ 48.000,00"
+              ]
+            },
+            "."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Quando uma negociação envolve valores assim, vale refletir sobre a atenção dada aos acordos, às responsabilidades e aos registros da sua atuação. O conhecimento jurídico faz parte desse preparo."
+            "Valores dessa ordem ajudam a colocar em perspectiva a responsabilidade do trabalho. Entender o serviço combinado, as informações transmitidas e os registros da atuação merece atenção proporcional à importância da negociação."
           ]
         },
         {
           "tag": "p",
           "children": [
-            "Exemplo matemático ilustrativo. O percentual não é uma recomendação, e a leitura não garante remuneração, recuperação de valores ou retorno financeiro."
+            "O investimento no eBook é de R$ 147,00 para estudar esses cuidados. A compra não garante comissão nem retorno financeiro. O percentual de 6% é apenas ilustrativo e não constitui recomendação de remuneração."
           ]
         }
       ]
@@ -935,32 +543,29 @@
   ],
   "faqs": [
     {
-      "question": "Para quem é o Corretor Imbatível?",
-      "answer": "Para corretores autônomos, profissionais vinculados a imobiliárias e gestores que desejam compreender os cuidados jurídicos e documentais da intermediação."
+      "question": "Preciso ter formação em Direito?",
+      "answer": "O eBook é voltado a corretores e profissionais do mercado imobiliário. Apresenta conceitos e cuidados jurídicos relacionados à rotina da profissão, com explicações para quem não tem formação jurídica."
     },
     {
-      "question": "Preciso ter conhecimento jurídico prévio?",
-      "answer": "Não. O conteúdo foi escrito para ser acessível a corretores sem formação jurídica, traduzindo a legislação em orientações práticas para o dia a dia da corretagem."
+      "question": "O material faz sentido para quem já atua há anos?",
+      "answer": "Sim. A leitura oferece uma referência para revisar atribuições, responsabilidades e cuidados com a intermediação. A experiência prática permite relacionar os temas às dúvidas da própria rotina."
     },
     {
-      "question": "O conteúdo serve para corretores iniciantes?",
-      "answer": "Sim. O material apresenta desde os conceitos fundamentais da profissão até cuidados de documentação e atuação preventiva."
+      "question": "O eBook e o Manual Jurídico são o mesmo produto?",
+      "answer": "São produtos diferentes. O eBook Corretor Imbatível aborda a profissão, sua base jurídica e boas práticas. O Manual Jurídico para Corretores de Imóveis e Imobiliárias concentra o estudo em documentos e formalização. Esta oferta de R$ 147,00 é do eBook."
     },
     {
-      "question": "Como recebo meu acesso?",
-      "answer": "Confira no checkout as condições de entrega e acesso ao produto antes de concluir sua compra."
+      "question": "O eBook garante o recebimento da minha comissão?",
+      "answer": "Não. A leitura amplia o conhecimento sobre a profissão. O direito à comissão e qualquer medida para exercê-lo dependem das circunstâncias da negociação e da análise jurídica do caso."
     },
     {
-      "question": "O conteúdo é digital?",
-      "answer": "Sim, 100% digital — leitura em computador, tablet ou celular."
+      "question": "Estou com uma disputa em andamento. O material resolve meu caso?",
+      "answer": "Uma disputa em andamento exige orientação individualizada. O eBook tem finalidade educacional e pode ajudar a compreender conceitos, mas não analisa documentos ou define a medida adequada para um caso específico."
     },
     {
-      "question": "Como funciona o pagamento?",
-      "answer": "O pagamento é processado pela Greenn. Confira as condições disponíveis no checkout."
-    },
-    {
-      "question": "O Corretor Imbatível substitui uma consulta jurídica?",
-      "answer": "Não. O conteúdo possui finalidade educacional e informativa e não substitui a análise jurídica individualizada de um caso concreto por um advogado."
+      "question": "Como funcionam o pagamento e o acesso?",
+      "answer": "O produto é digital e o pagamento é processado pela Greenn. Confira no checkout as condições de pagamento, entrega e acesso disponíveis para esta oferta."
     }
-  ]
+  ],
+  "copyRevision": "approved-2026-10-20"
 }
