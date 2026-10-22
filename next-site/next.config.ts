@@ -2,6 +2,7 @@ import type { NextConfig } from 'next';
 const config: NextConfig = {
  poweredByHeader: false,
  trailingSlash: false,
+ allowedDevOrigins: ['127.0.0.1'],
  async headers() {
   const preview = process.env.SITE_RELEASE !== 'production';
   return [{source:'/:path*',headers:[

@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   type MotionValue,
-  useReducedMotion,
   useScroll,
   useTransform,
 } from "framer-motion";
@@ -33,18 +32,27 @@ export function ContainerScroll({
 }: ContainerScrollProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const prefersReducedMotion = useReducedMotion() ?? false;
+  const [reduceMotion, setReduceMotion] = useState(false);
   const { scrollYProgress } = useScroll({ target: containerRef });
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const updateViewport = (event?: MediaQueryListEvent) => {
       setIsMobile(event?.matches ?? mediaQuery.matches);
     };
+    const updateMotion = (event?: MediaQueryListEvent) => {
+      setReduceMotion(event?.matches ?? motionQuery.matches);
+    };
 
     updateViewport();
+    updateMotion();
     mediaQuery.addEventListener("change", updateViewport);
-    return () => mediaQuery.removeEventListener("change", updateViewport);
+    motionQuery.addEventListener("change", updateMotion);
+    return () => {
+      mediaQuery.removeEventListener("change", updateViewport);
+      motionQuery.removeEventListener("change", updateMotion);
+    };
   }, []);
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
@@ -64,13 +72,9 @@ export function ContainerScroll({
         <Header
           translate={translate}
           titleComponent={titleComponent}
-          reduceMotion={prefersReducedMotion}
+          reduceMotion={reduceMotion}
         />
-        <Card
-          rotate={rotate}
-          scale={scale}
-          reduceMotion={prefersReducedMotion}
-        >
+        <Card rotate={rotate} scale={scale} reduceMotion={reduceMotion}>
           {children}
         </Card>
       </div>
@@ -101,12 +105,10 @@ export function Card({ rotate, scale, children, reduceMotion }: CardProps) {
       style={{
         rotateX: reduceMotion ? 0 : rotate,
         scale: reduceMotion ? 1 : scale,
-        boxShadow:
-          "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="mx-auto mt-8 aspect-square w-full max-w-3xl rounded-[30px] border-4 border-[#c6a45b] bg-[#0b1d2b] p-2 shadow-2xl md:mt-10 md:p-4"
+      className="scroll-publication mx-auto mt-8 aspect-square w-full max-w-3xl bg-[#102737] p-2 md:mt-10 md:p-4"
     >
-      <div className="h-full w-full overflow-hidden rounded-2xl bg-[#0b1d2b]">
+      <div className="h-full w-full overflow-hidden bg-[#0b1d2b]">
         {children}
       </div>
     </motion.div>

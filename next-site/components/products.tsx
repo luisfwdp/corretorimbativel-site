@@ -7,7 +7,7 @@ const visuals:Record<LandingId,{src:string;caption:string;detail:string;alt:stri
 };
 export function ProductVisual({id,priority=false}:{id:LandingId;priority?:boolean}){
  const visual=visuals[id];
- return <figure className="publication"><div className="publication-image"><Image src={visual.src} alt={visual.alt} width={1254} height={1254} priority={priority} sizes="(max-width: 680px) 90vw, (max-width: 1000px) 55vw, 500px"/></div><figcaption>{visual.caption}<span>{visual.detail}</span></figcaption></figure>;
+ return <figure className="publication"><div className="publication-image"><Image src={visual.src} alt={visual.alt} width={1254} height={1254} priority={priority} loading={priority?'eager':'lazy'} sizes="(max-width: 680px) 90vw, (max-width: 1000px) 55vw, 500px"/></div><figcaption>{visual.caption}<span>{visual.detail}</span></figcaption></figure>;
 }
 export function Price({id}:{id:LandingId}){return <p className="price">{money(catalogue[id].price)}</p>;}
 export function ComboSaving(){return <p className="saving">Economia de {money(savings)} em relação à compra dos dois produtos separadamente.</p>;}

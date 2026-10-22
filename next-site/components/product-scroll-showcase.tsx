@@ -43,12 +43,11 @@ export function ProductScrollShowcase({ id }: { id: LandingId }) {
   return (
     <section
       aria-labelledby={titleId}
-      className="dark overflow-hidden border-y border-[#354c5a] bg-[#0b1d2b] text-[#f8f6f0]"
+      className="dark product-showcase overflow-hidden bg-[#0b1d2b] text-[#f4f2ec]"
     >
       <ContainerScroll
         titleComponent={
           <div className="mx-auto max-w-4xl px-1 sm:px-4">
-            <p className="small-label">{showcase.eyebrow}</p>
             <h2
               id={titleId}
               className="mb-5 text-[clamp(1.85rem,4vw,3.75rem)] leading-[1.12] text-[#f8f6f0]"
